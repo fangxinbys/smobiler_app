@@ -109,6 +109,10 @@ namespace Maticsoft.Web.Admin
                 return;
             }
         }
+        /// <summary>
+        /// 登录成功
+        /// </summary>
+        /// <param name="user"></param>
         private void LoginSuccess(Model.tUsers user)
         {
             RegisterOnlineUser(user);
