@@ -1,0 +1,8 @@
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\bin\Release\Maticsoft.DAL.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\bin\Release\Maticsoft.Common.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\bin\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\bin\Release\Maticsoft.Model.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\bin\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\bin\Release\System.Data.SQLite.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Matic_Dev\DAL\obj\Release\Maticsoft.DAL.dll

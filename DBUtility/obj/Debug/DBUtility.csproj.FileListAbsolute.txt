@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\bin\Debug\System.Data.SQLite.DLL
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+D:\BaiduNetdiskDownload\Matic_Dev\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+D:\BaiduNetdiskDownload\Matic_Dev\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+D:\BaiduNetdiskDownload\Matic_Dev\DBUtility\bin\Debug\MySql.Data.dll
+D:\BaiduNetdiskDownload\Matic_Dev\DBUtility\bin\Debug\System.Data.SQLite.DLL
+D:\BaiduNetdiskDownload\Matic_Dev\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\BaiduNetdiskDownload\Matic_Dev\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+D:\BaiduNetdiskDownload\Matic_Dev\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Matic_Dev\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
