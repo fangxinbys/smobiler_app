@@ -25,7 +25,9 @@ namespace Maticsoft.Web.Admin
             }
         }
 
-
+        /// <summary>
+        /// 加载数据
+        /// </summary>
         private void LoadData()
         {
             InitCaptchaCode();
