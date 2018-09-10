@@ -58,7 +58,7 @@ namespace Maticsoft.Web.Admin
 
                 if (tbxCaptcha.Text.Trim() != Session["HHCaptchaImageText"].ToString())
                 {
-                    Alert.ShowInTop("验证码错误！", String.Empty, tbxCaptcha.GetMarkInvalidReference("验证码错误！") + tbxCaptcha.GetFocusReference());
+                    Alert.ShowInTop("验证码错误！", String.Empty, "top.window.location.reload(false);");
                     return;
                 }
                 else
