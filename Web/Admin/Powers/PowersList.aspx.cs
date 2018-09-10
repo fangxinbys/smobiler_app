@@ -31,11 +31,11 @@ namespace Maticsoft.Web.Admin.Powers
         {
             if (e.EventArgument == "Confirm_OK")
             {
-                if (txtPidValue.Text.Trim() == "")
+                if (TreePower.SelectedNodeID == "")
                     return;
                 BLL.tPower bll = new BLL.tPower();
 
-                if (bll.Delete(int.Parse(txtPidValue.Text.Trim())))
+                if (bll.Delete(int.Parse(TreePower.SelectedNodeID)))
                 {
 
                     Alert.ShowInTop("删除成功！");
@@ -186,7 +186,7 @@ namespace Maticsoft.Web.Admin.Powers
 
             if (TreeUser.SelectedNode == null)
             {
-                Alert.ShowInTop("请选择用户！"); return;
+                Alert.ShowInTop("该项操作未执行，因未选择用户！"); return;
             }
            
             Maticsoft.BLL.tUserPower BLLtt = new Maticsoft.BLL.tUserPower();
@@ -208,14 +208,7 @@ namespace Maticsoft.Web.Admin.Powers
                 LoadPowerData();
             }
         }
-
-        protected void TreePower_NodeCommand(object sender, TreeCommandEventArgs e)
-        {
-            txtPidValue.Text = TreePower.SelectedNodeID;
-            txtPidName.Text = TreePower.SelectedNode.Text;
-        }
-
-
+ 
       
     }
 }
