@@ -15,13 +15,13 @@ namespace Maticsoft.Web
         private ReportDocument RegRdt = new ReportDocument();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //DealPrint();
+           // DealPrint();
         }
         protected void Page_UnLoad(object sender, EventArgs e)
 
         {
 
-            //建立完页面时，释放报表文档资源
+            //释放报表文档资源
 
             RegRdt.Dispose();
 
@@ -30,28 +30,28 @@ namespace Maticsoft.Web
             this.ClearChildState();
 
         }
-        //private void DealPrint()
+        private void DealPrint()
 
-        //{
+        {
 
 
-        //    BLL.tMenu bll = new BLL.tMenu();
-        //    DataTable dt = bll.GetList(" mCode=11 ").Tables[0];
+            BLL.tMenu bll = new BLL.tMenu();
+            DataTable dt = bll.GetList(" mCode=11 ").Tables[0];
 
-        //    RegRdt.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape;
-        //    string path = Server.MapPath("~/report/test.rpt");
-        //    RegRdt.Load(path);
+            RegRdt.PrintOptions.PaperOrientation = CrystalDecisions.Shared.PaperOrientation.Landscape;
+            string path = Server.MapPath("~/report/test.rpt");
+            RegRdt.Load(path);
 
-        //    RegRdt.SetDataSource(dt);
+            RegRdt.SetDataSource(dt);
 
-        //    // crv.ParameterFieldInfo = paramFields;
+            // crv.ParameterFieldInfo = paramFields;
 
-        //    crv.ReportSource = RegRdt;
+            crv.ReportSource = RegRdt;
 
-        //    crv.DataBind();
+            crv.DataBind();
 
-        //    RegRdt.Refresh();
+            RegRdt.Refresh();
 
-        //}
+        }
     }
 }

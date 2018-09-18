@@ -12,7 +12,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <%--<CR:CrystalReportViewer ID="crv" runat="server" AutoDataBind="true" PrintMode="ActiveX"  ToolPanelView="None" />--%>
+            <CR:CrystalReportViewer ID="crv" runat="server" AutoDataBind="true" PrintMode="ActiveX"  ToolPanelView="None" />
         </div>
     </form>
 </body>
