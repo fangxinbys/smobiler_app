@@ -21,7 +21,7 @@ namespace Maticsoft.Web
 
         {
 
-            //释放报表文档资源
+            //释放
 
             RegRdt.Dispose();
 
