@@ -1,0 +1,67 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IndexstList.aspx.cs" Inherits="Maticsoft.Web.Admin.Indexs.IndexstList" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <f:PageManager ID="PageManager1" AutoSizePanelID="Panel1" runat="server" />
+        <f:Panel ID="Panel1" CssClass="blockpanel" Margin="10px" runat="server" ShowBorder="false" ShowHeader="false" Layout="Region">
+            <Items>
+
+                <f:Panel runat="server" ID="panelLeftRegion" RegionPosition="Left" RegionSplit="true" EnableCollapse="true" ShowBorder="false"
+                    RegionPercent="20%" ShowHeader="false" IconFont="_PullLeft" AutoScroll="true">
+                    <Items>
+                        <f:Tree ID="TreeDpt" IsFluid="true" CssClass="blockpanel" ShowHeader="true" Title="指标列表"
+                            EnableCollapse="false" runat="server" OnNodeCommand="TreeDpt_NodeCommand">
+                        </f:Tree>
+                    </Items>
+                </f:Panel>
+
+                <f:Panel runat="server" ID="panelRightRegion" RegionPosition="Right" RegionSplit="true" EnableCollapse="true" AutoScroll="true"
+                    RegionPercent="80%" ShowHeader="false" IconFont="_PullRight">
+                    <Items>
+                        <f:Grid ID="GridDpt" runat="server" ShowBorder="false" ShowHeader="false" OnPageIndexChange="GridDpt_PageIndexChange"
+                            DataKeyNames="Id" EnableMultiSelect="false" ShowPagingMessage="true" AllowPaging="true" IsDatabasePaging="true"
+                            OnRowCommand="GridDpt_RowCommand" AllowSorting="true" SortField="Id" SortDirection="asc" OnSort="GridDpt_Sort">
+                            <Toolbars>
+                                <f:Toolbar ID="Toolbar1" Position="Top" runat="server">
+                                    <Items>
+                                        <f:ToolbarFill ID="ToolbarFill1" runat="server">
+                                        </f:ToolbarFill>
+                                        <f:Button ID="btnNew" runat="server" Icon="Add" Text="新增指标" OnClick="btnNew_Click">
+                                        </f:Button>
+                                    </Items>
+                                </f:Toolbar>
+                            </Toolbars>
+                            <Columns>
+
+
+                                <f:BoundField DataField="Id" HeaderText="编码" Width="150px" SortField="Id" />
+                                <f:BoundField DataField="Name" HeaderText="名称" Width="150px" />
+                                <f:BoundField DataField="SubDptId" HeaderText="填报部门" ExpandUnusedSpace="true" />
+                                <f:BoundField DataField="ApproveDptId" HeaderText="审核部门" ExpandUnusedSpace="true"/>
+                                <f:BoundField DataField="Scale" HeaderText="百分比" />
+                                <f:BoundField DataField="Score" HeaderText="分数" />
+                                <f:LinkButtonField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="编辑" ConfirmTarget="Top" CommandName="Edit" Width="50px" />
+                                <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除"
+                                    ConfirmText="确定删除该指标？" ConfirmTarget="Top" CommandName="Delete" Width="50px" />
+                            </Columns>
+                        </f:Grid>
+                    </Items>
+                </f:Panel>
+
+            </Items>
+        </f:Panel>
+
+        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"
+            EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="600px" Title="指标管理"
+            Height="340px">
+        </f:Window>
+    </form>
+</body>
+</html>

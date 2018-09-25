@@ -16,13 +16,14 @@ namespace Maticsoft.Web.Admin
     public partial class Main : PageBase
     {
         protected Maticsoft.Model.tSet model;
+        BLL.tDepartMent dptbll = new BLL.tDepartMent();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 LoadData();
                 Maticsoft.Model.tUsers user= GetIdentityUser();
-                btnUserName.Text = user.usersName;
+                btnUserName.Text =dptbll.GetModel(user.dptId).dptName + " "+user.usersName;
 
                 Maticsoft.BLL.tSet bll = new Maticsoft.BLL.tSet();
                 model = bll.GetModel(1);

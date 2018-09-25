@@ -85,6 +85,9 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Indexs\IndexEdit.aspx" />
+    <Content Include="Admin\Indexs\IndexstList.aspx" />
+    <Content Include="Admin\Indexs\selectIndex.aspx" />
     <Content Include="Admin\DptMent\DptMentEdit.aspx" />
     <Content Include="Admin\DptMent\DptMentList.aspx" />
     <Content Include="Admin\DptMent\selectDpt.aspx" />
@@ -2288,6 +2291,27 @@
     <Content Include="upload\blank.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Indexs\IndexEdit.aspx.cs">
+      <DependentUpon>IndexEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Indexs\IndexEdit.aspx.designer.cs">
+      <DependentUpon>IndexEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Indexs\IndexstList.aspx.cs">
+      <DependentUpon>IndexstList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Indexs\IndexstList.aspx.designer.cs">
+      <DependentUpon>IndexstList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Indexs\selectIndex.aspx.cs">
+      <DependentUpon>selectIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Indexs\selectIndex.aspx.designer.cs">
+      <DependentUpon>selectIndex.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\DptMent\DptMentEdit.aspx.cs">
       <DependentUpon>DptMentEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
