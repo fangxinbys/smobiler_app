@@ -130,6 +130,7 @@
     <Compile Include="tSysLog.cs" />
     <Compile Include="tUserPower.cs" />
     <Compile Include="tUsers.cs" />
+    <Compile Include="t_Index.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

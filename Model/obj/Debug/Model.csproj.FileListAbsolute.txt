@@ -7,3 +7,8 @@ D:\BaiduNetdiskDownload\Matic_Dev\Model\bin\Debug\Maticsoft.Model.pdb
 D:\BaiduNetdiskDownload\Matic_Dev\Model\obj\Debug\Maticsoft.Model.dll
 D:\BaiduNetdiskDownload\Matic_Dev\Model\obj\Debug\Maticsoft.Model.pdb
 C:\Users\Administrator\Desktop\Matic_Dev\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\dev\Model\bin\Debug\Maticsoft.Model.dll
+C:\Users\Administrator\source\repos\dev\Model\bin\Debug\Maticsoft.Model.pdb
+C:\Users\Administrator\source\repos\dev\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\dev\Model\obj\Debug\Maticsoft.Model.dll
+C:\Users\Administrator\source\repos\dev\Model\obj\Debug\Maticsoft.Model.pdb
