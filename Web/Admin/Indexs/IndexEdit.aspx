@@ -53,7 +53,7 @@
         </f:Panel>
 
 
-        <f:Window ID="Window1" Title="组织架构" Hidden="true" EnableIFrame="true" runat="server"
+        <f:Window ID="Window1" Title="指标列表" Hidden="true" EnableIFrame="true" runat="server"
             EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="550px"
             Height="350px">
         </f:Window>

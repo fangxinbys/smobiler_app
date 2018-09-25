@@ -16,7 +16,7 @@
                 <f:Panel runat="server" ID="panelLeftRegion" RegionPosition="Center" RegionSplit="true" EnableCollapse="true" ShowBorder="false" RegionPercent="60%"
                     ShowHeader="false" IconFont="_PullLeft" AutoScroll="true">
                     <Items>
-                        <f:Tree ID="TreeDpt" IsFluid="true" CssClass="blockpanel" ShowHeader="false" Title="组织架构"
+                        <f:Tree ID="TreeDpt" IsFluid="true" CssClass="blockpanel" ShowHeader="false" Title="指标列表"
                             EnableCollapse="false" runat="server" OnNodeCommand="TreeDpt_NodeCommand">
                         </f:Tree>
                     </Items>
