@@ -23,8 +23,8 @@ namespace Maticsoft.Web.Admin
             {
                 LoadData();
                 Maticsoft.Model.tUsers user= GetIdentityUser();
-                btnUserName.Text =dptbll.GetModel(user.dptId).dptName + " "+user.usersName;
-
+                btnUserName.Text = user.usersName;
+                btnUserName.ToolTip = dptbll.GetModel(user.dptId).dptName;
                 Maticsoft.BLL.tSet bll = new Maticsoft.BLL.tSet();
                 model = bll.GetModel(1);
                 Maticsoft.BLL.S_Onlines bllOn = new Maticsoft.BLL.S_Onlines();
