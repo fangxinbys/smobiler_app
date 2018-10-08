@@ -114,6 +114,8 @@
     <Compile Include="tUserPower.cs" />
     <Compile Include="tUsers.cs" />
     <Compile Include="t_Index.cs" />
+    <Compile Include="Uvip.cs" />
+    <Compile Include="UvipInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
