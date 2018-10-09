@@ -92,6 +92,9 @@
     <Content Include="Admin\DptMent\DptMentList.aspx" />
     <Content Include="Admin\DptMent\selectDpt.aspx" />
     <Content Include="Admin\Main.aspx" />
+    <Content Include="Admin\Member\MemberPointEdit.aspx" />
+    <Content Include="Admin\Member\MemberList.aspx" />
+    <Content Include="Admin\Member\MemberEdit.aspx" />
     <Content Include="Admin\Menu\MenuEdit.aspx" />
     <Content Include="Admin\Menu\MenuList.aspx" />
     <Content Include="Admin\Menu\selectMenu.aspx" />
@@ -2340,6 +2343,27 @@
     <Compile Include="Admin\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Member\MemberPointEdit.aspx.cs">
+      <DependentUpon>MemberPointEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member\MemberPointEdit.aspx.designer.cs">
+      <DependentUpon>MemberPointEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member\MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member\MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Member\MemberEdit.aspx.cs">
+      <DependentUpon>MemberEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Member\MemberEdit.aspx.designer.cs">
+      <DependentUpon>MemberEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Menu\MenuEdit.aspx.cs">
       <DependentUpon>MenuEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2538,6 +2562,7 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
