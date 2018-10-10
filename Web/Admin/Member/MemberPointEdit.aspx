@@ -21,15 +21,14 @@
                         <f:Toolbar ID="Toolbar" runat="server">
 
                             <Items>
-                                <f:RadioButton ID="rbtnFirst" Checked="true" GroupName="MyRadioGroup1"
-                                    Text="消费" runat="server">
+                                <f:ToolbarFill ID="ToolbarFill1" runat="server">
+                                </f:ToolbarFill>
+                                <f:RadioButton ID="rbtnFirst" Checked="true" GroupName="MyRadioGroup1" Text="消费" runat="server">
                                 </f:RadioButton>
                                 <f:RadioButton ID="rbtnSecond" GroupName="MyRadioGroup1" ShowEmptyLabel="true" Text="充值" runat="server">
                                 </f:RadioButton>
                                 <f:NumberBox runat="server" ID="txtNum" Label="消费金额" ShowRedStar="true" MinValue="0" Required="true"></f:NumberBox>
-
-                            </Items>
-                            <Items>
+                                <f:TextBox runat="server" ID="txtValue" Label="备注"></f:TextBox>
                                 <f:Button runat="server" ID="btnSelect" Text="提交操作" Icon="DatabaseSave" OnClick="btnSelect_Click"></f:Button>
                                 <f:Button runat="server" ID="btnExcel" Text="导出数据" Icon="Cursor" OnClick="btnExcel_Click"
                                     EnableAjax="false" DisableControlBeforePostBack="false">
@@ -43,30 +42,16 @@
                         <f:Grid ID="GridDpt" runat="server" ShowBorder="false" ShowHeader="false" OnPageIndexChange="GridDpt_PageIndexChange"
                             DataKeyNames="Id" EnableMultiSelect="false" ShowPagingMessage="true" AllowPaging="true" IsDatabasePaging="true"
                             OnRowCommand="GridDpt_RowCommand" AllowSorting="true" SortField="Id" SortDirection="asc" OnSort="GridDpt_Sort">
-                            <Toolbars>
-                                <f:Toolbar ID="Toolbar1" Position="Top" runat="server">
-                                    <Items>
-                                        <f:ToolbarFill ID="ToolbarFill1" runat="server">
-                                        </f:ToolbarFill>
-                                        <f:Button ID="btnNew" runat="server" Icon="Add" Text="添加会员" OnClick="btnNew_Click">
-                                        </f:Button>
-                                    </Items>
-                                </f:Toolbar>
-                            </Toolbars>
+
                             <Columns>
 
-                                <f:BoundField DataField="Ucode" HeaderText="卡号" SortField="Ucode" ExpandUnusedSpace="true" />
+                                <f:BoundField DataField="UvipId" HeaderText="编号" SortField="UvipId" ExpandUnusedSpace="true" />
 
-                                <f:BoundField DataField="Uname" HeaderText="会员名" ExpandUnusedSpace="true" />
-                                <f:BoundField DataField="Utel" HeaderText="电话" ExpandUnusedSpace="true" />
-                                <f:BoundField DataField="Uads" HeaderText="地址" ExpandUnusedSpace="true" />
-                                <f:BoundField DataField="Usex" HeaderText="性别" />
+                                <f:BoundField DataField="Uqyt" HeaderText="金额" ExpandUnusedSpace="true" />
+                                <f:BoundField DataField="Urmk" HeaderText="备注" ExpandUnusedSpace="true" />
+                                <f:BoundField DataField="Utime" HeaderText="时间" ExpandUnusedSpace="true" />
 
-                                <f:BoundField DataField="Ufen" HeaderText="积分" ExpandUnusedSpace="true" />
-                                <f:LinkButtonField ColumnID="editFieldPower" TextAlign="Center" Icon="User" ToolTip="积分操作" ConfirmTarget="Top" CommandName="EditPoint" Width="50px" />
-                                <f:LinkButtonField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="信息修改" ConfirmTarget="Top" CommandName="Edit" Width="50px" />
-                                <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除"
-                                    ConfirmText="确定删除该会员？" ConfirmTarget="Top" CommandName="Delete" Width="50px" />
+
                             </Columns>
                         </f:Grid>
                     </Items>
@@ -75,10 +60,6 @@
             </Items>
         </f:Panel>
 
-        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"
-            EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="620px" Title="会员管理"
-            Height="380px">
-        </f:Window>
 
 
     </form>

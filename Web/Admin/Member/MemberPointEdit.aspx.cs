@@ -14,13 +14,14 @@ namespace Maticsoft.Web.Admin.Member
 {
     public partial class MemberPointEdit : PageBase
     {
+        Maticsoft.BLL.UvipInfo bll = new BLL.UvipInfo();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
-             
+
                 LoadData();
-                
             }
         }
 
@@ -33,26 +34,23 @@ namespace Maticsoft.Web.Admin.Member
 
         protected void LoadData()
         {
-            Maticsoft.BLL.Uvip BLL = new Maticsoft.BLL.Uvip();
+
+            if (string.IsNullOrEmpty(Request.QueryString["userId"]))
+            {
+                return;
+            }
+            string userId = Request.QueryString["userId"];
+            int  uid = int.Parse(userId);
             string sortField = GridDpt.SortField;
             string sortDirection = GridDpt.SortDirection;
 
-            if (txtValue.Text.Trim() == "")
-            {
-                GridDpt.RecordCount = BLL.GetRecordCount(" ");
 
-                DataView view = BLL.GetListByPage("", " Id asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
-                view.Sort = String.Format("{0} {1}", sortField, sortDirection);
-                GridDpt.DataSource = view.ToTable();
-            }
-            else
-            {
-                GridDpt.RecordCount = BLL.GetRecordCount(" Uname like '%"+txtValue.Text+ "%' or Ucode like '%" + txtValue.Text + "%' or Utel like '%" + txtValue.Text + "%' ");
+            GridDpt.RecordCount = bll.GetRecordCount(string.Format(" UvipId={0} ",uid));
 
-                DataView view = BLL.GetListByPage(" Uname like '%" + txtValue.Text + "%' or Ucode like '%" + txtValue.Text + "%' or Utel like '%" + txtValue.Text + "%' ", " Id asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
-                view.Sort = String.Format("{0} {1}", sortField, sortDirection);
-                GridDpt.DataSource = view.ToTable();
-            }
+            DataView view = bll.GetListByPage(string.Format(" UvipId={0} ", uid), " Id desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+            view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+            GridDpt.DataSource = view.ToTable();
+
             GridDpt.DataBind();
 
         }
@@ -65,43 +63,7 @@ namespace Maticsoft.Web.Admin.Member
         protected void GridDpt_RowCommand(object sender, GridCommandEventArgs e)
         {
            
-            int deptID  = GetSelectedDataKeyID(GridDpt);
-
-        
-            if (e.CommandName == "Delete")
-            {
-
-
-              
-
-                BLL.Uvip BLL = new Maticsoft.BLL.Uvip();
-               
-                bool isTrue = BLL.Delete(deptID);
-
-
-                if (!isTrue)
-                {
-                    Alert.ShowInTop("删除失败！");
-                    return;
-                }
-                else
-                {
-                  
-                    LoadData();
-                }
-            }
-            if (e.CommandName == "Edit")
-            {
-                this.Window1.Title = "会员管理";
-                string openUrl = String.Format("./MemberEdit.aspx?userId={0}", HttpUtility.UrlEncode(deptID.ToString()));
-                PageContext.RegisterStartupScript(Window1.GetSaveStateReference(deptID.ToString())+ Window1.GetShowReference(openUrl));
-            }
-            if (e.CommandName == "EditPoint")
-            {
-                this.Window1.Title = "积分管理";
-                string openUrl = String.Format("./MemberPointEdit.aspx?userId={0}", HttpUtility.UrlEncode(deptID.ToString()));
-                PageContext.RegisterStartupScript(Window1.GetSaveStateReference(deptID.ToString()) + Window1.GetShowReference(openUrl));
-            }
+           
 
         }
 
@@ -110,18 +72,8 @@ namespace Maticsoft.Web.Admin.Member
             LoadData();
         }
 
-        protected void btnNew_Click(object sender, EventArgs e)
-        {
-            Window1.Title = "会员管理";
-            PageContext.RegisterStartupScript(Window1.GetShowReference("./MemberEdit.aspx"));
-        }
-
-        protected void Window1_Close(object sender, WindowCloseEventArgs e)
-        {
-            Alert.ShowInTop("保存成功");
-           
-            LoadData();
-        }
+       
+ 
         protected void btnExcel_Click(object sender, EventArgs e)
         {
             if (GridDpt.Rows.Count <= 0)
@@ -234,6 +186,11 @@ namespace Maticsoft.Web.Admin.Member
 
         protected void btnSelect_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(Request.QueryString["userId"]))
+            {
+                Alert.ShowInTop("请选择会员！"); return;
+            }
             if (rbtnFirst.Checked == false && rbtnSecond.Checked == false)
             {
                 Alert.ShowInTop("请选择操作！");return;
@@ -247,9 +204,20 @@ namespace Maticsoft.Web.Admin.Member
             {
                 money =   decimal.Parse(txtNum.Text);
             }
-
-
-            LoadData();
+            Maticsoft.Model.UvipInfo model = new Maticsoft.Model.UvipInfo();
+            model.Uqyt = money;
+            model.Urmk = txtValue.Text+"-"+ (rbtnFirst.Checked==true?rbtnFirst.Text:rbtnSecond.Text)              ;
+            model.Utime = DateTime.Now;
+            model.UvipId = int.Parse(Request.QueryString["userId"]);
+            if (bll.Add(model) > 0)
+            {
+                LoadData();
+            }
+            else
+            {
+                Alert.ShowInTop("出错了！"); return;
+            }
+          
         }
     }
 }
