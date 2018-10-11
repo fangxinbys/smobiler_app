@@ -9,7 +9,8 @@ using Web;
 using FineUIPro;
 using System.IO;
 using System.Text;
- 
+using Maticsoft.DBUtility;
+
 namespace Maticsoft.Web.Admin.Member
 {
     public partial class MemberPointEdit : PageBase
@@ -195,10 +196,23 @@ namespace Maticsoft.Web.Admin.Member
             {
                 Alert.ShowInTop("请选择操作！");return;
             }
+            if (txtNum.Text.Trim() == "")
+            {
+                Alert.ShowInTop("请输入金额！"); return;
+            }
+
             decimal money = 0;
             if (rbtnFirst.Checked)
             {
                 money = 0 - decimal.Parse(txtNum.Text);
+
+                string sql = string.Format("select isnull(sum(Uqyt),0) from dbo.UvipInfo where UvipId={0}", int.Parse(Request.QueryString["userId"]));
+                decimal num =decimal.Parse( DbHelperSQL.GetSingle(sql).ToString());
+                if (num < (0 - money))
+                {
+                    Alert.ShowInTop("积分不够，请充值！"); return;
+                }
+               
             }
             else
             {
@@ -206,11 +220,14 @@ namespace Maticsoft.Web.Admin.Member
             }
             Maticsoft.Model.UvipInfo model = new Maticsoft.Model.UvipInfo();
             model.Uqyt = money;
-            model.Urmk = txtValue.Text+"-"+ (rbtnFirst.Checked==true?rbtnFirst.Text:rbtnSecond.Text)              ;
+            model.Urmk =  (rbtnFirst.Checked==true?rbtnFirst.Text:rbtnSecond.Text)  + "  "+ txtValue.Text    ;
             model.Utime = DateTime.Now;
             model.UvipId = int.Parse(Request.QueryString["userId"]);
+
+          
             if (bll.Add(model) > 0)
             {
+                insertLog("操作了：" + model.UvipId + (rbtnFirst.Checked == true ? rbtnFirst.Text : rbtnSecond.Text) + " 金额：" + model.Uqyt);
                 LoadData();
             }
             else

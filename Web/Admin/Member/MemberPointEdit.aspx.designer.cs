@@ -58,15 +58,6 @@ namespace Maticsoft.Web.Admin.Member {
         protected global::FineUIPro.Toolbar Toolbar;
         
         /// <summary>
-        /// ToolbarFill1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUIPro.ToolbarFill ToolbarFill1;
-        
-        /// <summary>
         /// rbtnFirst 控件。
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace Maticsoft.Web.Admin.Member {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::FineUIPro.RadioButton rbtnSecond;
+        
+        /// <summary>
+        /// Toolbar1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.Toolbar Toolbar1;
         
         /// <summary>
         /// txtNum 控件。

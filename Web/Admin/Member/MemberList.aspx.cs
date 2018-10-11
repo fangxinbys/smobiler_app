@@ -9,7 +9,8 @@ using Web;
 using FineUIPro;
 using System.IO;
 using System.Text;
- 
+using Maticsoft.DBUtility;
+
 namespace Maticsoft.Web.Admin.Member
 {
     public partial class MemberList : PageBase
@@ -23,7 +24,15 @@ namespace Maticsoft.Web.Admin.Member
                 
             }
         }
+        protected string GetFen(string Id)
+        {
 
+            string sql = string.Format("select isnull(sum(Uqyt),0) from dbo.UvipInfo where UvipId={0}",Id);
+            string num= DbHelperSQL.GetSingle(sql).ToString();
+           
+            return string.Format("<span style='color:red'>{0}</span>",num);
+           
+        }
         protected void GridDpt_PageIndexChange(object sender, FineUIPro.GridPageEventArgs e)
         {
             LoadData();

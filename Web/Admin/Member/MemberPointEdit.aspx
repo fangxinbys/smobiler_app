@@ -21,27 +21,34 @@
                         <f:Toolbar ID="Toolbar" runat="server">
 
                             <Items>
-                                <f:ToolbarFill ID="ToolbarFill1" runat="server">
-                                </f:ToolbarFill>
-                                <f:RadioButton ID="rbtnFirst" Checked="true" GroupName="MyRadioGroup1" Text="消费" runat="server">
+
+                                <f:RadioButton ID="rbtnFirst" Checked="true" GroupName="MyRadioGroup1" Text="消费" runat="server" LabelWidth="65">
                                 </f:RadioButton>
-                                <f:RadioButton ID="rbtnSecond" GroupName="MyRadioGroup1" ShowEmptyLabel="true" Text="充值" runat="server">
+                                <f:RadioButton ID="rbtnSecond" GroupName="MyRadioGroup1" ShowEmptyLabel="true" Text="充值" runat="server" LabelWidth="65">
                                 </f:RadioButton>
-                                <f:NumberBox runat="server" ID="txtNum" Label="消费金额" ShowRedStar="true" MinValue="0" Required="true"></f:NumberBox>
-                                <f:TextBox runat="server" ID="txtValue" Label="备注"></f:TextBox>
-                                <f:Button runat="server" ID="btnSelect" Text="提交操作" Icon="DatabaseSave" OnClick="btnSelect_Click"></f:Button>
-                                <f:Button runat="server" ID="btnExcel" Text="导出数据" Icon="Cursor" OnClick="btnExcel_Click"
+                            </Items>
+
+
+                        </f:Toolbar>
+
+                        <f:Toolbar ID="Toolbar1" runat="server">
+
+
+                            <Items>
+                                <f:NumberBox runat="server" ID="txtNum" Label="金额" ShowRedStar="true" MinValue="0" Required="true" LabelWidth="65" Width="150"></f:NumberBox>
+                                <f:TextBox runat="server" ID="txtValue" Label="备注" Width="250" LabelWidth="65"></f:TextBox>
+                                <f:Button runat="server" ID="btnSelect" Text="提交" Icon="DatabaseSave" OnClick="btnSelect_Click"></f:Button>
+                                <f:Button runat="server" ID="btnExcel" Text="导出" Icon="Cursor" OnClick="btnExcel_Click"
                                     EnableAjax="false" DisableControlBeforePostBack="false">
                                 </f:Button>
                             </Items>
-
                         </f:Toolbar>
 
                     </Toolbars>
                     <Items>
                         <f:Grid ID="GridDpt" runat="server" ShowBorder="false" ShowHeader="false" OnPageIndexChange="GridDpt_PageIndexChange"
                             DataKeyNames="Id" EnableMultiSelect="false" ShowPagingMessage="true" AllowPaging="true" IsDatabasePaging="true"
-                            OnRowCommand="GridDpt_RowCommand" AllowSorting="true" SortField="Id" SortDirection="asc" OnSort="GridDpt_Sort">
+                            OnRowCommand="GridDpt_RowCommand" AllowSorting="true" SortField="Id" SortDirection="desc" OnSort="GridDpt_Sort">
 
                             <Columns>
 
