@@ -75,7 +75,7 @@
             </Items>
         </f:Panel>
 
-        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"   CloseAction="HideRefresh"
+        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"   CloseAction="HidePostBack"
             EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="620px" Title="会员管理"
             Height="380px">
         </f:Window>

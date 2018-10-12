@@ -71,6 +71,7 @@ namespace Maticsoft.Web.Admin.Member
 
                 if (BLL.Update(tUsers) == true)
                 {
+                    insertLog("修改了会员：" + userId);
                     PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());
                 }
                 else
@@ -94,6 +95,7 @@ namespace Maticsoft.Web.Admin.Member
                 }
                 if (BLL.Add(tUsers) >= 1)
                 {
+            
                     PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());
                 }
                 else

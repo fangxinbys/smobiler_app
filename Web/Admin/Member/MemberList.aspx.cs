@@ -95,7 +95,7 @@ namespace Maticsoft.Web.Admin.Member
                 }
                 else
                 {
-                  
+                    insertLog("删除了会员：" + deptID);
                     LoadData();
                 }
             }

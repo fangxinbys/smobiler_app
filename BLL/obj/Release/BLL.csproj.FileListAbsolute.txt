@@ -7,3 +7,12 @@ C:\Users\Administrator\Desktop\Matic_Dev\BLL\bin\Release\System.Data.SQLite.dll
 C:\Users\Administrator\Desktop\Matic_Dev\BLL\bin\Release\MySql.Data.dll
 C:\Users\Administrator\Desktop\Matic_Dev\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\Matic_Dev\BLL\obj\Release\Maticsoft.BLL.dll
+C:\Users\Administrator\source\repos\dev\BLL\bin\Release\Maticsoft.BLL.dll
+C:\Users\Administrator\source\repos\dev\BLL\bin\Release\Maticsoft.Common.dll
+C:\Users\Administrator\source\repos\dev\BLL\bin\Release\Maticsoft.DAL.dll
+C:\Users\Administrator\source\repos\dev\BLL\bin\Release\Maticsoft.Model.dll
+C:\Users\Administrator\source\repos\dev\BLL\bin\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\source\repos\dev\BLL\bin\Release\System.Data.SQLite.dll
+C:\Users\Administrator\source\repos\dev\BLL\bin\Release\MySql.Data.dll
+C:\Users\Administrator\source\repos\dev\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\dev\BLL\obj\Release\Maticsoft.BLL.dll

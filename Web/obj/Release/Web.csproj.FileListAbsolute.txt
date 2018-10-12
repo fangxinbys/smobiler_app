@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\dev\Web\bin\Maticsoft.Web.dll.config
+C:\Users\Administrator\source\repos\dev\Web\bin\Maticsoft.Web.dll
+C:\Users\Administrator\source\repos\dev\Web\bin\Maticsoft.Web.pdb
+C:\Users\Administrator\source\repos\dev\Web\bin\Maticsoft.BLL.dll
+C:\Users\Administrator\source\repos\dev\Web\bin\Maticsoft.DAL.dll
+C:\Users\Administrator\source\repos\dev\Web\bin\Maticsoft.DBUtility.dll
+C:\Users\Administrator\source\repos\dev\Web\bin\Maticsoft.Model.dll
+C:\Users\Administrator\source\repos\dev\Web\bin\System.Data.SQLite.dll
+C:\Users\Administrator\source\repos\dev\Web\bin\MySql.Data.dll
+C:\Users\Administrator\source\repos\dev\Web\obj\Release\Web.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\dev\Web\obj\Release\Maticsoft.Web.dll
+C:\Users\Administrator\source\repos\dev\Web\obj\Release\Maticsoft.Web.pdb
