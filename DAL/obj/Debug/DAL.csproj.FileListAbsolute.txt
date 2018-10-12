@@ -38,3 +38,17 @@ C:\Users\Administrator\source\repos\dev\DAL\obj\Debug\DAL.csproj.CoreCompileInpu
 C:\Users\Administrator\source\repos\dev\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\Administrator\source\repos\dev\DAL\obj\Debug\Maticsoft.DAL.dll
 C:\Users\Administrator\source\repos\dev\DAL\obj\Debug\Maticsoft.DAL.pdb
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\Maticsoft.DAL.dll
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\Maticsoft.DAL.pdb
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\Maticsoft.Common.dll
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\Maticsoft.Model.dll
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\System.Data.SQLite.dll
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\DevNew\DAL\bin\Debug\Maticsoft.Model.pdb
+C:\Users\Administrator\Desktop\DevNew\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\DevNew\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DevNew\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Administrator\Desktop\DevNew\DAL\obj\Debug\Maticsoft.DAL.dll
+C:\Users\Administrator\Desktop\DevNew\DAL\obj\Debug\Maticsoft.DAL.pdb
