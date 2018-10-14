@@ -46,21 +46,27 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Uvip(");
-			strSql.Append("Uname,Utel,Ucode,Uads,Usex)");
+			strSql.Append("Uname,Utel,Ucode,Uads,Usex,UchName,UbirTime,Uwx)");
 			strSql.Append(" values (");
-			strSql.Append("@Uname,@Utel,@Ucode,@Uads,@Usex)");
+			strSql.Append("@Uname,@Utel,@Ucode,@Uads,@Usex,@UchName,@UbirTime,@Uwx)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Uname", SqlDbType.NVarChar,50),
 					new SqlParameter("@Utel", SqlDbType.NVarChar,50),
 					new SqlParameter("@Ucode", SqlDbType.NVarChar,50),
 					new SqlParameter("@Uads", SqlDbType.NVarChar,150),
-					new SqlParameter("@Usex", SqlDbType.NVarChar,50)};
+					new SqlParameter("@Usex", SqlDbType.NVarChar,50),
+					new SqlParameter("@UchName", SqlDbType.NVarChar,50),
+					new SqlParameter("@UbirTime", SqlDbType.DateTime),
+					new SqlParameter("@Uwx", SqlDbType.NVarChar,150)};
 			parameters[0].Value = model.Uname;
 			parameters[1].Value = model.Utel;
 			parameters[2].Value = model.Ucode;
 			parameters[3].Value = model.Uads;
 			parameters[4].Value = model.Usex;
+			parameters[5].Value = model.UchName;
+			parameters[6].Value = model.UbirTime;
+			parameters[7].Value = model.Uwx;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -83,7 +89,10 @@ namespace Maticsoft.DAL
 			strSql.Append("Utel=@Utel,");
 			strSql.Append("Ucode=@Ucode,");
 			strSql.Append("Uads=@Uads,");
-			strSql.Append("Usex=@Usex");
+			strSql.Append("Usex=@Usex,");
+			strSql.Append("UchName=@UchName,");
+			strSql.Append("UbirTime=@UbirTime,");
+			strSql.Append("Uwx=@Uwx");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Uname", SqlDbType.NVarChar,50),
@@ -91,13 +100,19 @@ namespace Maticsoft.DAL
 					new SqlParameter("@Ucode", SqlDbType.NVarChar,50),
 					new SqlParameter("@Uads", SqlDbType.NVarChar,150),
 					new SqlParameter("@Usex", SqlDbType.NVarChar,50),
+					new SqlParameter("@UchName", SqlDbType.NVarChar,50),
+					new SqlParameter("@UbirTime", SqlDbType.DateTime),
+					new SqlParameter("@Uwx", SqlDbType.NVarChar,150),
 					new SqlParameter("@Id", SqlDbType.Int,4)};
 			parameters[0].Value = model.Uname;
 			parameters[1].Value = model.Utel;
 			parameters[2].Value = model.Ucode;
 			parameters[3].Value = model.Uads;
 			parameters[4].Value = model.Usex;
-			parameters[5].Value = model.Id;
+			parameters[5].Value = model.UchName;
+			parameters[6].Value = model.UbirTime;
+			parameters[7].Value = model.Uwx;
+			parameters[8].Value = model.Id;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -161,7 +176,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 Id,Uname,Utel,Ucode,Uads,Usex from Uvip ");
+			strSql.Append("select  top 1 Id,Uname,Utel,Ucode,Uads,Usex,UchName,UbirTime,Uwx from Uvip ");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Id", SqlDbType.Int,4)
@@ -213,6 +228,18 @@ namespace Maticsoft.DAL
 				{
 					model.Usex=row["Usex"].ToString();
 				}
+				if(row["UchName"]!=null)
+				{
+					model.UchName=row["UchName"].ToString();
+				}
+				if(row["UbirTime"]!=null && row["UbirTime"].ToString()!="")
+				{
+					model.UbirTime=DateTime.Parse(row["UbirTime"].ToString());
+				}
+				if(row["Uwx"]!=null)
+				{
+					model.Uwx=row["Uwx"].ToString();
+				}
 			}
 			return model;
 		}
@@ -223,7 +250,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select Id,Uname,Utel,Ucode,Uads,Usex ");
+			strSql.Append("select Id,Uname,Utel,Ucode,Uads,Usex,UchName,UbirTime,Uwx ");
 			strSql.Append(" FROM Uvip ");
 			if(strWhere.Trim()!="")
 			{
@@ -243,7 +270,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" Id,Uname,Utel,Ucode,Uads,Usex ");
+			strSql.Append(" Id,Uname,Utel,Ucode,Uads,Usex,UchName,UbirTime,Uwx ");
 			strSql.Append(" FROM Uvip ");
 			if(strWhere.Trim()!="")
 			{

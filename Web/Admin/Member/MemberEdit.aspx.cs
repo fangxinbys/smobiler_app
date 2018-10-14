@@ -50,7 +50,11 @@ namespace Maticsoft.Web.Admin.Member
             txtAdr.Text = tUsers.Uads;
             txtTel.Text = tUsers.Utel;
             ddlfatherId.SelectedValue = tUsers.Usex;
-             
+            txtWx.Text = tUsers.Uwx;
+            txtCname.Text = tUsers.UchName;
+            DateTimeCh.SelectedDate = tUsers.UbirTime;
+
+
         }
   
 
@@ -63,11 +67,13 @@ namespace Maticsoft.Web.Admin.Member
                 if (tUsers == null) return;
 
                 tUsers.Uname = txtUsername.Text;
-               
+
                 tUsers.Uads = txtAdr.Text;
                 tUsers.Utel = txtTel.Text;
                 tUsers.Usex = ddlfatherId.SelectedValue;
-
+                tUsers.Uwx = txtWx.Text;
+                tUsers.UchName = txtCname.Text;
+                tUsers.UbirTime = DateTimeCh.SelectedDate;
 
                 if (BLL.Update(tUsers) == true)
                 {
@@ -82,7 +88,9 @@ namespace Maticsoft.Web.Admin.Member
             else
             {
                 Model.Uvip tUsers = new Model.Uvip();
-
+                tUsers.Uwx = txtWx.Text;
+                tUsers.UchName = txtCname.Text;
+                tUsers.UbirTime = DateTimeCh.SelectedDate;
                 tUsers.Uname = txtUsername.Text;
                 tUsers.Ucode = txtCode.Text;
                 tUsers.Uads = txtAdr.Text;
@@ -95,7 +103,7 @@ namespace Maticsoft.Web.Admin.Member
                 }
                 if (BLL.Add(tUsers) >= 1)
                 {
-            
+
                     PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());
                 }
                 else

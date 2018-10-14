@@ -55,14 +55,7 @@ namespace Maticsoft.BLL
 			
 			return dal.Delete(Id);
 		}
-		/// <summary>
-		/// 删除一条数据
-		/// </summary>
-		public bool DeleteList(string Idlist )
-		{
-			return dal.DeleteList(Idlist );
-		}
-
+ 
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>

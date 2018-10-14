@@ -16,6 +16,9 @@ namespace Maticsoft.Model
 		private string _ucode;
 		private string _uads;
 		private string _usex;
+		private string _uchname;
+		private DateTime? _ubirtime;
+		private string _uwx;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -63,6 +66,30 @@ namespace Maticsoft.Model
 		{
 			set{ _usex=value;}
 			get{return _usex;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string UchName
+		{
+			set{ _uchname=value;}
+			get{return _uchname;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public DateTime? UbirTime
+		{
+			set{ _ubirtime=value;}
+			get{return _ubirtime;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string Uwx
+		{
+			set{ _uwx=value;}
+			get{return _uwx;}
 		}
 		#endregion Model
 

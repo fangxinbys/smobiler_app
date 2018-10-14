@@ -56,9 +56,11 @@ namespace Maticsoft.Web.Admin.Member
             }
             else
             {
-                GridDpt.RecordCount = BLL.GetRecordCount(" Uname like '%"+txtValue.Text+ "%' or Ucode like '%" + txtValue.Text + "%' or Utel like '%" + txtValue.Text + "%' ");
+                GridDpt.RecordCount = BLL.GetRecordCount(" Uname like '%"+txtValue.Text+ "%' or Ucode like '%" + txtValue.Text + "%' or Utel like '%" + txtValue.Text
+                    + "%' or UchName like '%" + txtValue.Text + "%' or UbirTime like '%" + txtValue.Text + "%' or Uwx like '%" + txtValue.Text + "%' ");
 
-                DataView view = BLL.GetListByPage(" Uname like '%" + txtValue.Text + "%' or Ucode like '%" + txtValue.Text + "%' or Utel like '%" + txtValue.Text + "%' ", " Id asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                DataView view = BLL.GetListByPage(" Uname like '%" + txtValue.Text + "%' or Ucode like '%" + txtValue.Text + "%' or Utel like '%" + txtValue.Text
+                    + "%' or UchName like '%" + txtValue.Text + "%' or UbirTime like '%" + txtValue.Text + "%' or Uwx like '%" + txtValue.Text + "%' ", " Id asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
                 view.Sort = String.Format("{0} {1}", sortField, sortDirection);
                 GridDpt.DataSource = view.ToTable();
             }
