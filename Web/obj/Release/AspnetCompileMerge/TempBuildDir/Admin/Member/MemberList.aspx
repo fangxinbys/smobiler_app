@@ -55,14 +55,17 @@
 
                                 <f:BoundField DataField="Uname" HeaderText="会员名" ExpandUnusedSpace="true" />
                                 <f:BoundField DataField="Utel" HeaderText="电话" ExpandUnusedSpace="true" />
+                                <f:BoundField DataField="Uwx" HeaderText="微信" ExpandUnusedSpace="true" />
+                                <f:BoundField DataField="UchName" HeaderText="孩子姓名" ExpandUnusedSpace="true" />
+                                <f:BoundField DataField="UbirTime" HeaderText="孩子生日" ExpandUnusedSpace="true" />
                                 <f:BoundField DataField="Uads" HeaderText="地址" ExpandUnusedSpace="true" />
                                 <f:BoundField DataField="Usex" HeaderText="性别" />
-                                   <f:TemplateField   HeaderText="积分" ExpandUnusedSpace="true" >
+                                <f:TemplateField HeaderText="积分" ExpandUnusedSpace="true">
                                     <ItemTemplate>
                                         <asp:Label runat="server" ID="rname" Text='<%# GetFen(Eval("Id").ToString()) %>'></asp:Label>
                                     </ItemTemplate>
                                 </f:TemplateField>
-                              
+
                                 <f:LinkButtonField ColumnID="editFieldPower" TextAlign="Center" Icon="User" ToolTip="积分操作" ConfirmTarget="Top" CommandName="EditPoint" Width="50px" />
                                 <f:LinkButtonField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="信息修改" ConfirmTarget="Top" CommandName="Edit" Width="50px" />
                                 <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除"
@@ -75,9 +78,9 @@
             </Items>
         </f:Panel>
 
-        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"   CloseAction="HideRefresh"
-            EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="620px" Title="会员管理"
-            Height="380px">
+        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close" CloseAction="HidePostBack"
+            EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="700px" Title="会员管理"
+            Height="400px">
         </f:Window>
 
 

@@ -112,6 +112,33 @@ namespace Maticsoft.Web.Admin.Member {
         protected global::FineUIPro.TextBox txtTel;
         
         /// <summary>
+        /// txtWx 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.TextBox txtWx;
+        
+        /// <summary>
+        /// txtCname 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.TextBox txtCname;
+        
+        /// <summary>
+        /// DateTimeCh 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::FineUIPro.DatePicker DateTimeCh;
+        
+        /// <summary>
         /// ddlfatherId 控件。
         /// </summary>
         /// <remarks>

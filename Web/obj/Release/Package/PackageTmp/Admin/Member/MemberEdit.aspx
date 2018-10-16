@@ -50,6 +50,26 @@
                         </f:FormRow>
                         <f:FormRow>
                             <Items>
+                                <f:TextBox ID="txtWx" Label="微信" runat="server" />
+                            </Items>
+
+                        </f:FormRow>
+                        <f:FormRow>
+                            <Items>
+                                <f:TextBox ID="txtCname" Label="孩子姓名" runat="server" />
+                            </Items>
+
+                        </f:FormRow>
+                        <f:FormRow>
+                            <Items>
+                                <f:DatePicker runat="server" DateFormatString="yyyy-MM-dd" Label="生日" EmptyText="请选择日期"
+                                    ID="DateTimeCh">
+                                </f:DatePicker>
+                            </Items>
+
+                        </f:FormRow>
+                        <f:FormRow>
+                            <Items>
                                 <f:DropDownList Label="性别" AutoPostBack="false" runat="server" ID="ddlfatherId">
                                     <f:ListItem Text="男" Value="男" />
                                     <f:ListItem Text="女" Value="女" />

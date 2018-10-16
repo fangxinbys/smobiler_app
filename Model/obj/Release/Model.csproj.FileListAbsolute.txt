@@ -2,5 +2,6 @@ C:\Users\Administrator\Desktop\Matic_Dev\Model\bin\Release\Maticsoft.Model.dll
 C:\Users\Administrator\Desktop\Matic_Dev\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\Matic_Dev\Model\obj\Release\Maticsoft.Model.dll
 C:\Users\Administrator\source\repos\dev\Model\bin\Release\Maticsoft.Model.dll
-C:\Users\Administrator\source\repos\dev\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\source\repos\dev\Model\obj\Release\Maticsoft.Model.dll
+C:\Users\Administrator\source\repos\dev\Model\obj\Release\Model.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\dev\Model\obj\Release\Model.csproj.CoreCompileInputs.cache

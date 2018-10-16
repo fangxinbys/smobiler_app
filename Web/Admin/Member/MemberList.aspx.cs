@@ -247,5 +247,10 @@ namespace Maticsoft.Web.Admin.Member
         {
             LoadData();
         }
+
+        protected void btnRe_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
     }
 }
