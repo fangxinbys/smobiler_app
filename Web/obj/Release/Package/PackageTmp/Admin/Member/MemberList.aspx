@@ -44,6 +44,7 @@
                                     <Items>
                                         <f:ToolbarFill ID="ToolbarFill1" runat="server">
                                         </f:ToolbarFill>
+                                        <f:Button ID="btnRe" runat="server" Icon="Reload" Text="刷新" OnClick="btnRe_Click"></f:Button>
                                         <f:Button ID="btnNew" runat="server" Icon="Add" Text="添加会员" OnClick="btnNew_Click">
                                         </f:Button>
                                     </Items>
@@ -78,7 +79,7 @@
             </Items>
         </f:Panel>
 
-        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close" CloseAction="HidePostBack"
+        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"
             EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="700px" Title="会员管理"
             Height="400px">
         </f:Window>

@@ -32,7 +32,7 @@ namespace Maticsoft.Web.Admin.Powers
             if (e.EventArgument == "Confirm_OK")
             {
                 if (TreePower.SelectedNodeID == "")
-                    return;
+                { Alert.ShowInTop("该项操作未执行，因未选权限！"); return; }
                 BLL.tPower bll = new BLL.tPower();
 
                 if (bll.Delete(int.Parse(TreePower.SelectedNodeID)))

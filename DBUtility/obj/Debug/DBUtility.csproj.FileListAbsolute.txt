@@ -30,3 +30,4 @@ C:\Users\Administrator\Desktop\DevNew\DBUtility\obj\Debug\DBUtility.csproj.CoreC
 C:\Users\Administrator\Desktop\DevNew\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\Administrator\Desktop\DevNew\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
 C:\Users\Administrator\Desktop\DevNew\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\source\repos\dev\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
