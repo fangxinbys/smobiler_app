@@ -35,21 +35,18 @@
                     </Items>
                 </f:Panel>
                 <f:Panel runat="server" ID="panel3" RegionPosition="Left" RegionSplit="true" EnableCollapse="true"
-                    Width="230px" Title="3.权限设置" ShowBorder="true" ShowHeader="true" AutoScroll="true"
+                    Width="230px" Title="3.权限列表" ShowBorder="true" ShowHeader="true" AutoScroll="true"
                     BodyPadding="10px">
 
                     <Items>
                         <f:Tree ID="TreePower" IsFluid="true" CssClass="blockpanel" ShowHeader="false" EnableMultiSelect="true" OnNodeCheck="TreePower_NodeCheck"
-                            EnableCollapse="false" runat="server" ShowBorder="false"  >
+                            EnableCollapse="false" runat="server" ShowBorder="false">
                         </f:Tree>
                     </Items>
                 </f:Panel>
                 <f:Panel runat="server" ID="panelCenterRegion" RegionPosition="Center"
                     Title="" ShowBorder="true" ShowHeader="true" BodyPadding="10px">
                     <Items>
-                        <f:Button ID="btnDel" runat="server" Icon="Delete" Text="删除所选权限【单选】" EnablePostBack="false">
-                        </f:Button>
-
                     </Items>
 
                 </f:Panel>
@@ -57,14 +54,15 @@
             <Toolbars>
                 <f:Toolbar ID="Toolbar1" Position="Top" runat="server">
                     <Items>
-                        <f:ToolbarFill ID="ToolbarFill1" runat="server">
+
+                       
+                        <f:ToolbarFill ID="ToolbarFill2" runat="server">
                         </f:ToolbarFill>
-                        <f:TextBox ID="txtName" Label="名称" runat="server" />
-
-
+                        <f:TextBox ID="txtName" Label="名称" runat="server" /> 
                         <f:Button ID="btnNew" runat="server" Icon="Add" Text="添加权限" OnClick="btnNew_Click">
                         </f:Button>
-
+                         <f:Button ID="btnDel" runat="server" Icon="Delete" Text="删除权限" EnablePostBack="false" CssStyle="margin-left:10px;">
+                        </f:Button>
 
                     </Items>
                 </f:Toolbar>

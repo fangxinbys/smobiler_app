@@ -9,4 +9,6 @@ C:\Users\Administrator\source\repos\dev\Web\bin\System.Data.SQLite.dll
 C:\Users\Administrator\source\repos\dev\Web\bin\MySql.Data.dll
 C:\Users\Administrator\source\repos\dev\Web\obj\Release\Maticsoft.Web.dll
 C:\Users\Administrator\source\repos\dev\Web\obj\Release\Maticsoft.Web.pdb
-C:\Users\Administrator\source\repos\dev\Web\obj\Release\Web.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\source\repos\dev\Web\obj\Release\Web.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\dev\Web\obj\Release\Web.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\dev\Web\obj\Release\Web.csproj.CopyComplete
