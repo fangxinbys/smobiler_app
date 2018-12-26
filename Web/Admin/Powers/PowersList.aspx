@@ -40,7 +40,7 @@
 
                     <Items>
                         <f:Tree ID="TreePower" IsFluid="true" CssClass="blockpanel" ShowHeader="false" EnableMultiSelect="true" OnNodeCheck="TreePower_NodeCheck"
-                            EnableCollapse="false" runat="server" ShowBorder="false">
+                            EnableCollapse="false" runat="server" ShowBorder="false" EnableCheckBox="true">
                         </f:Tree>
                     </Items>
                 </f:Panel>

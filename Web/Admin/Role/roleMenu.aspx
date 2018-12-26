@@ -28,7 +28,7 @@
                     </Toolbars>
                     <Items>
                         <f:Tree ID="TreeDpt" IsFluid="true" CssClass="blockpanel" ShowHeader="false" EnableMultiSelect="true" OnNodeCheck="TreeDpt_NodeCheck"
-                            EnableCollapse="false" runat="server">
+                            EnableCollapse="false" runat="server" EnableCheckBox="true">
                         </f:Tree>
                     </Items>
                 </f:Panel>

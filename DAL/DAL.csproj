@@ -121,6 +121,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="S_Onlines.cs" />
+    <Compile Include="tBom.cs" />
     <Compile Include="tDepartMent.cs" />
     <Compile Include="tMenu.cs" />
     <Compile Include="tPower.cs" />
