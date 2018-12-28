@@ -29,15 +29,7 @@ namespace Maticsoft.Web.Admin.Bom
         {
             TreeBom.Nodes.Clear();
             BLL.tBom BLL = new BLL.tBom();
-            DataSet ds = DbHelperSQL.Query(@"with  temp(id,parent,component)
-as
-(
-    select id, parent, component from  tBom
-    where id = 26030
-    union all
-    select t.id, t.parent, t.component from tBom t, temp
-    where temp.component = t.parent
-) select* from temp");
+            DataSet ds = DbHelperSQL.Query(@"");//
             ds.Relations.Add("TreeRelation", ds.Tables[0].Columns["component"], ds.Tables[0].Columns["parent"], false);
 
             foreach (DataRow row in ds.Tables[0].Rows)
