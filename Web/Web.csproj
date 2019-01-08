@@ -1849,6 +1849,7 @@
     <Content Include="res\images\logo\logo_old.gif" />
     <Content Include="res\images\logo\logo_small.png" />
     <Content Include="res\images\my_face_80.jpg" />
+    <Content Include="res\images\my_logo.png" />
     <Content Include="res\images\themes\black_tie.png" />
     <Content Include="res\images\themes\blitzer.png" />
     <Content Include="res\images\themes\bootstrap_pure.png" />

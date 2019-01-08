@@ -16,6 +16,13 @@
     vertical-align: middle;
 }
 
+#header  img {
+  
+   width:150px;
+   height:35px;
+   margin-left:5px;
+}
+
 
 
 #header .f-btn {
