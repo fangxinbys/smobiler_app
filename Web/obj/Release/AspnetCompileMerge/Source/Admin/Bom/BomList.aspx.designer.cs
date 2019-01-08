@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Maticsoft.Web.Admin.Role {
+namespace Maticsoft.Web.Admin.Bom {
     
     
-    public partial class roleMenu {
+    public partial class BomList {
         
         /// <summary>
         /// form1 控件。
@@ -49,39 +49,30 @@ namespace Maticsoft.Web.Admin.Role {
         protected global::FineUIPro.Panel panelLeftRegion;
         
         /// <summary>
-        /// Toolbar2 控件。
+        /// TreeBom 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Toolbar Toolbar2;
+        protected global::FineUIPro.Tree TreeBom;
         
         /// <summary>
-        /// btnClose 控件。
+        /// panelCenterRegion 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Button btnClose;
+        protected global::FineUIPro.Panel panelCenterRegion;
         
         /// <summary>
-        /// btnSave 控件。
+        /// Toolbar1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Button btnSave;
-        
-        /// <summary>
-        /// TreeDpt 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUIPro.Tree TreeDpt;
+        protected global::FineUIPro.Toolbar Toolbar1;
     }
 }

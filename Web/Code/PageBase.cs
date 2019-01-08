@@ -48,7 +48,19 @@ namespace Web
                 }
                 else
                 {
-                    pm.Theme = (Theme)Enum.Parse(typeof(Theme), "Blitzer", true);
+                    string themeValue = "Blitzer";
+
+                    // 是否为内置主题
+                    if (IsSystemTheme(themeValue))
+                    {
+                        pm.CustomTheme = String.Empty;
+                        pm.Theme = (Theme)Enum.Parse(typeof(Theme), themeValue, true);
+                    }
+                    else
+                    {
+                        pm.CustomTheme = themeValue;
+                    }
+                 
                 }
 
                 if (Constants.IS_BASE)

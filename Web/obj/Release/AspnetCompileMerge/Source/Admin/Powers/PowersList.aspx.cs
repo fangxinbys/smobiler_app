@@ -16,7 +16,7 @@ namespace Maticsoft.Web.Admin.Powers
         {
             if (!IsPostBack)
             {
-                BindTree();//绑定部门树
+                BindTree();//绑定部门
                 LoadData();
                 LoadPowerData();
 

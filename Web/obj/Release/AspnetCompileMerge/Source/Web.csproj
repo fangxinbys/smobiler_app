@@ -93,6 +93,7 @@
     <Content Include="Admin\Menu\MenuEdit.aspx" />
     <Content Include="Admin\Menu\MenuList.aspx" />
     <Content Include="Admin\Menu\selectMenu.aspx" />
+    <Content Include="Admin\Bom\BomList.aspx" />
     <Content Include="Admin\Powers\PowersList.aspx" />
     <Content Include="Admin\Role\RoleEdit.aspx" />
     <Content Include="Admin\Role\RoleList.aspx" />
@@ -2379,6 +2380,13 @@
     </Compile>
     <Compile Include="Admin\Menu\selectMenu.aspx.designer.cs">
       <DependentUpon>selectMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Bom\BomList.aspx.cs">
+      <DependentUpon>BomList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bom\BomList.aspx.designer.cs">
+      <DependentUpon>BomList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Powers\PowersList.aspx.cs">
       <DependentUpon>PowersList.aspx</DependentUpon>

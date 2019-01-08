@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using FineUIPro;
+using Newtonsoft.Json;
+using System;
+using System.Text;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Text;
-using System.Data;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.IO;
-
-using FineUIPro;
-using AspNet = System.Web.UI.WebControls;
-using System.Web.Security;
-using System.Web.UI.HtmlControls;
-using Maticsoft.Web.Code;
 
 
 namespace Web
@@ -55,6 +45,22 @@ namespace Web
                     {
                         pm.CustomTheme = themeValue;
                     }
+                }
+                else
+                {
+                    string themeValue = "Blitzer";
+
+                    // 是否为内置主题
+                    if (IsSystemTheme(themeValue))
+                    {
+                        pm.CustomTheme = String.Empty;
+                        pm.Theme = (Theme)Enum.Parse(typeof(Theme), themeValue, true);
+                    }
+                    else
+                    {
+                        pm.CustomTheme = themeValue;
+                    }
+                 
                 }
 
                 if (Constants.IS_BASE)

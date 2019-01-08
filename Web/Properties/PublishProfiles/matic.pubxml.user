@@ -45,6 +45,9 @@
     <File Include="Admin/ArtType/ArtTypeList.aspx.designer.cs">
       <publishTime>05/30/2018 22:10:21</publishTime>
     </File>
+    <File Include="Admin/Bom/BomList.aspx">
+      <publishTime>01/08/2019 11:31:27</publishTime>
+    </File>
     <File Include="Admin/DptMent/DptMentEdit.aspx">
       <publishTime>09/07/2018 16:43:35</publishTime>
     </File>
@@ -208,7 +211,7 @@
       <publishTime>06/01/2018 20:26:42</publishTime>
     </File>
     <File Include="Admin/Powers/PowersList.aspx">
-      <publishTime>12/07/2018 16:13:36</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="Admin/Role/RoleEdit.aspx">
       <publishTime>09/07/2018 16:43:35</publishTime>
@@ -229,7 +232,7 @@
       <publishTime>05/29/2018 19:57:48</publishTime>
     </File>
     <File Include="Admin/Role/roleMenu.aspx">
-      <publishTime>09/07/2018 16:43:35</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="Admin/Role/roleMenu.aspx.cs">
       <publishTime>05/29/2018 23:24:21</publishTime>
@@ -3991,40 +3994,40 @@
       <publishTime>12/03/2018 10:06:02</publishTime>
     </File>
     <File Include="bin/Maticsoft.BLL.dll">
-      <publishTime>12/10/2018 14:08:31</publishTime>
+      <publishTime>01/08/2019 11:45:36</publishTime>
     </File>
     <File Include="bin/Maticsoft.BLL.pdb">
-      <publishTime>12/10/2018 15:23:47</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="bin/Maticsoft.Common.dll">
       <publishTime>09/07/2018 16:43:37</publishTime>
     </File>
     <File Include="bin/Maticsoft.DAL.dll">
-      <publishTime>12/10/2018 14:08:30</publishTime>
+      <publishTime>01/08/2019 11:45:36</publishTime>
     </File>
     <File Include="bin/Maticsoft.DAL.pdb">
-      <publishTime>12/10/2018 15:23:47</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="bin/Maticsoft.DBUtility.dll">
-      <publishTime>12/10/2018 14:08:30</publishTime>
+      <publishTime>01/08/2019 11:45:35</publishTime>
     </File>
     <File Include="bin/Maticsoft.DBUtility.pdb">
-      <publishTime>12/10/2018 15:23:45</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="bin/Maticsoft.Model.dll">
-      <publishTime>12/10/2018 14:08:29</publishTime>
+      <publishTime>01/08/2019 11:45:35</publishTime>
     </File>
     <File Include="bin/Maticsoft.Model.pdb">
-      <publishTime>12/10/2018 15:23:45</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="bin/Maticsoft.Web.dll">
-      <publishTime>12/10/2018 15:37:14</publishTime>
+      <publishTime>01/08/2019 12:52:53</publishTime>
     </File>
     <File Include="bin/Maticsoft.Web.dll.config">
-      <publishTime>10/15/2018 09:01:02</publishTime>
+      <publishTime>01/08/2019 12:39:05</publishTime>
     </File>
     <File Include="bin/Maticsoft.Web.pdb">
-      <publishTime>12/10/2018 15:37:14</publishTime>
+      <publishTime>01/08/2019 12:52:53</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.UI.WebControls.dll">
       <publishTime>09/07/2018 16:43:37</publishTime>
@@ -4063,7 +4066,7 @@
       <publishTime>06/17/2018 09:42:35</publishTime>
     </File>
     <File Include="common/themes.aspx">
-      <publishTime>09/07/2018 16:43:37</publishTime>
+      <publishTime>01/08/2019 11:44:19</publishTime>
     </File>
     <File Include="common/themes.aspx.cs">
       <publishTime>05/23/2018 17:14:59</publishTime>
@@ -4081,7 +4084,7 @@
       <publishTime>09/07/2018 16:43:37</publishTime>
     </File>
     <File Include="index.aspx">
-      <publishTime>10/12/2018 11:07:08</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="index.aspx.cs">
       <publishTime>06/17/2018 09:39:00</publishTime>
@@ -4090,7 +4093,7 @@
       <publishTime>06/17/2018 09:26:18</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>12/10/2018 15:37:24</publishTime>
+      <publishTime>01/08/2019 12:53:09</publishTime>
     </File>
     <File Include="Properties/AssemblyInfo.cs">
       <publishTime>05/23/2018 17:09:58</publishTime>
@@ -4099,7 +4102,7 @@
       <publishTime>09/07/2018 16:43:35</publishTime>
     </File>
     <File Include="Properties/PublishProfiles/matic.pubxml.user">
-      <publishTime>12/10/2018 14:09:59</publishTime>
+      <publishTime>01/08/2019 11:46:44</publishTime>
     </File>
     <File Include="Properties/Settings.settings">
       <publishTime>09/07/2018 16:43:35</publishTime>
@@ -10714,13 +10717,13 @@
       <publishTime>09/07/2018 16:43:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/15/2018 09:01:02</publishTime>
+      <publishTime>01/08/2019 12:39:05</publishTime>
     </File>
     <File Include="Web.csproj">
-      <publishTime>12/10/2018 15:23:44</publishTime>
+      <publishTime>01/08/2019 11:31:27</publishTime>
     </File>
     <File Include="Web.csproj.user">
-      <publishTime>12/10/2018 15:37:13</publishTime>
+      <publishTime>01/08/2019 12:52:49</publishTime>
     </File>
   </ItemGroup>
 </Project>
