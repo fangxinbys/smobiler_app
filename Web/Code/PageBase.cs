@@ -46,6 +46,10 @@ namespace Web
                         pm.CustomTheme = themeValue;
                     }
                 }
+                else
+                {
+                    pm.Theme = (Theme)Enum.Parse(typeof(Theme), "Blitzer", true);
+                }
 
                 if (Constants.IS_BASE)
                 {

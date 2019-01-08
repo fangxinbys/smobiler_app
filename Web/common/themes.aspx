@@ -414,7 +414,7 @@
             // 初始化
             var themeName = F.cookie('Theme_Pro');
             if (!themeName) {
-                themeName = 'pure_green';
+                themeName = 'Blitzer';
             }
             themeName = themeName.toLowerCase();
             $('#themecontainer li').each(function () {
