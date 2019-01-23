@@ -38,7 +38,7 @@ namespace Web
                 }
                 else
                 {
-                   themeValue = "Blitzer"; //设置默认主题
+                   themeValue = "Blitzer"; //设置默认主题，这里可以写在配置文件里面
                 }
                 // 是否为内置主题
                 if (IsSystemTheme(themeValue))

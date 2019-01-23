@@ -18,12 +18,12 @@
                         <table>
                             <tr>
                                 <td>
-                                    <%--
+                                    
                                          <f:Button runat="server" CssClass="icononlyaction" ID="btnHomePage" IconAlign="Top" IconFont="_Home"
                                           EnablePostBack="false" EnableDefaultState="false" EnableDefaultCorner="false">
                                          </f:Button>
-                                    --%>
-                                    <img src="../res/images/my_logo.png" class="img" />
+                                    
+                                    
                                     <a class="logo" href="./Main.aspx"><%=(model==null?"":model.WebName) %>
                                     </a>
                                 </td>
