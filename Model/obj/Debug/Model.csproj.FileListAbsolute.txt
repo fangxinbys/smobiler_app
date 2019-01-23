@@ -18,3 +18,9 @@ C:\Users\Administrator\Desktop\DevNew\Model\obj\Debug\Model.csproj.CoreCompileIn
 C:\Users\Administrator\Desktop\DevNew\Model\obj\Debug\Maticsoft.Model.dll
 C:\Users\Administrator\Desktop\DevNew\Model\obj\Debug\Maticsoft.Model.pdb
 C:\Users\Administrator\source\repos\dev\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\bin\Debug\Maticsoft.Model.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\bin\Debug\Maticsoft.Model.pdb
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Debug\Maticsoft.Model.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Debug\Maticsoft.Model.pdb
