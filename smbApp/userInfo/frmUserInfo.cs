@@ -20,7 +20,7 @@ namespace smbApp.userInfo
         private void btnReturn_Press(object sender, EventArgs e)
         {
 
-            frmAppMain frm = new frmAppMain();
+            frmMenuMain frm = new frmMenuMain();
             Show(frm);
         }
 

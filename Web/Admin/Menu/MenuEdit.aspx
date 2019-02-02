@@ -62,6 +62,9 @@
                                 <f:DropDownList runat="server" ID="drp_tb" Label="菜单图标" EnableEdit="true">
                                 </f:DropDownList>
                             </Items>
+                             <Items>
+                                <f:TextBox ID="txtAppIcon" Label="App图标" EmptyText="不含图片后缀" runat="server" />
+                            </Items>
                         </f:FormRow>
 
                         <f:FormRow runat="server">

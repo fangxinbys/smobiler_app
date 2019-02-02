@@ -19,7 +19,7 @@ namespace Maticsoft.DBUtility
         /// <returns></returns>
 		public static string Encrypt(string Text) 
 		{
-            return Encrypt(Text, "ilove");
+            return Encrypt(Text,"");
 		}
 		/// <summary> 
 		/// 加密数据 
@@ -32,8 +32,8 @@ namespace Maticsoft.DBUtility
 			DESCryptoServiceProvider des = new DESCryptoServiceProvider(); 
 			byte[] inputByteArray; 
 			inputByteArray=Encoding.Default.GetBytes(Text); 
-			des.Key = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, "md5").Substring(0, 8)); 
-			des.IV = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(sKey, "md5").Substring(0, 8)); 
+			des.Key = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile("ilove", "md5").Substring(0, 8)); 
+			des.IV = ASCIIEncoding.ASCII.GetBytes(System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile("ilove", "md5").Substring(0, 8)); 
 			System.IO.MemoryStream ms=new System.IO.MemoryStream(); 
 			CryptoStream cs=new CryptoStream(ms,des.CreateEncryptor(),CryptoStreamMode.Write); 
 			cs.Write(inputByteArray,0,inputByteArray.Length); 

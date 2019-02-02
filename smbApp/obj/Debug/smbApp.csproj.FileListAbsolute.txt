@@ -21,12 +21,11 @@ C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Data.SQL
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\MySql.Data.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.DBUtility.pdb
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmLogin.resources
-C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmAppMain.resources
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.userInfo.frmUserInfo.resources
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.BLL.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.DAL.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Model.dll
-C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Common.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.BLL.pdb
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.DAL.pdb
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Model.pdb
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmMenuMain.resources

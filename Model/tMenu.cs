@@ -14,9 +14,10 @@ namespace Maticsoft.Model
 		private string _mname;
 		private string _murl;
 		private int? _msort;
-        private int? _mfaherid;
+		private int? _mfaherid;
 		private string _micon;
 		private string _mremark;
+		private string _mappicon;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -52,7 +53,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-        public int? mFaherId
+		public int? mFaherId
 		{
 			set{ _mfaherid=value;}
 			get{return _mfaherid;}
@@ -72,6 +73,14 @@ namespace Maticsoft.Model
 		{
 			set{ _mremark=value;}
 			get{return _mremark;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string mAppIcon
+		{
+			set{ _mappicon=value;}
+			get{return _mappicon;}
 		}
 		#endregion Model
 

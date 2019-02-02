@@ -5,7 +5,7 @@ using System.Text;
 using Smobiler.Core;
 using Smobiler.Core.Controls;
 
-
+using Maticsoft.Common;
 namespace smbApp
 {
     partial class frmLogin : Smobiler.Core.Controls.MobileForm
@@ -23,6 +23,7 @@ namespace smbApp
         private void frmLogon_Load(object sender, EventArgs e)
         {
          
+
             //读取用户名
             ReadClientData(MobileServer.ServerID + "user", (object sender1, ClientDataResultHandlerArgs e1) =>
             {
@@ -75,12 +76,12 @@ namespace smbApp
 
                 Maticsoft.BLL.tUsers bll = new Maticsoft.BLL.tUsers();
                 List<Maticsoft.Model.tUsers> userList = bll.GetModelList("usersName='" + userID + "'"); 
-                Maticsoft.Model.tUsers user = userList.Count == 0 ? null : userList[0];
+                Maticsoft.Model.tUsers user = userList.Count == 1 ? userList[0] : null;
 
                 if (user != null)
                 {
-                    string str = Maticsoft.DBUtility.DESEncrypt.Encrypt(PassWord);
-                    if (user.usersPwd == Maticsoft.DBUtility.DESEncrypt.Encrypt(PassWord))
+                    string strPwd =Maticsoft.Common.DEncrypt.DESEncrypt.Encrypt(PassWord);
+                    if (user.usersPwd == strPwd)
                     {
                         if (user.Flag == 0)
                         {
@@ -89,8 +90,8 @@ namespace smbApp
                         }
                         else
                         {
-                            Client.Session["UserID"] = userID;
-                            frmAppMain frm = new frmAppMain();
+                            Client.Session["UserModel"] = userList[0];
+                            frmMenuMain frm = new frmMenuMain();
                             Show(frm);
                             return;
                         }
@@ -117,7 +118,6 @@ namespace smbApp
                 Toast(ex.Message);
             }
         }
-
-       
+ 
     }
 }

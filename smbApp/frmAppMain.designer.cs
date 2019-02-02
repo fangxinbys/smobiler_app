@@ -2,7 +2,7 @@
 using Smobiler.Core;
 namespace smbApp
 {
-    partial class frmAppMain : Smobiler.Core.Controls.MobileForm
+    partial class frmMenuMain : Smobiler.Core.Controls.MobileForm
     {
         #region "SmobilerForm generated code "
 
@@ -22,8 +22,10 @@ namespace smbApp
             this.panTop = new Smobiler.Core.Controls.Panel();
             this.panNav = new Smobiler.Core.Controls.Panel();
             this.imgBtnNav = new Smobiler.Core.Controls.ImageButton();
-            this.iconMenuView = new Smobiler.Core.Controls.IconMenuView();
             this.labTitle = new Smobiler.Core.Controls.Label();
+            this.panelBanner = new Smobiler.Core.Controls.Panel();
+            this.panelMenu = new Smobiler.Core.Controls.Panel();
+            this.iconMenuView = new Smobiler.Core.Controls.IconMenuView();
             // 
             // panTop
             // 
@@ -61,13 +63,6 @@ namespace smbApp
             this.imgBtnNav.Size = new System.Drawing.Size(100, 30);
             this.imgBtnNav.Press += new System.EventHandler(this.imgBtnNav_Press);
             // 
-            // iconMenuView
-            // 
-            this.iconMenuView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconMenuView.Location = new System.Drawing.Point(0, 60);
-            this.iconMenuView.Name = "iconMenuView";
-            this.iconMenuView.Size = new System.Drawing.Size(300, 300);
-            // 
             // labTitle
             // 
             this.labTitle.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -80,13 +75,42 @@ namespace smbApp
             this.labTitle.Size = new System.Drawing.Size(100, 35);
             this.labTitle.Text = "功能列表";
             // 
+            // panelBanner
+            // 
+            this.panelBanner.BackColor = System.Drawing.Color.Maroon;
+            this.panelBanner.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBanner.Location = new System.Drawing.Point(108, 113);
+            this.panelBanner.Name = "panelBanner";
+            this.panelBanner.Size = new System.Drawing.Size(300, 116);
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.iconMenuView});
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMenu.Location = new System.Drawing.Point(108, 113);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.ShowVerticalScrollBar = false;
+            this.panelMenu.Size = new System.Drawing.Size(300, 100);
+            // 
+            // iconMenuView
+            // 
+            this.iconMenuView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconMenuView.GridLines = true;
+            this.iconMenuView.Location = new System.Drawing.Point(156, 70);
+            this.iconMenuView.Name = "iconMenuView";
+            this.iconMenuView.Size = new System.Drawing.Size(300, 300);
+            this.iconMenuView.ItemPress += new Smobiler.Core.Controls.IconMenuViewItemPressClickHandler(this.iconMenuView_ItemPress);
+            // 
             // frmMenuMain
             // 
             this.BackColor = System.Drawing.Color.White;
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panTop,
-            this.iconMenuView});
+            this.panelBanner,
+            this.panelMenu});
             this.DrawerWidth = 200;
+            this.Load += new System.EventHandler(this.frmMenuMain_Load);
             this.Name = "frmMenuMain";
 
         }
@@ -94,8 +118,10 @@ namespace smbApp
 
         private Smobiler.Core.Controls.Panel panTop;
         private Smobiler.Core.Controls.Panel panNav;
-        private Smobiler.Core.Controls.IconMenuView iconMenuView;
         private Smobiler.Core.Controls.ImageButton imgBtnNav;
         private Smobiler.Core.Controls.Label labTitle;
+        private Smobiler.Core.Controls.Panel panelBanner;
+        private Smobiler.Core.Controls.Panel panelMenu;
+        private Smobiler.Core.Controls.IconMenuView iconMenuView;
     }
 }

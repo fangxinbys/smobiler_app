@@ -41,6 +41,10 @@
     <ApplicationIcon>Smobiler_128.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Maticsoft.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Maticsoft.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Smobiler.Utility" />
     <Reference Include="Smobiler.Core" />
     <Reference Include="Smobiler.Core.Controls" />
@@ -48,6 +52,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />

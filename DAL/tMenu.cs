@@ -46,23 +46,25 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into tMenu(");
-			strSql.Append("mName,mUrl,mSort,mFaherId,mIcon,mRemark)");
+			strSql.Append("mName,mUrl,mSort,mFaherId,mIcon,mRemark,mAppIcon)");
 			strSql.Append(" values (");
-			strSql.Append("@mName,@mUrl,@mSort,@mFaherId,@mIcon,@mRemark)");
+			strSql.Append("@mName,@mUrl,@mSort,@mFaherId,@mIcon,@mRemark,@mAppIcon)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@mName", SqlDbType.VarChar,50),
 					new SqlParameter("@mUrl", SqlDbType.VarChar,250),
 					new SqlParameter("@mSort", SqlDbType.Int,4),
 					new SqlParameter("@mFaherId", SqlDbType.Int,4),
-					new SqlParameter("@mIcon", SqlDbType.VarChar,50),
-					new SqlParameter("@mRemark", SqlDbType.VarChar,50)};
+					new SqlParameter("@mIcon", SqlDbType.VarChar,150),
+					new SqlParameter("@mRemark", SqlDbType.VarChar,150),
+					new SqlParameter("@mAppIcon", SqlDbType.VarChar,150)};
 			parameters[0].Value = model.mName;
 			parameters[1].Value = model.mUrl;
 			parameters[2].Value = model.mSort;
 			parameters[3].Value = model.mFaherId;
 			parameters[4].Value = model.mIcon;
 			parameters[5].Value = model.mRemark;
+			parameters[6].Value = model.mAppIcon;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -86,15 +88,17 @@ namespace Maticsoft.DAL
 			strSql.Append("mSort=@mSort,");
 			strSql.Append("mFaherId=@mFaherId,");
 			strSql.Append("mIcon=@mIcon,");
-			strSql.Append("mRemark=@mRemark");
+			strSql.Append("mRemark=@mRemark,");
+			strSql.Append("mAppIcon=@mAppIcon");
 			strSql.Append(" where mCode=@mCode");
 			SqlParameter[] parameters = {
 					new SqlParameter("@mName", SqlDbType.VarChar,50),
 					new SqlParameter("@mUrl", SqlDbType.VarChar,250),
 					new SqlParameter("@mSort", SqlDbType.Int,4),
 					new SqlParameter("@mFaherId", SqlDbType.Int,4),
-					new SqlParameter("@mIcon", SqlDbType.VarChar,50),
-					new SqlParameter("@mRemark", SqlDbType.VarChar,50),
+					new SqlParameter("@mIcon", SqlDbType.VarChar,150),
+					new SqlParameter("@mRemark", SqlDbType.VarChar,150),
+					new SqlParameter("@mAppIcon", SqlDbType.VarChar,150),
 					new SqlParameter("@mCode", SqlDbType.Int,4)};
 			parameters[0].Value = model.mName;
 			parameters[1].Value = model.mUrl;
@@ -102,7 +106,8 @@ namespace Maticsoft.DAL
 			parameters[3].Value = model.mFaherId;
 			parameters[4].Value = model.mIcon;
 			parameters[5].Value = model.mRemark;
-			parameters[6].Value = model.mCode;
+			parameters[6].Value = model.mAppIcon;
+			parameters[7].Value = model.mCode;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -166,7 +171,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 mCode,mName,mUrl,mSort,mFaherId,mIcon,mRemark from tMenu ");
+			strSql.Append("select  top 1 mCode,mName,mUrl,mSort,mFaherId,mIcon,mRemark,mAppIcon from tMenu ");
 			strSql.Append(" where mCode=@mCode");
 			SqlParameter[] parameters = {
 					new SqlParameter("@mCode", SqlDbType.Int,4)
@@ -222,6 +227,10 @@ namespace Maticsoft.DAL
 				{
 					model.mRemark=row["mRemark"].ToString();
 				}
+				if(row["mAppIcon"]!=null)
+				{
+					model.mAppIcon=row["mAppIcon"].ToString();
+				}
 			}
 			return model;
 		}
@@ -232,7 +241,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select mCode,mName,mUrl,mSort,mFaherId,mIcon,mRemark ");
+			strSql.Append("select mCode,mName,mUrl,mSort,mFaherId,mIcon,mRemark,mAppIcon ");
 			strSql.Append(" FROM tMenu ");
 			if(strWhere.Trim()!="")
 			{
@@ -252,7 +261,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" mCode,mName,mUrl,mSort,mFaherId,mIcon,mRemark ");
+			strSql.Append(" mCode,mName,mUrl,mSort,mFaherId,mIcon,mRemark,mAppIcon ");
 			strSql.Append(" FROM tMenu ");
 			if(strWhere.Trim()!="")
 			{
