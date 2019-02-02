@@ -123,6 +123,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DESEncrypt.cs" />
+    <Compile Include="HttpHelper.cs" />
     <Compile Include="OracleHelper.cs">
       <SubType>Code</SubType>
     </Compile>

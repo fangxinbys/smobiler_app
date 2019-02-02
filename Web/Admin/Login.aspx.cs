@@ -68,17 +68,17 @@ namespace Maticsoft.Web.Admin
 
                     if (user != null)
                     {
-           
-                        if (user.usersPwd ==  DESEncrypt.Encrypt(password))
+
+                        if (user.usersPwd == DESEncrypt.Encrypt(password))
                         {
-                            if (user.Flag==0)
+                            if (user.Flag == 0)
                             {
                                 Alert.ShowInTop("用户未启用，请联系管理员！", String.Empty, "top.window.location.reload(false);");
                                 return;
                             }
                             else
                             {
-                               
+
                                 LoginSuccess(user);
 
                                 return;
@@ -86,13 +86,13 @@ namespace Maticsoft.Web.Admin
                         }
                         else
                         {
-                          
+
                             Alert.ShowInTop("用户名或密码错误！", String.Empty, "top.window.location.reload(false);");
                             return;
                         }
                     }
                     else
-                    { 
+                    {
                         Alert.ShowInTop("用户名或密码错误！", String.Empty, "top.window.location.reload(false);");
                         return;
                     }
