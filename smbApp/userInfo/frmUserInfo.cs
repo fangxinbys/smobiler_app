@@ -17,13 +17,7 @@ namespace smbApp.userInfo
 
 
 
-        private void btnReturn_Press(object sender, EventArgs e)
-        {
-
-            frmMenuMain frm = new frmMenuMain();
-            Show(frm);
-        }
-
+      
         private void btnExit_Press(object sender, EventArgs e)
         {
 
@@ -35,6 +29,11 @@ namespace smbApp.userInfo
                   
                 }
             });
+        }
+
+        private void imgBtnNav_Press(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

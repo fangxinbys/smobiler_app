@@ -21,11 +21,11 @@ namespace smbApp.userInfo
         {
             this.panTop = new Smobiler.Core.Controls.Panel();
             this.panNav = new Smobiler.Core.Controls.Panel();
-            this.btnReturn = new Smobiler.Core.Controls.Button();
-            this.panBot = new Smobiler.Core.Controls.Panel();
-            this.btnExit = new Smobiler.Core.Controls.Button();
             this.paneCenter = new Smobiler.Core.Controls.Panel();
             this.labTitle = new Smobiler.Core.Controls.Label();
+            this.panBot = new Smobiler.Core.Controls.Panel();
+            this.btnExit = new Smobiler.Core.Controls.Button();
+            this.imgBtnNav = new Smobiler.Core.Controls.ImageButton();
             // 
             // panTop
             // 
@@ -43,22 +43,32 @@ namespace smbApp.userInfo
             // panNav
             // 
             this.panNav.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.btnReturn});
+            this.imgBtnNav});
             this.panNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.panNav.Location = new System.Drawing.Point(12, 0);
             this.panNav.Name = "panNav";
             this.panNav.Size = new System.Drawing.Size(60, 100);
             // 
-            // btnReturn
+            // paneCenter
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.Maroon;
-            this.btnReturn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReturn.FontSize = 18F;
-            this.btnReturn.Location = new System.Drawing.Point(13, 15);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(100, 30);
-            this.btnReturn.Text = "返回";
-            this.btnReturn.Press += new System.EventHandler(this.btnReturn_Press);
+            this.paneCenter.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.labTitle});
+            this.paneCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneCenter.Location = new System.Drawing.Point(81, 15);
+            this.paneCenter.Name = "paneCenter";
+            this.paneCenter.Size = new System.Drawing.Size(300, 100);
+            // 
+            // labTitle
+            // 
+            this.labTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labTitle.FontSize = 16F;
+            this.labTitle.ForeColor = System.Drawing.Color.White;
+            this.labTitle.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Center;
+            this.labTitle.Location = new System.Drawing.Point(48, 10);
+            this.labTitle.Name = "labTitle";
+            this.labTitle.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 50F, 0F);
+            this.labTitle.Size = new System.Drawing.Size(100, 35);
+            this.labTitle.Text = "个人信息";
             // 
             // panBot
             // 
@@ -84,26 +94,19 @@ namespace smbApp.userInfo
             this.btnExit.Text = "安全退出";
             this.btnExit.Press += new System.EventHandler(this.btnExit_Press);
             // 
-            // paneCenter
+            // imgBtnNav
             // 
-            this.paneCenter.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.labTitle});
-            this.paneCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneCenter.Location = new System.Drawing.Point(81, 15);
-            this.paneCenter.Name = "paneCenter";
-            this.paneCenter.Size = new System.Drawing.Size(300, 100);
-            // 
-            // labTitle
-            // 
-            this.labTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labTitle.FontSize = 16F;
-            this.labTitle.ForeColor = System.Drawing.Color.White;
-            this.labTitle.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.labTitle.Location = new System.Drawing.Point(48, 10);
-            this.labTitle.Name = "labTitle";
-            this.labTitle.Padding = new Smobiler.Core.Controls.Padding(50F, 0F, 0F, 0F);
-            this.labTitle.Size = new System.Drawing.Size(100, 35);
-            this.labTitle.Text = "个人信息";
+            this.imgBtnNav.BackColor = System.Drawing.Color.Maroon;
+            this.imgBtnNav.BorderColor = System.Drawing.Color.Transparent;
+            this.imgBtnNav.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imgBtnNav.ForeColor = System.Drawing.Color.White;
+            this.imgBtnNav.IconColor = System.Drawing.Color.White;
+            this.imgBtnNav.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
+            this.imgBtnNav.Location = new System.Drawing.Point(17, 11);
+            this.imgBtnNav.Name = "imgBtnNav";
+            this.imgBtnNav.ResourceID = "angle-left";
+            this.imgBtnNav.Size = new System.Drawing.Size(100, 30);
+            this.imgBtnNav.Press += new System.EventHandler(this.imgBtnNav_Press);
             // 
             // frmUserInfo
             // 
@@ -118,10 +121,10 @@ namespace smbApp.userInfo
 
         private Smobiler.Core.Controls.Panel panTop;
         private Smobiler.Core.Controls.Panel panNav;
-        private Smobiler.Core.Controls.Button btnReturn;
         private Smobiler.Core.Controls.Panel panBot;
         private Smobiler.Core.Controls.Button btnExit;
         private Smobiler.Core.Controls.Panel paneCenter;
         private Smobiler.Core.Controls.Label labTitle;
+        private Smobiler.Core.Controls.ImageButton imgBtnNav;
     }
 }

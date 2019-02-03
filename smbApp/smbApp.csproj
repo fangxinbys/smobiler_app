@@ -116,11 +116,29 @@
     <Compile Include="SmobilerForm1.Designer.cs">
       <DependentUpon>SmobilerForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="userControl\mainBanner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="userControl\mainBanner.Designer.cs">
+      <DependentUpon>mainBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userControl\memberListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="userControl\memberListView.Designer.cs">
+      <DependentUpon>memberListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="userInfo\frmUserInfo.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="userInfo\frmUserInfo.Designer.cs">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="work\memberList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="work\memberList.Designer.cs">
+      <DependentUpon>memberList.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -146,8 +164,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="userControl\mainBanner.resx">
+      <DependentUpon>mainBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userControl\memberListView.resx">
+      <DependentUpon>memberListView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userInfo\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="work\memberList.resx">
+      <DependentUpon>memberList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

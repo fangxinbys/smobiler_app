@@ -24,6 +24,7 @@ namespace smbApp
             this.imgBtnNav = new Smobiler.Core.Controls.ImageButton();
             this.labTitle = new Smobiler.Core.Controls.Label();
             this.panelBanner = new Smobiler.Core.Controls.Panel();
+            this.pageMainView = new Smobiler.Core.Controls.PageView();
             this.panelMenu = new Smobiler.Core.Controls.Panel();
             this.iconMenuView = new Smobiler.Core.Controls.IconMenuView();
             // 
@@ -68,20 +69,30 @@ namespace smbApp
             this.labTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labTitle.FontSize = 16F;
             this.labTitle.ForeColor = System.Drawing.Color.White;
-            this.labTitle.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
+            this.labTitle.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Center;
             this.labTitle.Location = new System.Drawing.Point(48, 10);
             this.labTitle.Name = "labTitle";
-            this.labTitle.Padding = new Smobiler.Core.Controls.Padding(50F, 0F, 0F, 0F);
+            this.labTitle.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 50F, 0F);
             this.labTitle.Size = new System.Drawing.Size(100, 35);
             this.labTitle.Text = "功能列表";
             // 
             // panelBanner
             // 
-            this.panelBanner.BackColor = System.Drawing.Color.Maroon;
+            this.panelBanner.BackColor = System.Drawing.Color.White;
+            this.panelBanner.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.pageMainView});
             this.panelBanner.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBanner.Location = new System.Drawing.Point(108, 113);
             this.panelBanner.Name = "panelBanner";
-            this.panelBanner.Size = new System.Drawing.Size(300, 116);
+            this.panelBanner.Size = new System.Drawing.Size(300, 115);
+            // 
+            // pageMainView
+            // 
+            this.pageMainView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pageMainView.IsLoop = true;
+            this.pageMainView.Name = "pageMainView";
+            this.pageMainView.Size = new System.Drawing.Size(300, 59);
+            this.pageMainView.TemplateControlName = "mainBanner";
             // 
             // panelMenu
             // 
@@ -97,7 +108,8 @@ namespace smbApp
             // 
             this.iconMenuView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.iconMenuView.GridLines = true;
-            this.iconMenuView.Location = new System.Drawing.Point(156, 70);
+            this.iconMenuView.Location = new System.Drawing.Point(55, 23);
+            this.iconMenuView.MessageForeColor = System.Drawing.Color.White;
             this.iconMenuView.Name = "iconMenuView";
             this.iconMenuView.Size = new System.Drawing.Size(300, 300);
             this.iconMenuView.ItemPress += new Smobiler.Core.Controls.IconMenuViewItemPressClickHandler(this.iconMenuView_ItemPress);
@@ -110,6 +122,7 @@ namespace smbApp
             this.panelBanner,
             this.panelMenu});
             this.DrawerWidth = 200;
+            this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmMenuMain_KeyDown);
             this.Load += new System.EventHandler(this.frmMenuMain_Load);
             this.Name = "frmMenuMain";
 
@@ -123,5 +136,6 @@ namespace smbApp
         private Smobiler.Core.Controls.Panel panelBanner;
         private Smobiler.Core.Controls.Panel panelMenu;
         private Smobiler.Core.Controls.IconMenuView iconMenuView;
+        private Smobiler.Core.Controls.PageView pageMainView;
     }
 }

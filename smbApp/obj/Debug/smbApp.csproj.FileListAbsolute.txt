@@ -20,7 +20,6 @@ C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.DBUti
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Data.SQLite.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\MySql.Data.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.DBUtility.pdb
-C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmLogin.resources
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.userInfo.frmUserInfo.resources
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.BLL.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.DAL.dll
@@ -29,3 +28,7 @@ C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.BLL.p
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.DAL.pdb
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Model.pdb
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmMenuMain.resources
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.Login.resources
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.userControl.mainBanner.resources
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.work.memberList.resources
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.userControl.memberListView.resources

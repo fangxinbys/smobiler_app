@@ -8,9 +8,9 @@ using Smobiler.Core.Controls;
 using Maticsoft.Common;
 namespace smbApp
 {
-    partial class frmLogin : Smobiler.Core.Controls.MobileForm
+    partial class Login : Smobiler.Core.Controls.MobileForm
     {
-        public frmLogin() : base()
+        public Login() : base()
         {
  
             InitializeComponent();
@@ -92,7 +92,8 @@ namespace smbApp
                         {
                             Client.Session["UserModel"] = userList[0];
                             frmMenuMain frm = new frmMenuMain();
-                            Show(frm);
+                            this.Show(frm);
+                            //this.Show(frm, (obj, args) => { this.Close(); });
                             return;
                         }
                     }
@@ -118,6 +119,11 @@ namespace smbApp
                 Toast(ex.Message);
             }
         }
- 
+
+        private void Login_KeyDown(object sender, KeyDownEventArgs e)
+        {
+            Client.Exit();
+            
+        }
     }
 }

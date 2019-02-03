@@ -51,7 +51,7 @@ public class MobileGlobal
     /// <param name="e"></param>
     public static void OnSessionConnect(object sender, SmobilerSessionEventArgs e)
     {
-
+        e.Client.ReStart();
     }
     /// <summary>
     /// 在回调推送被客户端点击时触发

@@ -16,7 +16,20 @@ namespace smbApp
         
             InitializeComponent();
         }
-
+        DataTable pageTable;
+        private void DataBindBanner()
+        {
+            pageTable = new DataTable();
+            pageTable.Columns.Add("image");
+            pageTable.Rows.Add("logon");
+            pageTable.Rows.Add("logon");
+            pageTable.Rows.Add("logon");
+            if (pageTable.Rows.Count > 0)
+            {
+                pageMainView.DataSource = pageTable;
+                pageMainView.DataBind();
+            }
+        }
         private void imgBtnNav_Press(object sender, EventArgs e)
         {
             userInfo.frmUserInfo frm = new userInfo.frmUserInfo();
@@ -27,6 +40,7 @@ namespace smbApp
         private void frmMenuMain_Load(object sender, EventArgs e)
         {
             if (Client.Session["UserModel"] == null) return;
+             DataBindBanner();
 
             IconMenuViewGroup grop = new IconMenuViewGroup();
             Maticsoft.Model.tUsers user = (Maticsoft.Model.tUsers)Client.Session["UserModel"];
@@ -38,7 +52,7 @@ namespace smbApp
                 if (row.IsNull("mFaherId"))
                 {
               
-                    grop.Items.Add(new IconMenuViewItem (row["mCode"].ToString(), row["mAppIcon"].ToString(), row["mName"].ToString(), row["mCode"].ToString())); 
+                    grop.Items.Add(new IconMenuViewItem (row["mCode"].ToString(), row["mAppIcon"].ToString(), row["mName"].ToString(), row["mCode"].ToString(),"1")); 
                     ResolveSubTree(row);
                    
                 }
@@ -74,9 +88,20 @@ namespace smbApp
             }
             else
             {
-                MessageBox.Show(e.Item.ID);
-            //    switch
+              
+                switch (e.Item.ID)
+                {
+                    case "40":
+                        work.memberList frm = new work.memberList();
+                        this.Show(frm);
 
+                        break;
+                     
+                    default:  
+                        
+                        break;
+                }
+              
             }
         }
         private DataSet getMenu(int roleCode)
@@ -86,5 +111,10 @@ namespace smbApp
             return dt;
         }
 
+        private void frmMenuMain_KeyDown(object sender, KeyDownEventArgs e)
+        {
+           this.Client.Exit();
+            
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace smbApp
 {
-    partial class frmLogin : Smobiler.Core.Controls.MobileForm
+    partial class Login : Smobiler.Core.Controls.MobileForm
     {
         #region "SmobilerForm Designer generated code "
 
@@ -135,6 +135,8 @@ namespace smbApp
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panel_top,
             this.panel_content});
+            this.Name = "Login";
+            this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.Login_KeyDown);
             this.Load += new System.EventHandler(this.frmLogon_Load);
             this.Name = "Login";
 
