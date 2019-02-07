@@ -90,19 +90,17 @@ namespace smbApp.work
             this.listViewMember});
             this.panelList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelList.Name = "panelList";
-            this.panelList.Scrollable = true;
-            this.panelList.Size = new System.Drawing.Size(300, 100);
+            this.panelList.Size = new System.Drawing.Size(300, 460);
             // 
             // listViewMember
             // 
             this.listViewMember.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewMember.Location = new System.Drawing.Point(0, 10);
             this.listViewMember.Name = "listViewMember";
             this.listViewMember.PageSize = 30;
             this.listViewMember.PageSizeTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(145)))), ((int)(((byte)(145)))));
             this.listViewMember.PageSizeTextSize = 12F;
             this.listViewMember.ShowSplitLine = true;
-            this.listViewMember.Size = new System.Drawing.Size(300, 430);
+            this.listViewMember.Size = new System.Drawing.Size(300, 460);
             this.listViewMember.SplitLineColor = System.Drawing.Color.Silver;
             this.listViewMember.TemplateControlName = "memberListView";
             // 

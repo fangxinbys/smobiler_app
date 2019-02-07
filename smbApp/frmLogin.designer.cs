@@ -38,7 +38,7 @@ namespace smbApp
             this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_top.Location = new System.Drawing.Point(12, 53);
             this.panel_top.Name = "panel_top";
-            this.panel_top.Size = new System.Drawing.Size(300, 171);
+            this.panel_top.Size = new System.Drawing.Size(300, 170);
             // 
             // imgLogin
             // 
@@ -59,11 +59,9 @@ namespace smbApp
             this.checkRemb,
             this.labLogin});
             this.panel_content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_content.ItemAlign = Smobiler.Core.Controls.LayoutItemAlign.Center;
-            this.panel_content.JustifyAlign = Smobiler.Core.Controls.LayoutJustifyAlign.SpaceAround;
             this.panel_content.Location = new System.Drawing.Point(12, 53);
             this.panel_content.Name = "panel_content";
-            this.panel_content.Size = new System.Drawing.Size(300, 62);
+            this.panel_content.Size = new System.Drawing.Size(300, 330);
             // 
             // txtUserName
             // 
@@ -135,7 +133,7 @@ namespace smbApp
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panel_top,
             this.panel_content});
-            this.Name = "Login";
+            this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.Login_KeyDown);
             this.Load += new System.EventHandler(this.frmLogon_Load);
             this.Name = "Login";

@@ -110,12 +110,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="SmobilerForm1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="SmobilerForm1.Designer.cs">
-      <DependentUpon>SmobilerForm1.cs</DependentUpon>
-    </Compile>
     <Compile Include="userControl\mainBanner.cs">
       <SubType>Component</SubType>
     </Compile>

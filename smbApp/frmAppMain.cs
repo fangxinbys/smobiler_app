@@ -33,15 +33,25 @@ namespace smbApp
         private void imgBtnNav_Press(object sender, EventArgs e)
         {
             userInfo.frmUserInfo frm = new userInfo.frmUserInfo();
-            Show(frm);
+            //this.Show(frm, (obj, args) => { this.Close(); });
+             Show(frm);
+
+
 
         }
     
         private void frmMenuMain_Load(object sender, EventArgs e)
         {
-            if (Client.Session["UserModel"] == null) return;
-             DataBindBanner();
 
+            getMainMenu();
+            DataBindBanner();
+
+        }
+
+        protected void getMainMenu()
+        {
+            if (Client.Session["UserModel"] == null) return;
+            this.iconMenuView.Groups.Clear();
             IconMenuViewGroup grop = new IconMenuViewGroup();
             Maticsoft.Model.tUsers user = (Maticsoft.Model.tUsers)Client.Session["UserModel"];
             DataSet ds = getMenu(user.roleCode);
@@ -51,16 +61,16 @@ namespace smbApp
 
                 if (row.IsNull("mFaherId"))
                 {
-              
-                    grop.Items.Add(new IconMenuViewItem (row["mCode"].ToString(), row["mAppIcon"].ToString(), row["mName"].ToString(), row["mCode"].ToString(),"1")); 
+
+                    grop.Items.Add(new IconMenuViewItem(row["mCode"].ToString(), row["mAppIcon"].ToString(), row["mName"].ToString(), row["mCode"].ToString(), "1"));
                     ResolveSubTree(row);
-                   
+
                 }
-             
+
             }
             this.iconMenuView.Groups.Add(grop);
-        }
 
+        }
         private void ResolveSubTree(DataRow dataRow)
         {
             DataRow[] rows = dataRow.GetChildRows("TreeRelation");
@@ -116,5 +126,28 @@ namespace smbApp
            this.Client.Exit();
             
         }
+
+        private void toolBarMain_ToolbarItemClick(object sender, ToolbarClickEventArgs e)
+        {
+            switch (e.Name)
+            {
+                case "主页": 
+                    getMainMenu();
+                    this.toolBarMain.SelectedIndex = -1;
+                    break;
+                case "通知":
+                    this.toolBarMain.SelectedIndex = -1;
+                    break;
+                case "我的":
+                    this.toolBarMain.SelectedIndex = -1;
+                    break;
+                case "设置":
+                    userInfo.frmUserInfo frm = new userInfo.frmUserInfo();
+                    this.Show(frm, (obj, args) => { this.toolBarMain.SelectedIndex=-1 ; });
+                    break;
+            }
+        }
+
+        
     }
 }
