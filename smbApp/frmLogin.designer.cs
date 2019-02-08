@@ -2,7 +2,7 @@
 
 namespace smbApp
 {
-    partial class Login : Smobiler.Core.Controls.MobileForm
+    partial class frmLogin : Smobiler.Core.Controls.MobileForm
     {
         #region "SmobilerForm Designer generated code "
 

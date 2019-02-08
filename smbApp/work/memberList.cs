@@ -10,12 +10,18 @@ namespace smbApp.work
 {
     partial class memberList : Smobiler.Core.Controls.MobileForm
     {
+ 
+
         public memberList() : base()
         {
             //This call is required by the SmobilerForm.
             InitializeComponent();
         }
-
+        public void UpdateTitle(string StrRs)
+        {
+      
+            this.labTitle.Text  = StrRs;
+        }
 
         DataTable pageTable;
         private void DataBindMeList()
@@ -27,23 +33,29 @@ namespace smbApp.work
             DataRow dr = pageTable.NewRow();
             dr["Img"] = "icon-"+(i+1);
             dr["Title"] = "Title" + (i + 1);
-                pageTable.Rows.Add(dr);
+            pageTable.Rows.Add(dr);
             }
             if (pageTable.Rows.Count > 0)
             {
                 listViewMember.DataSource = pageTable;
                 listViewMember.DataBind();
             }
+  
         }
 
         private void imgBtnNav_Press(object sender, EventArgs e)
         {
+       
             this.Close();
         }
 
         private void memberList_Load(object sender, EventArgs e)
         {
             DataBindMeList();
+            //userControl.memberListView listaa = new userControl.memberListView();
+            //listaa.OnClickEvent += new userControl.memberListView.EventHandler(GetText);
+
+            //userControl.memberListView.EventHandler 
         }
     }
 }

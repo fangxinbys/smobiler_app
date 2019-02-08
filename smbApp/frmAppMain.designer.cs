@@ -78,7 +78,7 @@ namespace smbApp
             this.labTitle.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Center;
             this.labTitle.Location = new System.Drawing.Point(0, 10);
             this.labTitle.Name = "labTitle";
-            this.labTitle.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 50F, 0F);
+            this.labTitle.Padding = new Smobiler.Core.Controls.Padding(0F, 0F, 60F, 0F);
             this.labTitle.Size = new System.Drawing.Size(100, 35);
             this.labTitle.Text = "功能列表";
             // 
@@ -184,6 +184,7 @@ namespace smbApp
             this.panelBottom,
             this.panelMain});
             this.DrawerWidth = 200;
+            this.Name = "frmMenuMain";
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmMenuMain_KeyDown);
             this.Load += new System.EventHandler(this.frmMenuMain_Load);
             this.Name = "frmMenuMain";

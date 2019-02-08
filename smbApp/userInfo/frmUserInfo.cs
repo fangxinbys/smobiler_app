@@ -35,5 +35,10 @@ namespace smbApp.userInfo
         {
             this.Close();
         }
+
+        private void imgBtnUser_Press(object sender, EventArgs e)
+        {
+            this.popListTest.ShowDialog();
+        }
     }
 }

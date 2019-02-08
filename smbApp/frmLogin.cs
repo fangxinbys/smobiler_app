@@ -8,9 +8,9 @@ using Smobiler.Core.Controls;
 using Maticsoft.Common;
 namespace smbApp
 {
-    partial class Login : Smobiler.Core.Controls.MobileForm
+    partial class frmLogin : Smobiler.Core.Controls.MobileForm
     {
-        public Login() : base()
+        public frmLogin() : base()
         {
  
             InitializeComponent();
@@ -90,6 +90,7 @@ namespace smbApp
                         }
                         else
                         {
+                            insertLog(userList[0], "APP登入系统");
                             Client.Session["UserModel"] = userList[0];
                             frmMenuMain frm = new frmMenuMain();
                             this.Show(frm);
@@ -118,6 +119,19 @@ namespace smbApp
             {
                 Toast(ex.Message);
             }
+        }
+        protected void insertLog(Maticsoft.Model.tUsers user,string doWhat)
+        {
+            Maticsoft.BLL.tSysLog bll = new Maticsoft.BLL.tSysLog();
+            Maticsoft.Model.tSysLog m = new Maticsoft.Model.tSysLog();
+            m.DoWhat = doWhat;
+            m.IP = this.Client.Device + ":" + this.Client.DeviceID;
+            m.SysTime = DateTime.Now;
+ 
+            m.UserId = user.userId;
+            m.UserName = user.usersName;
+
+            bll.Add(m);
         }
 
         private void Login_KeyDown(object sender, KeyDownEventArgs e)
