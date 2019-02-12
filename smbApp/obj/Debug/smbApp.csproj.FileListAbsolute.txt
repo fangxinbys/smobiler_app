@@ -30,5 +30,16 @@ C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Model
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.userControl.mainBanner.resources
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.work.memberList.resources
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.userControl.memberListView.resources
-C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmLogin.resources
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmMenuMain.resources
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.Login.resources
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\qcloudsms_csharp.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Net.Http.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Net.Http.WebRequest.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Net.Http.xml
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Net.Http.WebRequest.xml
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Web.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\FineUIPro.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Web.pdb
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Maticsoft.Web.dll.config

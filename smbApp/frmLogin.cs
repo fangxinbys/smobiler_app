@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using Smobiler.Core;
 using Smobiler.Core.Controls;
-
+ 
 using Maticsoft.Common;
+
 namespace smbApp
 {
-    partial class frmLogin : Smobiler.Core.Controls.MobileForm 
+    partial class Login : Smobiler.Core.Controls.MobileForm 
     {
-        public frmLogin() : base()
+        public Login() : base()
         {
  
             InitializeComponent();
@@ -22,8 +23,9 @@ namespace smbApp
         /// <param name="e"></param>
         private void frmLogon_Load(object sender, EventArgs e)
         {
-         
 
+            //Maticsoft.Web.Code.web web = new Maticsoft.Web.Code.web();
+            //web.sendMsg(new string[] { "13839870291", "15290319652" }, 277602);
             //读取用户名
             ReadClientData(MobileServer.ServerID + "user", (object sender1, ClientDataResultHandlerArgs e1) =>
             {
