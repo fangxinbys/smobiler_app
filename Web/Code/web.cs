@@ -43,12 +43,12 @@ namespace Maticsoft.Web.Code
                 {
                     SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
                     var result = ssender.sendWithParam("86", phoneNumbers[i],
-                        templateId, new[] { "5678", "3" }, smsSign, "", ""); 
+                        templateId, new[] { "5678", "3" }, smsSign, "", "");
                     strRs += result;
                 }
                 catch (JSONException ex)
                 {
-                    strRs += ";"+ ex;
+                    strRs += ";" + ex;
                     Console.WriteLine(ex);
                 }
                 catch (HTTPException ex)
@@ -63,7 +63,7 @@ namespace Maticsoft.Web.Code
                 }
             }
         }
-      
+
         public void SetWebHeader(Page page)
         {
             Maticsoft.BLL.tSet bll = new Maticsoft.BLL.tSet();
@@ -87,9 +87,9 @@ namespace Maticsoft.Web.Code
             page.Header.Controls.AddAt(index, li);
         }
 
-      
 
- 
+
+
 
     }
 }
