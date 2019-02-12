@@ -19,10 +19,10 @@ namespace smbApp
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.ToolBarItem toolBarItem5 = new Smobiler.Core.Controls.ToolBarItem();
-            Smobiler.Core.Controls.ToolBarItem toolBarItem6 = new Smobiler.Core.Controls.ToolBarItem();
-            Smobiler.Core.Controls.ToolBarItem toolBarItem7 = new Smobiler.Core.Controls.ToolBarItem();
-            Smobiler.Core.Controls.ToolBarItem toolBarItem8 = new Smobiler.Core.Controls.ToolBarItem();
+            Smobiler.Core.Controls.ToolBarItem toolBarItem13 = new Smobiler.Core.Controls.ToolBarItem();
+            Smobiler.Core.Controls.ToolBarItem toolBarItem14 = new Smobiler.Core.Controls.ToolBarItem();
+            Smobiler.Core.Controls.ToolBarItem toolBarItem15 = new Smobiler.Core.Controls.ToolBarItem();
+            Smobiler.Core.Controls.ToolBarItem toolBarItem16 = new Smobiler.Core.Controls.ToolBarItem();
             this.panTop = new Smobiler.Core.Controls.Panel();
             this.panNav = new Smobiler.Core.Controls.Panel();
             this.imgBtnNav = new Smobiler.Core.Controls.ImageButton();
@@ -46,7 +46,7 @@ namespace smbApp
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(0, 100);
             this.panTop.Name = "panTop";
-            this.panTop.Size = new System.Drawing.Size(300, 35);
+            this.panTop.Size = new System.Drawing.Size(300, 40);
             // 
             // panNav
             // 
@@ -60,14 +60,13 @@ namespace smbApp
             // 
             this.imgBtnNav.BackColor = System.Drawing.Color.Maroon;
             this.imgBtnNav.BorderColor = System.Drawing.Color.Transparent;
-            this.imgBtnNav.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imgBtnNav.ForeColor = System.Drawing.Color.White;
             this.imgBtnNav.IconColor = System.Drawing.Color.White;
             this.imgBtnNav.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
-            this.imgBtnNav.Location = new System.Drawing.Point(17, 11);
+            this.imgBtnNav.Location = new System.Drawing.Point(15, 5);
             this.imgBtnNav.Name = "imgBtnNav";
             this.imgBtnNav.ResourceID = "bars";
-            this.imgBtnNav.Size = new System.Drawing.Size(100, 30);
+            this.imgBtnNav.Size = new System.Drawing.Size(30, 30);
             this.imgBtnNav.Press += new System.EventHandler(this.imgBtnNav_Press);
             // 
             // labTitle
@@ -89,41 +88,41 @@ namespace smbApp
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelBottom.Location = new System.Drawing.Point(57, 469);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(300, 50);
+            this.panelBottom.Size = new System.Drawing.Size(300, 45);
             // 
             // toolBarMain
             // 
             this.toolBarMain.BackColor = System.Drawing.Color.White;
             this.toolBarMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            toolBarItem5.IconColor = System.Drawing.Color.Maroon;
-            toolBarItem5.IconID = "home";
-            toolBarItem5.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
-            toolBarItem5.Name = "主页";
-            toolBarItem5.SelectIconColor = System.Drawing.Color.White;
-            toolBarItem5.Text = "主页";
-            toolBarItem6.IconColor = System.Drawing.Color.Maroon;
-            toolBarItem6.IconID = "bell";
-            toolBarItem6.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
-            toolBarItem6.Name = "通知";
-            toolBarItem6.SelectIconColor = System.Drawing.Color.White;
-            toolBarItem6.Text = "通知";
-            toolBarItem7.IconColor = System.Drawing.Color.Maroon;
-            toolBarItem7.IconID = "book";
-            toolBarItem7.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
-            toolBarItem7.Name = "我的";
-            toolBarItem7.SelectIconColor = System.Drawing.Color.White;
-            toolBarItem7.Text = "我的";
-            toolBarItem8.IconColor = System.Drawing.Color.Maroon;
-            toolBarItem8.IconID = "asterisk";
-            toolBarItem8.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
-            toolBarItem8.Name = "设置";
-            toolBarItem8.SelectIconColor = System.Drawing.Color.White;
-            toolBarItem8.Text = "设置";
+            toolBarItem13.IconColor = System.Drawing.Color.Maroon;
+            toolBarItem13.IconID = "home";
+            toolBarItem13.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
+            toolBarItem13.Name = "主页";
+            toolBarItem13.SelectIconColor = System.Drawing.Color.White;
+            toolBarItem13.Text = "主页";
+            toolBarItem14.IconColor = System.Drawing.Color.Maroon;
+            toolBarItem14.IconID = "bell";
+            toolBarItem14.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
+            toolBarItem14.Name = "通知";
+            toolBarItem14.SelectIconColor = System.Drawing.Color.White;
+            toolBarItem14.Text = "通知";
+            toolBarItem15.IconColor = System.Drawing.Color.Maroon;
+            toolBarItem15.IconID = "book";
+            toolBarItem15.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
+            toolBarItem15.Name = "我的";
+            toolBarItem15.SelectIconColor = System.Drawing.Color.White;
+            toolBarItem15.Text = "我的";
+            toolBarItem16.IconColor = System.Drawing.Color.Maroon;
+            toolBarItem16.IconID = "asterisk";
+            toolBarItem16.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
+            toolBarItem16.Name = "设置";
+            toolBarItem16.SelectIconColor = System.Drawing.Color.White;
+            toolBarItem16.Text = "设置";
             this.toolBarMain.Items.AddRange(new Smobiler.Core.Controls.ToolBarItem[] {
-            toolBarItem5,
-            toolBarItem6,
-            toolBarItem7,
-            toolBarItem8});
+            toolBarItem13,
+            toolBarItem14,
+            toolBarItem15,
+            toolBarItem16});
             this.toolBarMain.Name = "toolBarMain";
             this.toolBarMain.SelectBackColor = System.Drawing.Color.Maroon;
             this.toolBarMain.SelectForeColor = System.Drawing.Color.White;
@@ -169,6 +168,7 @@ namespace smbApp
             this.iconMenuView.BorderRadius = 1;
             this.iconMenuView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.iconMenuView.GridLines = true;
+            this.iconMenuView.GridLinesColor = System.Drawing.Color.WhiteSmoke;
             this.iconMenuView.Location = new System.Drawing.Point(39, 28);
             this.iconMenuView.MenuItemHeight = 65;
             this.iconMenuView.MessageForeColor = System.Drawing.Color.White;
@@ -184,7 +184,6 @@ namespace smbApp
             this.panelBottom,
             this.panelMain});
             this.DrawerWidth = 200;
-            this.Name = "frmMenuMain";
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmMenuMain_KeyDown);
             this.Load += new System.EventHandler(this.frmMenuMain_Load);
             this.Name = "frmMenuMain";

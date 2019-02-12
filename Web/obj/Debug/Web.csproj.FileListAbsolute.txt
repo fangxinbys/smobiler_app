@@ -100,3 +100,10 @@ C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\obj\Debug\Maticsoft.Web.pdb
 C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\obj\Debug\Web.csprojAssemblyReference.cache
 C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\obj\Debug\Web.csproj.CopyComplete
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\bin\qcloudsms_csharp.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\bin\System.Net.Http.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\bin\System.Net.Http.WebRequest.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\bin\System.Net.Http.xml
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Web\bin\System.Net.Http.WebRequest.xml

@@ -2,7 +2,7 @@
 
 namespace smbApp
 {
-    partial class frmLogin : Smobiler.Core.Controls.MobileForm
+    partial class Login : Smobiler.Core.Controls.MobileForm
     {
         #region "SmobilerForm Designer generated code "
 
@@ -29,6 +29,10 @@ namespace smbApp
             this.fPwd = new Smobiler.Core.Controls.FontIcon();
             this.checkRemb = new Smobiler.Core.Controls.CheckBox();
             this.labLogin = new Smobiler.Core.Controls.Label();
+            this.panelRg = new Smobiler.Core.Controls.Panel();
+            this.panelPwd = new Smobiler.Core.Controls.Panel();
+            this.labelRg = new Smobiler.Core.Controls.Label();
+            this.labelPwd = new Smobiler.Core.Controls.Label();
             // 
             // panel_top
             // 
@@ -57,7 +61,9 @@ namespace smbApp
             this.fUser,
             this.fPwd,
             this.checkRemb,
-            this.labLogin});
+            this.labLogin,
+            this.panelRg,
+            this.panelPwd});
             this.panel_content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_content.Location = new System.Drawing.Point(12, 53);
             this.panel_content.Name = "panel_content";
@@ -71,8 +77,8 @@ namespace smbApp
             this.txtUserName.Location = new System.Drawing.Point(75, 26);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.txtUserName.Size = new System.Drawing.Size(190, 30);
-            this.txtUserName.WaterMarkText = "+86 请输入手机号码";
+            this.txtUserName.Size = new System.Drawing.Size(195, 30);
+            this.txtUserName.WaterMarkText = "请输入手机号码";
             // 
             // txtPassWord
             // 
@@ -83,8 +89,8 @@ namespace smbApp
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtPassWord.SecurityMode = true;
-            this.txtPassWord.Size = new System.Drawing.Size(190, 30);
-            this.txtPassWord.WaterMarkText = "请输入6-12位密码";
+            this.txtPassWord.Size = new System.Drawing.Size(195, 30);
+            this.txtPassWord.WaterMarkText = "请输入登录密码";
             // 
             // btnLogin
             // 
@@ -92,7 +98,7 @@ namespace smbApp
             this.btnLogin.FontSize = 18F;
             this.btnLogin.Location = new System.Drawing.Point(27, 174);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(238, 44);
+            this.btnLogin.Size = new System.Drawing.Size(243, 44);
             this.btnLogin.Text = "登录";
             this.btnLogin.Press += new System.EventHandler(this.btnLogin_Press);
             // 
@@ -114,7 +120,6 @@ namespace smbApp
             // 
             // checkRemb
             // 
-            this.checkRemb.Checked = true;
             this.checkRemb.Location = new System.Drawing.Point(27, 118);
             this.checkRemb.Name = "checkRemb";
             this.checkRemb.Size = new System.Drawing.Size(30, 30);
@@ -128,11 +133,47 @@ namespace smbApp
             this.labLogin.Size = new System.Drawing.Size(100, 30);
             this.labLogin.Text = "是否记住登录密码";
             // 
+            // panelRg
+            // 
+            this.panelRg.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.labelRg});
+            this.panelRg.Location = new System.Drawing.Point(27, 228);
+            this.panelRg.Name = "panelRg";
+            this.panelRg.Size = new System.Drawing.Size(106, 25);
+            // 
+            // panelPwd
+            // 
+            this.panelPwd.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.labelPwd});
+            this.panelPwd.Location = new System.Drawing.Point(164, 228);
+            this.panelPwd.Name = "panelPwd";
+            this.panelPwd.Size = new System.Drawing.Size(106, 25);
+            // 
+            // labelRg
+            // 
+            this.labelRg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRg.ForeColor = System.Drawing.Color.Silver;
+            this.labelRg.Location = new System.Drawing.Point(28, -1);
+            this.labelRg.Name = "labelRg";
+            this.labelRg.Size = new System.Drawing.Size(100, 35);
+            this.labelRg.Text = "没有账号?立即注册";
+            // 
+            // labelPwd
+            // 
+            this.labelPwd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPwd.ForeColor = System.Drawing.Color.Silver;
+            this.labelPwd.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
+            this.labelPwd.Location = new System.Drawing.Point(28, -1);
+            this.labelPwd.Name = "labelPwd";
+            this.labelPwd.Size = new System.Drawing.Size(100, 35);
+            this.labelPwd.Text = "忘记密码?";
+            // 
             // Login
             // 
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panel_top,
             this.panel_content});
+            this.Name = "Login";
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.Login_KeyDown);
             this.Load += new System.EventHandler(this.frmLogon_Load);
@@ -151,5 +192,9 @@ namespace smbApp
         private Smobiler.Core.Controls.FontIcon fPwd;
         private Smobiler.Core.Controls.CheckBox checkRemb;
         private Smobiler.Core.Controls.Label labLogin;
+        private Smobiler.Core.Controls.Panel panelRg;
+        private Smobiler.Core.Controls.Panel panelPwd;
+        private Smobiler.Core.Controls.Label labelRg;
+        private Smobiler.Core.Controls.Label labelPwd;
     }
 }

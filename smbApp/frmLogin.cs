@@ -8,9 +8,9 @@ using Smobiler.Core.Controls;
 using Maticsoft.Common;
 namespace smbApp
 {
-    partial class frmLogin : Smobiler.Core.Controls.MobileForm
+    partial class Login : Smobiler.Core.Controls.MobileForm
     {
-        public frmLogin() : base()
+        public Login() : base()
         {
  
             InitializeComponent();

@@ -58,7 +58,7 @@ namespace smbApp.userInfo
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panTop.Location = new System.Drawing.Point(44, 100);
             this.panTop.Name = "panTop";
-            this.panTop.Size = new System.Drawing.Size(300, 35);
+            this.panTop.Size = new System.Drawing.Size(300, 40);
             // 
             // panNav
             // 
