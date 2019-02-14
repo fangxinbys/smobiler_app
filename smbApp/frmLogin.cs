@@ -22,9 +22,7 @@ namespace smbApp
         /// <param name="e"></param>
         private void frmLogon_Load(object sender, EventArgs e)
         {
-            //Maticsoft.Web.Code.web web = new Maticsoft.Web.Code.web();
-            //web.sendMsg(new string[] { "13839870291", "15290319652" }, 277602);
-
+         
             //读取用户名
             ReadClientData(MobileServer.ServerID + "user", (object sender1, ClientDataResultHandlerArgs e1) =>
             {
@@ -139,6 +137,14 @@ namespace smbApp
         {
             Client.Exit();
             
+        }
+
+    
+
+        private void btnReg_Press(object sender, EventArgs e)
+        {
+            frmRegister frm = new frmRegister();
+            this.Show(frm);
         }
     }
 }

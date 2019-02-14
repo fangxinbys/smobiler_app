@@ -43,3 +43,4 @@ C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Newtonsoft.Json
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Net.Http.xml
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\System.Net.Http.WebRequest.xml
 C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.Login.resources
+C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\obj\Debug\smbApp.frmRegister.resources

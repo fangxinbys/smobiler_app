@@ -1,0 +1,332 @@
+2019/02/14 19:15:55 [Server] Starting 
+2019/02/14 19:15:55 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:15:56 [Server] Started 
+2019/02/14 19:15:56 [AutoSet] Start 
+2019/02/14 19:16:29 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:16:29 [866654035278602-192.168.100.100] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019/02/14 19:17:37 [Server] Starting 
+2019/02/14 19:17:37 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:17:37 [Server] Started 
+2019/02/14 19:17:37 [AutoSet] Start 
+2019/02/14 19:18:09 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:21:22 [Server] Starting 
+2019/02/14 19:21:22 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:21:23 [AutoSet] Start 
+2019/02/14 19:21:23 [Server] Started 
+2019/02/14 19:21:31 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:22:00 [Server] Stoping 
+2019/02/14 19:22:00 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:22:00 [Server] Stoped 
+2019/02/14 19:22:00 [AutoSet] Stop 
+2019/02/14 19:22:00 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:24:56 [Server] Starting 
+2019/02/14 19:24:56 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:24:56 [Server] Started 
+2019/02/14 19:24:56 [AutoSet] Start 
+2019/02/14 19:25:31 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:25:31 [866654035278602-192.168.100.100] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019/02/14 19:26:30 [Server] Stoping 
+2019/02/14 19:26:30 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:26:30 [Server] Stoped 
+2019/02/14 19:26:30 [AutoSet] Stop 
+2019/02/14 19:26:30 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:27:17 [Server] Starting 
+2019/02/14 19:27:18 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:27:18 [Server] Started 
+2019/02/14 19:27:18 [AutoSet] Start 
+2019/02/14 19:27:20 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:28:16 [Server] Starting 
+2019/02/14 19:28:16 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:28:16 [Server] Started 
+2019/02/14 19:28:16 [AutoSet] Start 
+2019/02/14 19:28:18 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:28:18 [866654035278602-192.168.100.100] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019/02/14 19:28:42 [Server] Stoping 
+2019/02/14 19:28:42 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:28:42 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:28:43 [Server] Stoped 
+2019/02/14 19:28:43 [AutoSet] Stop 
+2019/02/14 19:29:21 [Server] Starting 
+2019/02/14 19:29:21 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:29:21 [Server] Started 
+2019/02/14 19:29:21 [AutoSet] Start 
+2019/02/14 19:29:22 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:29:49 [Server] Stoping 
+2019/02/14 19:29:49 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:29:49 [Server] Stoped 
+2019/02/14 19:29:49 [AutoSet] Stop 
+2019/02/14 19:29:49 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:32:37 [Server] Starting 
+2019/02/14 19:32:37 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:32:37 [AutoSet] Start 
+2019/02/14 19:32:37 [Server] Started 
+2019/02/14 19:32:44 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:39:56 [Server] Starting 
+2019/02/14 19:39:57 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:39:57 [Server] Started 
+2019/02/14 19:39:57 [AutoSet] Start 
+2019/02/14 19:39:59 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:40:00 [866654035278602-192.168.100.100] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019/02/14 19:40:29 [Server] Stoping 
+2019/02/14 19:40:29 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:40:29 [Server] Stoped 
+2019/02/14 19:40:29 [AutoSet] Stop 
+2019/02/14 19:40:29 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:41:46 [Server] Starting 
+2019/02/14 19:41:47 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:41:47 [AutoSet] Start 
+2019/02/14 19:41:47 [Server] Started 
+2019/02/14 19:42:07 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:42:27 [Server] Stoping 
+2019/02/14 19:42:27 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:42:27 [Server] Stoped 
+2019/02/14 19:42:27 [AutoSet] Stop 
+2019/02/14 19:42:27 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:49:31 [Server] Starting 
+2019/02/14 19:49:31 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:49:31 [Server] Started 
+2019/02/14 19:49:31 [AutoSet] Start 
+2019/02/14 19:49:32 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:50:53 [Server] Starting 
+2019/02/14 19:50:54 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:50:54 [Server] Started 
+2019/02/14 19:50:54 [AutoSet] Start 
+2019/02/14 19:51:19 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:51:35 [Server] Stoping 
+2019/02/14 19:51:35 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:51:35 [Server] Stoped 
+2019/02/14 19:51:35 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:51:35 [AutoSet] Stop 
+2019/02/14 19:52:11 [Server] Starting 
+2019/02/14 19:52:11 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:52:11 [AutoSet] Start 
+2019/02/14 19:52:11 [Server] Started 
+2019/02/14 19:52:12 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:52:37 [Server] Stoping 
+2019/02/14 19:52:37 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:52:37 [Server] Stoped 
+2019/02/14 19:52:37 [AutoSet] Stop 
+2019/02/14 19:52:37 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 19:53:01 [Server] Starting 
+2019/02/14 19:53:01 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 19:53:02 [Server] Started 
+2019/02/14 19:53:02 [AutoSet] Start 
+2019/02/14 19:53:09 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 19:53:45 [Server] Stoping 
+2019/02/14 19:53:45 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 19:53:45 [Server] Stoped 
+2019/02/14 19:53:45 [AutoSet] Stop 
+2019/02/14 19:53:45 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 20:02:10 [Server] Starting 
+2019/02/14 20:02:10 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 20:02:10 [Server] Started 
+2019/02/14 20:02:10 [AutoSet] Start 
+2019/02/14 20:02:37 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 20:02:37 [866654035278602-192.168.100.100] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019/02/14 20:03:39 [Server] Stoping 
+2019/02/14 20:03:39 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 20:03:39 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 20:03:40 [Server] Stoped 
+2019/02/14 20:03:40 [AutoSet] Stop 
+2019/02/14 20:06:36 [Server] Starting 
+2019/02/14 20:06:36 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 20:06:36 [Server] Started 
+2019/02/14 20:06:36 [AutoSet] Start 
+2019/02/14 20:06:43 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 20:07:28 [Server] Stoping 
+2019/02/14 20:07:28 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 20:07:28 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 20:07:28 [Server] Stoped 
+2019/02/14 20:07:28 [AutoSet] Stop 
+2019/02/14 20:19:02 [Server] Starting 
+2019/02/14 20:19:03 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 20:19:03 [Server] Started 
+2019/02/14 20:19:03 [AutoSet] Start 
+2019/02/14 20:19:27 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 20:19:59 [Server] Stoping 
+2019/02/14 20:19:59 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 20:20:00 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 20:20:00 [Server] Stoped 
+2019/02/14 20:20:00 [AutoSet] Stop 
+2019/02/14 20:22:23 [Server] Starting 
+2019/02/14 20:22:24 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 20:22:24 [Server] Started 
+2019/02/14 20:22:24 [AutoSet] Start 
+2019/02/14 20:22:44 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 20:23:48 [Server] Stoping 
+2019/02/14 20:23:48 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019/02/14 20:23:48 [866654035278602] Stop-StopServer-True-- 
+2019/02/14 20:23:49 [Server] Stoped 
+2019/02/14 20:23:49 [AutoSet] Stop 
+2019/02/14 20:24:13 [Server] Starting 
+2019/02/14 20:24:13 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\DevNew\proFineUI\smbApp\bin\Debug\Resources\Web
+ 
+2019/02/14 20:24:14 [Server] Started 
+2019/02/14 20:24:14 [AutoSet] Start 
+2019/02/14 20:24:22 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 20:30:09 [TcpAccept] 192.168.100.103:2323 
+2019/02/14 20:30:09 [866654035278602-192.168.100.100] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 

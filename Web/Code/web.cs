@@ -22,7 +22,7 @@ namespace Maticsoft.Web.Code
         /// <summary>
         /// 短信验证码  {1}短信内容  {2}有效时间
         /// </summary>
-        public void sendMsg(string[] phoneNumbers, int templateId)
+        public string sendMsg(string[] phoneNumbers, int templateId, string[] MsgBody)
         {
 
             // 短信应用SDK AppID
@@ -42,26 +42,27 @@ namespace Maticsoft.Web.Code
                 try
                 {
                     SmsSingleSender ssender = new SmsSingleSender(appid, appkey);
-                    var result = ssender.sendWithParam("86", phoneNumbers[i],
-                        templateId, new[] { "5678", "3" }, smsSign, "", "");
+                    var result = ssender.sendWithParam("86", phoneNumbers[i], templateId, MsgBody, smsSign, "", "");
                     strRs += result;
                 }
                 catch (JSONException ex)
                 {
                     strRs += ";" + ex;
-                    Console.WriteLine(ex);
+                  
                 }
                 catch (HTTPException ex)
                 {
                     strRs += ";" + ex;
-                    Console.WriteLine(ex);
+                    
                 }
                 catch (Exception ex)
                 {
                     strRs += ";" + ex;
-                    Console.WriteLine(ex);
+                   
                 }
+
             }
+            return strRs;
         }
 
         public void SetWebHeader(Page page)

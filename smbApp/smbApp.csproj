@@ -118,6 +118,12 @@
     <Compile Include="frmAppMain.designer.cs">
       <DependentUpon>frmAppMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppMain.resx">
       <DependentUpon>frmAppMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.cs</DependentUpon>

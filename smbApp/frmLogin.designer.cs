@@ -30,9 +30,9 @@ namespace smbApp
             this.checkRemb = new Smobiler.Core.Controls.CheckBox();
             this.labLogin = new Smobiler.Core.Controls.Label();
             this.panelRg = new Smobiler.Core.Controls.Panel();
+            this.btnReg = new Smobiler.Core.Controls.Button();
             this.panelPwd = new Smobiler.Core.Controls.Panel();
-            this.labelRg = new Smobiler.Core.Controls.Label();
-            this.labelPwd = new Smobiler.Core.Controls.Label();
+            this.btnPwd = new Smobiler.Core.Controls.Button();
             // 
             // panel_top
             // 
@@ -136,44 +136,46 @@ namespace smbApp
             // panelRg
             // 
             this.panelRg.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.labelRg});
+            this.btnReg});
             this.panelRg.Location = new System.Drawing.Point(27, 228);
             this.panelRg.Name = "panelRg";
             this.panelRg.Size = new System.Drawing.Size(106, 25);
             // 
+            // btnReg
+            // 
+            this.btnReg.BackColor = System.Drawing.Color.Transparent;
+            this.btnReg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnReg.ForeColor = System.Drawing.Color.Silver;
+            this.btnReg.Location = new System.Drawing.Point(6, 0);
+            this.btnReg.Name = "btnReg";
+            this.btnReg.Size = new System.Drawing.Size(100, 30);
+            this.btnReg.Text = "没有账号？立即注册";
+            this.btnReg.Press += new System.EventHandler(this.btnReg_Press);
+            // 
             // panelPwd
             // 
             this.panelPwd.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.labelPwd});
+            this.btnPwd});
             this.panelPwd.Location = new System.Drawing.Point(164, 228);
             this.panelPwd.Name = "panelPwd";
             this.panelPwd.Size = new System.Drawing.Size(106, 25);
             // 
-            // labelRg
+            // btnPwd
             // 
-            this.labelRg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRg.ForeColor = System.Drawing.Color.Silver;
-            this.labelRg.Location = new System.Drawing.Point(28, -1);
-            this.labelRg.Name = "labelRg";
-            this.labelRg.Size = new System.Drawing.Size(100, 35);
-            this.labelRg.Text = "没有账号?立即注册";
-            // 
-            // labelPwd
-            // 
-            this.labelPwd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPwd.ForeColor = System.Drawing.Color.Silver;
-            this.labelPwd.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
-            this.labelPwd.Location = new System.Drawing.Point(28, -1);
-            this.labelPwd.Name = "labelPwd";
-            this.labelPwd.Size = new System.Drawing.Size(100, 35);
-            this.labelPwd.Text = "忘记密码?";
+            this.btnPwd.BackColor = System.Drawing.Color.Transparent;
+            this.btnPwd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPwd.ForeColor = System.Drawing.Color.Silver;
+            this.btnPwd.HorizontalAlignment = Smobiler.Core.Controls.HorizontalAlignment.Right;
+            this.btnPwd.Location = new System.Drawing.Point(6, 0);
+            this.btnPwd.Name = "btnPwd";
+            this.btnPwd.Size = new System.Drawing.Size(100, 30);
+            this.btnPwd.Text = "？忘记密码";
             // 
             // Login
             // 
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panel_top,
             this.panel_content});
-            this.Name = "Login";
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.Login_KeyDown);
             this.Load += new System.EventHandler(this.frmLogon_Load);
@@ -194,7 +196,7 @@ namespace smbApp
         private Smobiler.Core.Controls.Label labLogin;
         private Smobiler.Core.Controls.Panel panelRg;
         private Smobiler.Core.Controls.Panel panelPwd;
-        private Smobiler.Core.Controls.Label labelRg;
-        private Smobiler.Core.Controls.Label labelPwd;
+        private Smobiler.Core.Controls.Button btnReg;
+        private Smobiler.Core.Controls.Button btnPwd;
     }
 }
