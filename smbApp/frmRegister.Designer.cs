@@ -41,12 +41,12 @@ namespace smbApp
             this.panel7 = new Smobiler.Core.Controls.Panel();
             this.fontIcon2 = new Smobiler.Core.Controls.FontIcon();
             this.panel9 = new Smobiler.Core.Controls.Panel();
-            this.textBox1 = new Smobiler.Core.Controls.TextBox();
+            this.textPwd = new Smobiler.Core.Controls.TextBox();
             this.panelPwdDou = new Smobiler.Core.Controls.Panel();
             this.panel11 = new Smobiler.Core.Controls.Panel();
             this.fontIcon3 = new Smobiler.Core.Controls.FontIcon();
             this.panel13 = new Smobiler.Core.Controls.Panel();
-            this.textBox2 = new Smobiler.Core.Controls.TextBox();
+            this.textPwdDou = new Smobiler.Core.Controls.TextBox();
             this.panelSave = new Smobiler.Core.Controls.Panel();
             this.panel12 = new Smobiler.Core.Controls.Panel();
             this.buttonSave = new Smobiler.Core.Controls.Button();
@@ -187,7 +187,9 @@ namespace smbApp
             this.txtUserName.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtUserName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.txtUserName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUserName.KeyboardType = Smobiler.Core.Controls.KeyboardType.PhonePad;
             this.txtUserName.Location = new System.Drawing.Point(75, 26);
+            this.txtUserName.MaxLength = 11;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(195, 30);
             this.txtUserName.WaterMarkText = "请输入手机号码";
@@ -236,6 +238,7 @@ namespace smbApp
             this.txtYzm.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtYzm.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.txtYzm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtYzm.KeyboardType = Smobiler.Core.Controls.KeyboardType.PhonePad;
             this.txtYzm.Location = new System.Drawing.Point(75, 26);
             this.txtYzm.Name = "txtYzm";
             this.txtYzm.Size = new System.Drawing.Size(195, 30);
@@ -274,21 +277,22 @@ namespace smbApp
             // panel9
             // 
             this.panel9.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.textBox1});
+            this.textPwd});
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(73, 7);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(300, 100);
             // 
-            // textBox1
+            // textPwd
             // 
-            this.textBox1.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.textBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(75, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 30);
-            this.textBox1.WaterMarkText = "设置登录密码";
+            this.textPwd.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
+            this.textPwd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.textPwd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textPwd.Location = new System.Drawing.Point(75, 26);
+            this.textPwd.Name = "textPwd";
+            this.textPwd.SecurityMode = true;
+            this.textPwd.Size = new System.Drawing.Size(195, 30);
+            this.textPwd.WaterMarkText = "设置登录密码";
             // 
             // panelPwdDou
             // 
@@ -323,21 +327,22 @@ namespace smbApp
             // panel13
             // 
             this.panel13.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
-            this.textBox2});
+            this.textPwdDou});
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(73, 7);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(300, 100);
             // 
-            // textBox2
+            // textPwdDou
             // 
-            this.textBox2.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.textBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(75, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 30);
-            this.textBox2.WaterMarkText = "再次输入密码";
+            this.textPwdDou.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
+            this.textPwdDou.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.textPwdDou.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textPwdDou.Location = new System.Drawing.Point(75, 26);
+            this.textPwdDou.Name = "textPwdDou";
+            this.textPwdDou.SecurityMode = true;
+            this.textPwdDou.Size = new System.Drawing.Size(195, 30);
+            this.textPwdDou.WaterMarkText = "再次输入密码";
             // 
             // panelSave
             // 
@@ -368,6 +373,7 @@ namespace smbApp
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(170, 30);
             this.buttonSave.Text = "提交注册";
+            this.buttonSave.Press += new System.EventHandler(this.buttonSave_Press);
             // 
             // timer1
             // 
@@ -382,6 +388,7 @@ namespace smbApp
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panTop,
             this.panelContent});
+            this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmRegister_KeyDown);
             this.Name = "frmRegister";
 
         }
@@ -409,12 +416,12 @@ namespace smbApp
         private Smobiler.Core.Controls.Panel panel7;
         private Smobiler.Core.Controls.FontIcon fontIcon2;
         private Smobiler.Core.Controls.Panel panel9;
-        private Smobiler.Core.Controls.TextBox textBox1;
+        private Smobiler.Core.Controls.TextBox textPwd;
         private Smobiler.Core.Controls.Panel panelPwdDou;
         private Smobiler.Core.Controls.Panel panel11;
         private Smobiler.Core.Controls.FontIcon fontIcon3;
         private Smobiler.Core.Controls.Panel panel13;
-        private Smobiler.Core.Controls.TextBox textBox2;
+        private Smobiler.Core.Controls.TextBox textPwdDou;
         private Smobiler.Core.Controls.Panel panelSave;
         private Smobiler.Core.Controls.Panel panel12;
         private Smobiler.Core.Controls.Button buttonSave;

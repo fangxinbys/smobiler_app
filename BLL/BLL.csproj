@@ -108,6 +108,7 @@
     <Compile Include="tDepartMent.cs" />
     <Compile Include="tMenu.cs" />
     <Compile Include="tPower.cs" />
+    <Compile Include="tRegisterSend.cs" />
     <Compile Include="tRole.cs" />
     <Compile Include="tRoleMenu.cs" />
     <Compile Include="tSet.cs" />
