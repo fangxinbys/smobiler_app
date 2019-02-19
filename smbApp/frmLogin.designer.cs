@@ -19,19 +19,40 @@ namespace smbApp
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.panel2 = new Smobiler.Core.Controls.Panel();
             this.panel_top = new Smobiler.Core.Controls.Panel();
+            this.panel1 = new Smobiler.Core.Controls.Panel();
+            this.panel2 = new Smobiler.Core.Controls.Panel();
             this.btnLogin = new Smobiler.Core.Controls.Button();
             this.panelRg = new Smobiler.Core.Controls.Panel();
             this.btnReg = new Smobiler.Core.Controls.Button();
             this.panelPwd = new Smobiler.Core.Controls.Panel();
             this.btnPwd = new Smobiler.Core.Controls.Button();
-            this.fUser = new Smobiler.Core.Controls.FontIcon();
-            this.txtUserName = new Smobiler.Core.Controls.TextBox();
             this.fPwd = new Smobiler.Core.Controls.FontIcon();
             this.txtPassWord = new Smobiler.Core.Controls.TextBox();
             this.checkRemb = new Smobiler.Core.Controls.CheckBox();
             this.labLogin = new Smobiler.Core.Controls.Label();
+            this.txtUserName = new Smobiler.Core.Controls.TextBox();
+            this.fUser = new Smobiler.Core.Controls.FontIcon();
+            // 
+            // panel_top
+            // 
+            this.panel_top.BackColor = System.Drawing.Color.White;
+            this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_top.Location = new System.Drawing.Point(12, 53);
+            this.panel_top.Name = "panel_top";
+            this.panel_top.Size = new System.Drawing.Size(0, 50);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.panel2});
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ItemAlign = Smobiler.Core.Controls.LayoutItemAlign.Center;
+            this.panel1.Layout = Smobiler.Core.Controls.LayoutPosition.Relative;
+            this.panel1.Location = new System.Drawing.Point(20, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Scrollable = true;
+            this.panel1.Size = new System.Drawing.Size(300, 100);
             // 
             // panel2
             // 
@@ -39,31 +60,21 @@ namespace smbApp
             this.btnLogin,
             this.panelRg,
             this.panelPwd,
-            this.fUser,
-            this.txtUserName,
             this.fPwd,
             this.txtPassWord,
             this.checkRemb,
-            this.labLogin});
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(68, 222);
+            this.labLogin,
+            this.txtUserName,
+            this.fUser});
             this.panel2.Name = "panel2";
             this.panel2.Scrollable = true;
-            this.panel2.Size = new System.Drawing.Size(300, 370);
-            // 
-            // panel_top
-            // 
-            this.panel_top.BackColor = System.Drawing.Color.Maroon;
-            this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_top.Location = new System.Drawing.Point(12, 53);
-            this.panel_top.Name = "panel_top";
-            this.panel_top.Size = new System.Drawing.Size(0, 130);
+            this.panel2.Size = new System.Drawing.Size(300, 450);
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Maroon;
             this.btnLogin.FontSize = 18F;
-            this.btnLogin.Location = new System.Drawing.Point(17, 277);
+            this.btnLogin.Location = new System.Drawing.Point(25, 227);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(250, 45);
             this.btnLogin.Text = "登录";
@@ -73,7 +84,7 @@ namespace smbApp
             // 
             this.panelRg.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.btnReg});
-            this.panelRg.Location = new System.Drawing.Point(17, 330);
+            this.panelRg.Location = new System.Drawing.Point(25, 280);
             this.panelRg.Name = "panelRg";
             this.panelRg.Size = new System.Drawing.Size(106, 25);
             // 
@@ -92,7 +103,7 @@ namespace smbApp
             // 
             this.panelPwd.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.btnPwd});
-            this.panelPwd.Location = new System.Drawing.Point(154, 330);
+            this.panelPwd.Location = new System.Drawing.Point(169, 280);
             this.panelPwd.Name = "panelPwd";
             this.panelPwd.Size = new System.Drawing.Size(106, 25);
             // 
@@ -107,29 +118,10 @@ namespace smbApp
             this.btnPwd.Size = new System.Drawing.Size(100, 30);
             this.btnPwd.Text = "？忘记密码";
             // 
-            // fUser
-            // 
-            this.fUser.ForeColor = System.Drawing.Color.Maroon;
-            this.fUser.Location = new System.Drawing.Point(28, 117);
-            this.fUser.Name = "fUser";
-            this.fUser.ResourceID = "user";
-            this.fUser.Size = new System.Drawing.Size(30, 30);
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
-            this.txtUserName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txtUserName.BorderRadius = 10;
-            this.txtUserName.Location = new System.Drawing.Point(72, 117);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
-            this.txtUserName.Size = new System.Drawing.Size(195, 30);
-            this.txtUserName.WaterMarkText = "请输入手机号码";
-            // 
             // fPwd
             // 
             this.fPwd.ForeColor = System.Drawing.Color.Maroon;
-            this.fPwd.Location = new System.Drawing.Point(28, 163);
+            this.fPwd.Location = new System.Drawing.Point(33, 102);
             this.fPwd.Name = "fPwd";
             this.fPwd.ResourceID = "unlock-alt";
             this.fPwd.Size = new System.Drawing.Size(30, 30);
@@ -139,7 +131,7 @@ namespace smbApp
             this.txtPassWord.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtPassWord.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.txtPassWord.BorderRadius = 10;
-            this.txtPassWord.Location = new System.Drawing.Point(72, 156);
+            this.txtPassWord.Location = new System.Drawing.Point(80, 102);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtPassWord.SecurityMode = true;
@@ -148,7 +140,7 @@ namespace smbApp
             // 
             // checkRemb
             // 
-            this.checkRemb.Location = new System.Drawing.Point(28, 205);
+            this.checkRemb.Location = new System.Drawing.Point(33, 162);
             this.checkRemb.Name = "checkRemb";
             this.checkRemb.Size = new System.Drawing.Size(30, 30);
             this.checkRemb.Style = Smobiler.Core.Controls.CheckBoxStyle.Circular;
@@ -156,35 +148,56 @@ namespace smbApp
             // 
             // labLogin
             // 
-            this.labLogin.Location = new System.Drawing.Point(72, 205);
+            this.labLogin.Location = new System.Drawing.Point(80, 162);
             this.labLogin.Name = "labLogin";
             this.labLogin.Size = new System.Drawing.Size(100, 30);
             this.labLogin.Text = "是否记住登录密码";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
+            this.txtUserName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txtUserName.BorderRadius = 10;
+            this.txtUserName.Location = new System.Drawing.Point(80, 47);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
+            this.txtUserName.Size = new System.Drawing.Size(195, 30);
+            this.txtUserName.WaterMarkText = "请输入手机号码";
+            // 
+            // fUser
+            // 
+            this.fUser.ForeColor = System.Drawing.Color.Maroon;
+            this.fUser.Location = new System.Drawing.Point(33, 47);
+            this.fUser.Name = "fUser";
+            this.fUser.ResourceID = "user";
+            this.fUser.Size = new System.Drawing.Size(30, 30);
             // 
             // Login
             // 
             this.BackColor = System.Drawing.Color.White;
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panel_top,
-            this.panel2});
+            this.panel1});
+            this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.Login_KeyDown);
             this.Load += new System.EventHandler(this.frmLogon_Load);
             this.Name = "Login";
 
         }
         #endregion
-        private Smobiler.Core.Controls.Panel panel2;
         private Smobiler.Core.Controls.Panel panel_top;
+        private Smobiler.Core.Controls.Panel panel1;
+        private Smobiler.Core.Controls.Panel panel2;
         private Smobiler.Core.Controls.Button btnLogin;
         private Smobiler.Core.Controls.Panel panelRg;
         private Smobiler.Core.Controls.Button btnReg;
         private Smobiler.Core.Controls.Panel panelPwd;
         private Smobiler.Core.Controls.Button btnPwd;
-        private Smobiler.Core.Controls.FontIcon fUser;
-        private Smobiler.Core.Controls.TextBox txtUserName;
         private Smobiler.Core.Controls.FontIcon fPwd;
         private Smobiler.Core.Controls.TextBox txtPassWord;
         private Smobiler.Core.Controls.CheckBox checkRemb;
         private Smobiler.Core.Controls.Label labLogin;
+        private Smobiler.Core.Controls.TextBox txtUserName;
+        private Smobiler.Core.Controls.FontIcon fUser;
     }
 }

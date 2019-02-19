@@ -106,7 +106,12 @@ namespace smbApp
                         this.Show(frm);
 
                         break;
-                     
+                    case "540":
+                        work.cameraImg frmImg = new work.cameraImg(); 
+                        this.Show(frmImg);
+
+                        break;
+                        
                     default:  
                         
                         break;
@@ -142,8 +147,8 @@ namespace smbApp
                     this.toolBarMain.SelectedIndex = -1;
                     break;
                 case "设置":
-                    userInfo.frmUserInfo frm = new userInfo.frmUserInfo();
-                    this.Show(frm, (obj, args) => { this.toolBarMain.SelectedIndex=-1 ; });
+                    userInfo.frmUserInfo frmUin = new userInfo.frmUserInfo();
+                    this.Show(frmUin, (obj, args) => { this.toolBarMain.SelectedIndex=-1 ; });
                     break;
             }
         }

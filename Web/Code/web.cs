@@ -9,19 +9,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+ 
+using System.Configuration;
 using qcloudsms_csharp;
 using qcloudsms_csharp.json;
 using qcloudsms_csharp.httpclient;
-using System.Configuration;
 
 namespace Maticsoft.Web.Code
 {
     public class web
     {
 
-        /// <summary>
-        /// 短信验证码  {1}短信内容  {2}有效时间
-        /// </summary>
+
         public string sendMsg(string[] phoneNumbers, int templateId, string[] MsgBody)
         {
 
@@ -48,24 +47,24 @@ namespace Maticsoft.Web.Code
                 catch (JSONException ex)
                 {
                     strRs += ";" + ex;
-                  
+
                 }
                 catch (HTTPException ex)
                 {
                     strRs += ";" + ex;
-                    
+
                 }
                 catch (Exception ex)
                 {
                     strRs += ";" + ex;
-                   
+
                 }
 
             }
             return strRs;
         }
 
-        public void SetWebHeader(Page page)
+public void SetWebHeader(Page page)
         {
             Maticsoft.BLL.tSet bll = new Maticsoft.BLL.tSet();
             Maticsoft.Model.tSet model = bll.GetModel(1);

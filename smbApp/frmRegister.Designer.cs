@@ -388,6 +388,7 @@ namespace smbApp
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panTop,
             this.panelContent});
+            this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.frmRegister_KeyDown);
             this.Name = "frmRegister";
 

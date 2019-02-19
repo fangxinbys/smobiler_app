@@ -19,9 +19,9 @@ namespace smbApp.userInfo
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.PopListGroup popListGroup1 = new Smobiler.Core.Controls.PopListGroup();
-            Smobiler.Core.Controls.PopListItem popListItem1 = new Smobiler.Core.Controls.PopListItem();
-            Smobiler.Core.Controls.PopListItem popListItem2 = new Smobiler.Core.Controls.PopListItem();
+            Smobiler.Core.Controls.PopListGroup popListGroup3 = new Smobiler.Core.Controls.PopListGroup();
+            Smobiler.Core.Controls.PopListItem popListItem5 = new Smobiler.Core.Controls.PopListItem();
+            Smobiler.Core.Controls.PopListItem popListItem6 = new Smobiler.Core.Controls.PopListItem();
             this.panTop = new Smobiler.Core.Controls.Panel();
             this.panNav = new Smobiler.Core.Controls.Panel();
             this.imgBtnNav = new Smobiler.Core.Controls.ImageButton();
@@ -288,19 +288,19 @@ namespace smbApp.userInfo
             // 
             // popListTest
             // 
-            popListItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem1.Text = "上海";
-            popListItem1.Value = "上海";
-            popListItem2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem2.Text = "北京";
-            popListItem2.Value = "北京";
-            popListGroup1.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
-            popListItem1,
-            popListItem2});
-            popListGroup1.Title = "一线城市";
-            popListGroup1.Value = "一线城市";
+            popListItem5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem5.Text = "上海";
+            popListItem5.Value = "上海";
+            popListItem6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem6.Text = "北京";
+            popListItem6.Value = "北京";
+            popListGroup3.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
+            popListItem5,
+            popListItem6});
+            popListGroup3.Title = "一线城市";
+            popListGroup3.Value = "一线城市";
             this.popListTest.Groups.AddRange(new Smobiler.Core.Controls.PopListGroup[] {
-            popListGroup1});
+            popListGroup3});
             this.popListTest.Name = "popListTest";
             // 
             // frmUserInfo
