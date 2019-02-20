@@ -140,6 +140,7 @@ namespace smbApp.work
             this.panelContent});
             this.Orientation = Smobiler.Core.Controls.FormOrientation.Portrait;
             this.KeyDown += new Smobiler.Core.Controls.KeyDownEventHandler(this.cameraImg_KeyDown);
+            this.Load += new System.EventHandler(this.cameraImg_Load);
             this.Name = "cameraImg";
 
         }

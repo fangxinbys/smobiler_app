@@ -39,3 +39,12 @@ C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Debug\DBUtility.cs
 C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
 C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\Pro\DBUtility\bin\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Pro\DBUtility\bin\Debug\Maticsoft.DBUtility.pdb
+C:\Users\Administrator\Desktop\Pro\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\Desktop\Pro\DBUtility\bin\Debug\System.Data.SQLite.DLL
+C:\Users\Administrator\Desktop\Pro\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\Pro\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Pro\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Pro\DBUtility\obj\Debug\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\Pro\DBUtility\obj\Debug\Maticsoft.DBUtility.pdb

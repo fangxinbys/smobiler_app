@@ -26,13 +26,23 @@ namespace smbApp.work
         {
             if (string.IsNullOrEmpty(e.error))
             {
+                if (Client.Session["UserModel"] == null) return;
                 try
                 {
                     string Rs = DateTime.Now.ToString("yyyyMMddHHmmss");
                     e.SaveFile(Rs + ".png");
                     //image1.ResourcePath = "Upload";
+
+
+
                     imageUser.ResourceID = Rs;
                     imageUser.Refresh();
+                     
+                    Maticsoft.Model.tUsers user = (Maticsoft.Model.tUsers)Client.Session["UserModel"];
+                    user.userImage = Rs + ".png";
+                    Maticsoft.BLL.tUsers bll = new Maticsoft.BLL.tUsers();
+                    bll.Update(user);
+
                 }
                 catch (Exception ex)
                 {
@@ -51,6 +61,16 @@ namespace smbApp.work
         private void cameraImg_KeyDown(object sender, KeyDownEventArgs e)
         {
             this.Close();
+        }
+
+        private void cameraImg_Load(object sender, EventArgs e)
+        {
+            if (Client.Session["UserModel"] == null) return;
+            Maticsoft.Model.tUsers user = (Maticsoft.Model.tUsers)Client.Session["UserModel"];
+            if (user.userImage == null) return;
+            imageUser.ResourceID = user.userImage.Replace(".png","");
+            imageUser.Refresh();
+
         }
     }
 }

@@ -19,7 +19,8 @@ namespace Maticsoft.Model
 		private string _tel;
 		private string _address;
 		private string _usersremark;
-        private int _dptid;
+		private int? _dptid;
+		private string _userimage;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -28,14 +29,6 @@ namespace Maticsoft.Model
 			set{ _userid=value;}
 			get{return _userid;}
 		}
-        /// <summary>
-        /// 
-        /// </summary>
-        public int dptId
-        {
-            set { _dptid = value; }
-            get { return _dptid; }
-        }
 		/// <summary>
 		/// 
 		/// </summary>
@@ -99,6 +92,22 @@ namespace Maticsoft.Model
 		{
 			set{ _usersremark=value;}
 			get{return _usersremark;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? dptId
+		{
+			set{ _dptid=value;}
+			get{return _dptid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string userImage
+		{
+			set{ _userimage=value;}
+			get{return _userimage;}
 		}
 		#endregion Model
 

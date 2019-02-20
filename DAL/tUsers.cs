@@ -46,9 +46,9 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into tUsers(");
-            strSql.Append("usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId)");
+			strSql.Append("usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId,userImage)");
 			strSql.Append(" values (");
-            strSql.Append("@usersName,@usersPwd,@roleCode,@trueName,@Flag,@Tel,@Address,@usersRemark,@dptId)");
+			strSql.Append("@usersName,@usersPwd,@roleCode,@trueName,@Flag,@Tel,@Address,@usersRemark,@dptId,@userImage)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@usersName", SqlDbType.VarChar,50),
@@ -59,7 +59,8 @@ namespace Maticsoft.DAL
 					new SqlParameter("@Tel", SqlDbType.VarChar,50),
 					new SqlParameter("@Address", SqlDbType.VarChar,200),
 					new SqlParameter("@usersRemark", SqlDbType.VarChar,500),
-                    new SqlParameter("@dptId", SqlDbType.Int,4) };
+					new SqlParameter("@dptId", SqlDbType.Int,4),
+					new SqlParameter("@userImage", SqlDbType.VarChar,500)};
 			parameters[0].Value = model.usersName;
 			parameters[1].Value = model.usersPwd;
 			parameters[2].Value = model.roleCode;
@@ -68,7 +69,9 @@ namespace Maticsoft.DAL
 			parameters[5].Value = model.Tel;
 			parameters[6].Value = model.Address;
 			parameters[7].Value = model.usersRemark;
-            parameters[8].Value = model.dptId;
+			parameters[8].Value = model.dptId;
+			parameters[9].Value = model.userImage;
+
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
 			{
@@ -94,10 +97,10 @@ namespace Maticsoft.DAL
 			strSql.Append("Tel=@Tel,");
 			strSql.Append("Address=@Address,");
 			strSql.Append("usersRemark=@usersRemark,");
-            strSql.Append("dptId=@dptId");
+			strSql.Append("dptId=@dptId,");
+			strSql.Append("userImage=@userImage");
 			strSql.Append(" where userId=@userId");
 			SqlParameter[] parameters = {
-         
 					new SqlParameter("@usersName", SqlDbType.VarChar,50),
 					new SqlParameter("@usersPwd", SqlDbType.VarChar,50),
 					new SqlParameter("@roleCode", SqlDbType.Int,4),
@@ -106,8 +109,9 @@ namespace Maticsoft.DAL
 					new SqlParameter("@Tel", SqlDbType.VarChar,50),
 					new SqlParameter("@Address", SqlDbType.VarChar,200),
 					new SqlParameter("@usersRemark", SqlDbType.VarChar,500),
-					new SqlParameter("@userId", SqlDbType.Int,4),
-                    new SqlParameter("@dptId", SqlDbType.Int,4) };
+					new SqlParameter("@dptId", SqlDbType.Int,4),
+					new SqlParameter("@userImage", SqlDbType.VarChar,500),
+					new SqlParameter("@userId", SqlDbType.Int,4)};
 			parameters[0].Value = model.usersName;
 			parameters[1].Value = model.usersPwd;
 			parameters[2].Value = model.roleCode;
@@ -116,8 +120,10 @@ namespace Maticsoft.DAL
 			parameters[5].Value = model.Tel;
 			parameters[6].Value = model.Address;
 			parameters[7].Value = model.usersRemark;
-			parameters[8].Value = model.userId;
-            parameters[9].Value = model.dptId;
+			parameters[8].Value = model.dptId;
+			parameters[9].Value = model.userImage;
+			parameters[10].Value = model.userId;
+
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
 			{
@@ -180,7 +186,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 userId,usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId from tUsers ");
+			strSql.Append("select  top 1 userId,usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId,userImage from tUsers ");
 			strSql.Append(" where userId=@userId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@userId", SqlDbType.Int,4)
@@ -244,10 +250,14 @@ namespace Maticsoft.DAL
 				{
 					model.usersRemark=row["usersRemark"].ToString();
 				}
-                if (row["dptId"] != null && row["dptId"].ToString() != "")
-                {
-                    model.dptId = int.Parse(row["dptId"].ToString());
-                }
+				if(row["dptId"]!=null && row["dptId"].ToString()!="")
+				{
+					model.dptId=int.Parse(row["dptId"].ToString());
+				}
+				if(row["userImage"]!=null)
+				{
+					model.userImage=row["userImage"].ToString();
+				}
 			}
 			return model;
 		}
@@ -258,7 +268,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select userId,usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId");
+			strSql.Append("select userId,usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId,userImage ");
 			strSql.Append(" FROM tUsers ");
 			if(strWhere.Trim()!="")
 			{
@@ -278,7 +288,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" userId,usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId ");
+			strSql.Append(" userId,usersName,usersPwd,roleCode,trueName,Flag,Tel,Address,usersRemark,dptId,userImage ");
 			strSql.Append(" FROM tUsers ");
 			if(strWhere.Trim()!="")
 			{
