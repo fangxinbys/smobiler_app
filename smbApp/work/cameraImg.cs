@@ -9,10 +9,12 @@ namespace smbApp.work
 {
     partial class cameraImg : Smobiler.Core.Controls.MobileForm
     {
-        public cameraImg() : base()
+        private userInfo.frmUserInfo fWindow;
+        public cameraImg(userInfo.frmUserInfo fatherWindow) : base()
         {
             //This call is required by the SmobilerForm.
             InitializeComponent();
+            fWindow = fatherWindow;
         }
 
         private void imgBtnNav_Press(object sender, EventArgs e)
@@ -37,12 +39,15 @@ namespace smbApp.work
 
                     imageUser.ResourceID = Rs;
                     imageUser.Refresh();
-                     
+
                     Maticsoft.Model.tUsers user = (Maticsoft.Model.tUsers)Client.Session["UserModel"];
                     user.userImage = Rs + ".png";
                     Maticsoft.BLL.tUsers bll = new Maticsoft.BLL.tUsers();
                     bll.Update(user);
 
+                    if (fWindow == null) return;
+                    fWindow.loadUserImg();
+                  
                 }
                 catch (Exception ex)
                 {

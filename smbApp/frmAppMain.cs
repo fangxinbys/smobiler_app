@@ -107,7 +107,7 @@ namespace smbApp
 
                         break;
                     case "540":
-                        work.cameraImg frmImg = new work.cameraImg(); 
+                        work.cameraImg frmImg = new work.cameraImg(null); 
                         this.Show(frmImg);
 
                         break;

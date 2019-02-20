@@ -1,0 +1,145 @@
+2019-02-20 13:31:29 [Server] Starting 
+2019-02-20 13:31:29 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 13:31:29 [Server] Started 
+2019-02-20 13:31:29 [AutoSet] Start 
+2019-02-20 13:31:42 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 13:31:43 [866654035278602-192.168.1.109] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019-02-20 13:32:34 [Server] Stoping 
+2019-02-20 13:32:34 [866654035278602] Stop-StopServer-True-- 
+2019-02-20 13:32:34 [Server] Stoped 
+2019-02-20 13:32:34 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019-02-20 13:32:34 [AutoSet] Stop 
+2019-02-20 13:34:32 [Server] Starting 
+2019-02-20 13:34:32 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 13:34:32 [Server] Started 
+2019-02-20 13:34:32 [AutoSet] Start 
+2019-02-20 13:34:42 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 13:34:42 [866654035278602-192.168.1.109] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019-02-20 13:52:12 [Server] Starting 
+2019-02-20 13:52:12 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 13:52:12 [Server] Started 
+2019-02-20 13:52:12 [AutoSet] Start 
+2019-02-20 13:52:29 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 13:52:29 [866654035278602-192.168.1.109] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019-02-20 13:53:23 [Server] Stoping 
+2019-02-20 13:53:23 [866654035278602] Stop-StopServer-True-- 
+2019-02-20 13:53:23 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019-02-20 13:53:23 [Server] Stoped 
+2019-02-20 13:53:23 [AutoSet] Stop 
+2019-02-20 13:55:16 [Server] Starting 
+2019-02-20 13:55:16 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 13:55:16 [Server] Started 
+2019-02-20 13:55:16 [AutoSet] Start 
+2019-02-20 13:55:22 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 13:56:15 [Server] Stoping 
+2019-02-20 13:56:15 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019-02-20 13:56:15 [866654035278602] Stop-StopServer-True-- 
+2019-02-20 13:56:15 [Server] Stoped 
+2019-02-20 13:56:15 [AutoSet] Stop 
+2019-02-20 13:58:10 [Server] Starting 
+2019-02-20 13:58:10 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 13:58:10 [Server] Started 
+2019-02-20 13:58:10 [AutoSet] Start 
+2019-02-20 13:58:18 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 13:58:19 [866654035278602-192.168.1.109] {"deviceOS":"Android","deviceOSVersion":"8.0.0","deviceModel":"MI 6","screenSize":{"width":1080,"height":1920},"density":3.0,"version":"4.7.1","coreVersion":"4.7.0","autoBuild":false,"isCompany":true,"extraInfo":{"package_name":"com.smobiler.app","display_name":"Smobiler"}} 
+2019-02-20 13:59:17 [Server] Stoping 
+2019-02-20 13:59:17 [TcpAccept-EX] 无法访问已释放的对象。
+对象名:“System.Net.Sockets.Socket”。 
+2019-02-20 13:59:17 [866654035278602] Stop-StopServer-True-- 
+2019-02-20 13:59:17 [Server] Stoped 
+2019-02-20 13:59:17 [AutoSet] Stop 
+2019-02-20 14:03:59 [Server] Starting 
+2019-02-20 14:03:59 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 14:03:59 [Server] Started 
+2019-02-20 14:03:59 [AutoSet] Start 
+2019-02-20 14:04:07 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 14:06:19 [Server] Starting 
+2019-02-20 14:06:19 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 14:06:19 [Server] Started 
+2019-02-20 14:06:19 [AutoSet] Start 
+2019-02-20 14:06:35 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 14:17:12 [Server] Starting 
+2019-02-20 14:17:12 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 14:17:12 [Server] Started 
+2019-02-20 14:17:12 [AutoSet] Start 
+2019-02-20 14:17:12 [TcpAccept] 192.168.1.107:2323 
+2019-02-20 14:28:00 [Server] Starting 
+2019-02-20 14:28:01 [Initial] Version: 470.1548307665, HttpServerPort: 2324, TcpServerPort: 2323, DeveloperTrace: Single, DebugMode: True, TracePrint: True, ClientTrace: False, EnableStackView: True, SessionTimeOut: 1800, NetworkTimeOut: 30, MirrorPatternMaxVerifyTimes: 3, FormStackMaxCount: 10, RelativeScreen: True, TextFontScaling: True, SysTrace: False
+        BasePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\
+        DefaultImagePath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Image
+        DefaultAudioPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Audio
+        DefaultDocumentPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Document
+        DefaultUploadPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Upload
+        DefaultMediaPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Media
+        DefaultWebPath: C:\Users\Administrator\Desktop\Pro\smbApp\bin\Debug\Resources\Web
+ 
+2019-02-20 14:28:01 [Server] Started 
+2019-02-20 14:28:01 [AutoSet] Start 
+2019-02-20 14:28:05 [TcpAccept] 192.168.1.107:2323 

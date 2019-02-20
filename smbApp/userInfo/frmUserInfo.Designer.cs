@@ -19,9 +19,9 @@ namespace smbApp.userInfo
         [System.Diagnostics.DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            Smobiler.Core.Controls.PopListGroup popListGroup3 = new Smobiler.Core.Controls.PopListGroup();
-            Smobiler.Core.Controls.PopListItem popListItem5 = new Smobiler.Core.Controls.PopListItem();
-            Smobiler.Core.Controls.PopListItem popListItem6 = new Smobiler.Core.Controls.PopListItem();
+            Smobiler.Core.Controls.PopListGroup popListGroup15 = new Smobiler.Core.Controls.PopListGroup();
+            Smobiler.Core.Controls.PopListItem popListItem29 = new Smobiler.Core.Controls.PopListItem();
+            Smobiler.Core.Controls.PopListItem popListItem30 = new Smobiler.Core.Controls.PopListItem();
             this.panTop = new Smobiler.Core.Controls.Panel();
             this.panNav = new Smobiler.Core.Controls.Panel();
             this.imgBtnNav = new Smobiler.Core.Controls.ImageButton();
@@ -29,6 +29,8 @@ namespace smbApp.userInfo
             this.labTitle = new Smobiler.Core.Controls.Label();
             this.panBot = new Smobiler.Core.Controls.Panel();
             this.btnExit = new Smobiler.Core.Controls.Button();
+            this.popListTest = new Smobiler.Core.Controls.PopList();
+            this.panel7 = new Smobiler.Core.Controls.Panel();
             this.panelContent = new Smobiler.Core.Controls.Panel();
             this.panelUser = new Smobiler.Core.Controls.Panel();
             this.panelUserC1 = new Smobiler.Core.Controls.Panel();
@@ -45,7 +47,10 @@ namespace smbApp.userInfo
             this.label1 = new Smobiler.Core.Controls.Label();
             this.panel6 = new Smobiler.Core.Controls.Panel();
             this.buttonSave = new Smobiler.Core.Controls.Button();
-            this.popListTest = new Smobiler.Core.Controls.PopList();
+            this.panel8 = new Smobiler.Core.Controls.Panel();
+            this.imageUser = new Smobiler.Core.Controls.Image();
+            this.fontIcon2 = new Smobiler.Core.Controls.FontIcon();
+            this.upBtn = new Smobiler.Core.Controls.ImageButton();
             // 
             // panTop
             // 
@@ -56,7 +61,7 @@ namespace smbApp.userInfo
             this.paneCenter});
             this.panTop.Direction = Smobiler.Core.Controls.LayoutDirection.Row;
             this.panTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panTop.Location = new System.Drawing.Point(44, 100);
+            this.panTop.Location = new System.Drawing.Point(0, 100);
             this.panTop.Name = "panTop";
             this.panTop.Size = new System.Drawing.Size(300, 40);
             // 
@@ -128,16 +133,46 @@ namespace smbApp.userInfo
             this.btnExit.Text = "注销登录";
             this.btnExit.Press += new System.EventHandler(this.btnExit_Press);
             // 
+            // popListTest
+            // 
+            popListItem29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem29.Text = "上海";
+            popListItem29.Value = "上海";
+            popListItem30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            popListItem30.Text = "北京";
+            popListItem30.Value = "北京";
+            popListGroup15.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
+            popListItem29,
+            popListItem30});
+            popListGroup15.Title = "一线城市";
+            popListGroup15.Value = "一线城市";
+            this.popListTest.Groups.AddRange(new Smobiler.Core.Controls.PopListGroup[] {
+            popListGroup15});
+            this.popListTest.Name = "popListTest";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.panelContent});
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.ItemAlign = Smobiler.Core.Controls.LayoutItemAlign.Center;
+            this.panel7.Layout = Smobiler.Core.Controls.LayoutPosition.Relative;
+            this.panel7.Location = new System.Drawing.Point(0, 40);
+            this.panel7.Name = "panel7";
+            this.panel7.Scrollable = true;
+            this.panel7.Size = new System.Drawing.Size(300, 425);
+            // 
             // panelContent
             // 
             this.panelContent.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panelUser,
             this.panel1,
-            this.panel6});
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(7, 57);
+            this.panel6,
+            this.panel8,
+            this.fontIcon2});
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(300, 280);
+            this.panelContent.Scrollable = true;
+            this.panelContent.Size = new System.Drawing.Size(300, 425);
             // 
             // panelUser
             // 
@@ -147,8 +182,7 @@ namespace smbApp.userInfo
             this.panelUserC1,
             this.panelUserC2,
             this.panel2});
-            this.panelUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUser.Location = new System.Drawing.Point(23, 26);
+            this.panelUser.Location = new System.Drawing.Point(0, 100);
             this.panelUser.Name = "panelUser";
             this.panelUser.Size = new System.Drawing.Size(300, 35);
             // 
@@ -217,8 +251,7 @@ namespace smbApp.userInfo
             this.panel3,
             this.panel4,
             this.panel5});
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(23, 26);
+            this.panel1.Location = new System.Drawing.Point(0, 135);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 35);
             // 
@@ -270,8 +303,7 @@ namespace smbApp.userInfo
             this.panel6.BorderColor = System.Drawing.Color.Silver;
             this.panel6.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.buttonSave});
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(23, 26);
+            this.panel6.Location = new System.Drawing.Point(0, 170);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(300, 35);
             // 
@@ -286,22 +318,44 @@ namespace smbApp.userInfo
             this.buttonSave.Size = new System.Drawing.Size(170, 30);
             this.buttonSave.Text = "保存设置";
             // 
-            // popListTest
+            // panel8
             // 
-            popListItem5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem5.Text = "上海";
-            popListItem5.Value = "上海";
-            popListItem6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            popListItem6.Text = "北京";
-            popListItem6.Value = "北京";
-            popListGroup3.Items.AddRange(new Smobiler.Core.Controls.PopListItem[] {
-            popListItem5,
-            popListItem6});
-            popListGroup3.Title = "一线城市";
-            popListGroup3.Value = "一线城市";
-            this.popListTest.Groups.AddRange(new Smobiler.Core.Controls.PopListGroup[] {
-            popListGroup3});
-            this.popListTest.Name = "popListTest";
+            this.panel8.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
+            this.imageUser,
+            this.upBtn});
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(300, 100);
+            // 
+            // imageUser
+            // 
+            this.imageUser.Border = new Smobiler.Core.Controls.Border(1F);
+            this.imageUser.BorderColor = System.Drawing.Color.Silver;
+            this.imageUser.BorderRadius = 10;
+            this.imageUser.Location = new System.Drawing.Point(110, 10);
+            this.imageUser.Name = "imageUser";
+            this.imageUser.ResourcePath = "upload";
+            this.imageUser.Size = new System.Drawing.Size(80, 80);
+            this.imageUser.SizeMode = Smobiler.Core.Controls.ImageSizeMode.Cover;
+            // 
+            // fontIcon2
+            // 
+            this.fontIcon2.Location = new System.Drawing.Point(256, 300);
+            this.fontIcon2.Name = "fontIcon2";
+            this.fontIcon2.Size = new System.Drawing.Size(100, 30);
+            // 
+            // upBtn
+            // 
+            this.upBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.upBtn.ForeColor = System.Drawing.Color.Silver;
+            this.upBtn.IconColor = System.Drawing.Color.Silver;
+            this.upBtn.ImageType = Smobiler.Core.Controls.ImageEx.ImageStyle.FontIcon;
+            this.upBtn.Location = new System.Drawing.Point(198, 40);
+            this.upBtn.Name = "upBtn";
+            this.upBtn.ResourceID = "check-circle-o";
+            this.upBtn.Size = new System.Drawing.Size(55, 50);
+            this.upBtn.SizeMode = Smobiler.Core.Controls.ImageSizeMode.Default;
+            this.upBtn.Text = "修改";
+            this.upBtn.Press += new System.EventHandler(this.upBtn_Press);
             // 
             // frmUserInfo
             // 
@@ -311,7 +365,8 @@ namespace smbApp.userInfo
             this.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.panTop,
             this.panBot,
-            this.panelContent});
+            this.panel7});
+            this.Load += new System.EventHandler(this.frmUserInfo_Load);
             this.Name = "frmUserInfo";
 
         }
@@ -324,11 +379,14 @@ namespace smbApp.userInfo
         private Smobiler.Core.Controls.Label labTitle;
         private Smobiler.Core.Controls.ImageButton imgBtnNav;
         private Smobiler.Core.Controls.Button btnExit;
+        private Smobiler.Core.Controls.PopList popListTest;
+        private Smobiler.Core.Controls.Panel panel7;
         private Smobiler.Core.Controls.Panel panelContent;
         private Smobiler.Core.Controls.Panel panelUser;
         private Smobiler.Core.Controls.Panel panelUserC1;
         private Smobiler.Core.Controls.FontIcon fUser;
         private Smobiler.Core.Controls.Panel panelUserC2;
+        private Smobiler.Core.Controls.ImageButton imgBtnUser;
         private Smobiler.Core.Controls.Panel panel2;
         private Smobiler.Core.Controls.Label labelUser;
         private Smobiler.Core.Controls.Panel panel1;
@@ -339,7 +397,9 @@ namespace smbApp.userInfo
         private Smobiler.Core.Controls.Label label1;
         private Smobiler.Core.Controls.Panel panel6;
         private Smobiler.Core.Controls.Button buttonSave;
-        private Smobiler.Core.Controls.PopList popListTest;
-        private Smobiler.Core.Controls.ImageButton imgBtnUser;
+        private Smobiler.Core.Controls.Panel panel8;
+        private Smobiler.Core.Controls.Image imageUser;
+        private Smobiler.Core.Controls.ImageButton upBtn;
+        private Smobiler.Core.Controls.FontIcon fontIcon2;
     }
 }

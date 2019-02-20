@@ -74,7 +74,7 @@ namespace smbApp
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Maroon;
             this.btnLogin.FontSize = 18F;
-            this.btnLogin.Location = new System.Drawing.Point(25, 227);
+            this.btnLogin.Location = new System.Drawing.Point(25, 245);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(250, 45);
             this.btnLogin.Text = "登录";
@@ -84,7 +84,7 @@ namespace smbApp
             // 
             this.panelRg.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.btnReg});
-            this.panelRg.Location = new System.Drawing.Point(25, 280);
+            this.panelRg.Location = new System.Drawing.Point(25, 298);
             this.panelRg.Name = "panelRg";
             this.panelRg.Size = new System.Drawing.Size(106, 25);
             // 
@@ -103,7 +103,7 @@ namespace smbApp
             // 
             this.panelPwd.Controls.AddRange(new Smobiler.Core.Controls.MobileControl[] {
             this.btnPwd});
-            this.panelPwd.Location = new System.Drawing.Point(169, 280);
+            this.panelPwd.Location = new System.Drawing.Point(169, 298);
             this.panelPwd.Name = "panelPwd";
             this.panelPwd.Size = new System.Drawing.Size(106, 25);
             // 
@@ -121,7 +121,7 @@ namespace smbApp
             // fPwd
             // 
             this.fPwd.ForeColor = System.Drawing.Color.Maroon;
-            this.fPwd.Location = new System.Drawing.Point(33, 102);
+            this.fPwd.Location = new System.Drawing.Point(33, 120);
             this.fPwd.Name = "fPwd";
             this.fPwd.ResourceID = "unlock-alt";
             this.fPwd.Size = new System.Drawing.Size(30, 30);
@@ -131,7 +131,7 @@ namespace smbApp
             this.txtPassWord.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtPassWord.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.txtPassWord.BorderRadius = 10;
-            this.txtPassWord.Location = new System.Drawing.Point(80, 102);
+            this.txtPassWord.Location = new System.Drawing.Point(80, 120);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtPassWord.SecurityMode = true;
@@ -140,7 +140,7 @@ namespace smbApp
             // 
             // checkRemb
             // 
-            this.checkRemb.Location = new System.Drawing.Point(33, 162);
+            this.checkRemb.Location = new System.Drawing.Point(33, 180);
             this.checkRemb.Name = "checkRemb";
             this.checkRemb.Size = new System.Drawing.Size(30, 30);
             this.checkRemb.Style = Smobiler.Core.Controls.CheckBoxStyle.Circular;
@@ -148,7 +148,7 @@ namespace smbApp
             // 
             // labLogin
             // 
-            this.labLogin.Location = new System.Drawing.Point(80, 162);
+            this.labLogin.Location = new System.Drawing.Point(80, 180);
             this.labLogin.Name = "labLogin";
             this.labLogin.Size = new System.Drawing.Size(100, 30);
             this.labLogin.Text = "是否记住登录密码";
@@ -158,7 +158,7 @@ namespace smbApp
             this.txtUserName.Border = new Smobiler.Core.Controls.Border(0F, 0F, 0F, 1F);
             this.txtUserName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.txtUserName.BorderRadius = 10;
-            this.txtUserName.Location = new System.Drawing.Point(80, 47);
+            this.txtUserName.Location = new System.Drawing.Point(80, 65);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Padding = new Smobiler.Core.Controls.Padding(5F, 0F, 0F, 0F);
             this.txtUserName.Size = new System.Drawing.Size(195, 30);
@@ -167,7 +167,7 @@ namespace smbApp
             // fUser
             // 
             this.fUser.ForeColor = System.Drawing.Color.Maroon;
-            this.fUser.Location = new System.Drawing.Point(33, 47);
+            this.fUser.Location = new System.Drawing.Point(33, 65);
             this.fUser.Name = "fUser";
             this.fUser.ResourceID = "user";
             this.fUser.Size = new System.Drawing.Size(30, 30);

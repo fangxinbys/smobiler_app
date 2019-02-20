@@ -40,5 +40,25 @@ namespace smbApp.userInfo
         {
             this.popListTest.ShowDialog();
         }
+
+        private void frmUserInfo_Load(object sender, EventArgs e)
+        {
+            loadUserImg();
+        }
+        public void loadUserImg()
+        {
+            if (Client.Session["UserModel"] == null) return;
+            Maticsoft.Model.tUsers user = (Maticsoft.Model.tUsers)Client.Session["UserModel"];
+            if (user.userImage == null) return;
+            imageUser.ResourceID = user.userImage.Replace(".png", "").Trim();
+            imageUser.Refresh();
+        }
+
+        private void upBtn_Press(object sender, EventArgs e)
+        {
+            work.cameraImg frmImg = new work.cameraImg(this);
+            this.Show(frmImg);
+          
+        }
     }
 }
