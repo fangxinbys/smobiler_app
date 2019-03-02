@@ -120,6 +120,15 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PocketBalance.cs" />
+    <Compile Include="PocketBalanceRecard.cs" />
+    <Compile Include="PocketHelp.cs" />
+    <Compile Include="PocketMentor.cs" />
+    <Compile Include="PocketNotice.cs" />
+    <Compile Include="PocketTask.cs" />
+    <Compile Include="PocketTaskRec.cs" />
+    <Compile Include="PocketTaskSub.cs" />
+    <Compile Include="PocketUser.cs" />
     <Compile Include="S_Onlines.cs" />
     <Compile Include="tBom.cs" />
     <Compile Include="tDepartMent.cs" />

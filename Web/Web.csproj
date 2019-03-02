@@ -105,6 +105,8 @@
     <Content Include="Admin\Menu\MenuList.aspx" />
     <Content Include="Admin\Menu\selectMenu.aspx" />
     <Content Include="Admin\Bom\BomList.aspx" />
+    <Content Include="Admin\PocketNotice\PocketNoticeEdit.aspx" />
+    <Content Include="Admin\PocketNotice\PocketNoticeList.aspx" />
     <Content Include="Admin\Powers\PowersList.aspx" />
     <Content Include="Admin\Role\RoleEdit.aspx" />
     <Content Include="Admin\Role\RoleList.aspx" />
@@ -2399,6 +2401,20 @@
     </Compile>
     <Compile Include="Admin\Bom\BomList.aspx.designer.cs">
       <DependentUpon>BomList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeEdit.aspx.cs">
+      <DependentUpon>PocketNoticeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeEdit.aspx.designer.cs">
+      <DependentUpon>PocketNoticeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeList.aspx.cs">
+      <DependentUpon>PocketNoticeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeList.aspx.designer.cs">
+      <DependentUpon>PocketNoticeList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Powers\PowersList.aspx.cs">
       <DependentUpon>PowersList.aspx</DependentUpon>
