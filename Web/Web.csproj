@@ -105,8 +105,12 @@
     <Content Include="Admin\Menu\MenuList.aspx" />
     <Content Include="Admin\Menu\selectMenu.aspx" />
     <Content Include="Admin\Bom\BomList.aspx" />
+    <Content Include="Admin\PocketUser\PocketUserEdit.aspx" />
+    <Content Include="Admin\PocketUser\PocketUserList.aspx" />
     <Content Include="Admin\PocketNotice\PocketNoticeEdit.aspx" />
     <Content Include="Admin\PocketNotice\PocketNoticeList.aspx" />
+    <Content Include="Admin\PocketTask\PocketTaskList.aspx" />
+    <Content Include="Admin\PocketTask\PocketTaskEdit.aspx" />
     <Content Include="Admin\Powers\PowersList.aspx" />
     <Content Include="Admin\Role\RoleEdit.aspx" />
     <Content Include="Admin\Role\RoleList.aspx" />
@@ -2402,6 +2406,20 @@
     <Compile Include="Admin\Bom\BomList.aspx.designer.cs">
       <DependentUpon>BomList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserEdit.aspx.cs">
+      <DependentUpon>PocketUserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserEdit.aspx.designer.cs">
+      <DependentUpon>PocketUserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserList.aspx.cs">
+      <DependentUpon>PocketUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserList.aspx.designer.cs">
+      <DependentUpon>PocketUserList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\PocketNotice\PocketNoticeEdit.aspx.cs">
       <DependentUpon>PocketNoticeEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2415,6 +2433,20 @@
     </Compile>
     <Compile Include="Admin\PocketNotice\PocketNoticeList.aspx.designer.cs">
       <DependentUpon>PocketNoticeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskList.aspx.cs">
+      <DependentUpon>PocketTaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskList.aspx.designer.cs">
+      <DependentUpon>PocketTaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskEdit.aspx.cs">
+      <DependentUpon>PocketTaskEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskEdit.aspx.designer.cs">
+      <DependentUpon>PocketTaskEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Powers\PowersList.aspx.cs">
       <DependentUpon>PowersList.aspx</DependentUpon>

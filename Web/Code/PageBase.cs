@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 
@@ -200,6 +201,12 @@ namespace Web
             m.UserName = user.usersName;
 
             bll.Add(m);
+        }
+        protected static bool ValidateMobile(string mobile)
+        {
+            if (string.IsNullOrEmpty(mobile))
+                return false;
+            return Regex.IsMatch(mobile, @"^(13|14|15|16|18|19|17)\d{9}$");
         }
         #endregion
     }

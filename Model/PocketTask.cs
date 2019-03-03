@@ -13,8 +13,10 @@ namespace Maticsoft.Model
 		private int _pockettaskid;
 		private string _pockettaskinfo;
 		private int? _pockettasknum;
-		private int? _pockettaskmoney;
+		private decimal? _pockettaskmoney;
 		private string _pockettaskrule;
+		private DateTime? _pockettime;
+		private string _pocketfengmian;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -42,7 +44,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? pocketTaskMoney
+		public decimal? pocketTaskMoney
 		{
 			set{ _pockettaskmoney=value;}
 			get{return _pockettaskmoney;}
@@ -54,6 +56,22 @@ namespace Maticsoft.Model
 		{
 			set{ _pockettaskrule=value;}
 			get{return _pockettaskrule;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public DateTime? pocketTime
+		{
+			set{ _pockettime=value;}
+			get{return _pockettime;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string pocketFengMian
+		{
+			set{ _pocketfengmian=value;}
+			get{return _pocketfengmian;}
 		}
 		#endregion Model
 

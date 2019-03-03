@@ -51,8 +51,8 @@ namespace Maticsoft.DAL
 			strSql.Append("@noticeTitle,@noticeInfo,@noticeTime)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
-					new SqlParameter("@noticeTitle", SqlDbType.VarChar,50),
-					new SqlParameter("@noticeInfo", SqlDbType.Text),
+					new SqlParameter("@noticeTitle", SqlDbType.VarChar,150),
+					new SqlParameter("@noticeInfo", SqlDbType.VarChar,500),
 					new SqlParameter("@noticeTime", SqlDbType.DateTime)};
 			parameters[0].Value = model.noticeTitle;
 			parameters[1].Value = model.noticeInfo;
@@ -80,8 +80,8 @@ namespace Maticsoft.DAL
 			strSql.Append("noticeTime=@noticeTime");
 			strSql.Append(" where noticeId=@noticeId");
 			SqlParameter[] parameters = {
-					new SqlParameter("@noticeTitle", SqlDbType.VarChar,50),
-					new SqlParameter("@noticeInfo", SqlDbType.Text),
+					new SqlParameter("@noticeTitle", SqlDbType.VarChar,150),
+					new SqlParameter("@noticeInfo", SqlDbType.VarChar,500),
 					new SqlParameter("@noticeTime", SqlDbType.DateTime),
 					new SqlParameter("@noticeId", SqlDbType.Int,4)};
 			parameters[0].Value = model.noticeTitle;

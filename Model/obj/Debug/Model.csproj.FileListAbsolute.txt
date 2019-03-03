@@ -29,4 +29,3 @@ C:\Users\Administrator\Desktop\Pro\Model\obj\Debug\Model.csproj.CoreCompileInput
 C:\Users\Administrator\Desktop\Pro\Model\obj\Debug\Maticsoft.Model.dll
 C:\Users\Administrator\Desktop\Pro\Model\obj\Debug\Maticsoft.Model.pdb
 C:\Users\Administrator\Desktop\Pro\Model\obj\Debug\Model.csprojAssemblyReference.cache
-C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Debug\Model.csprojAssemblyReference.cache
