@@ -46,19 +46,23 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into PocketTaskSub(");
-			strSql.Append("subTaskId,subUser,subInfo,examine)");
+			strSql.Append("subTaskId,subUser,subInfo,subTime,subMoney,examine)");
 			strSql.Append(" values (");
-			strSql.Append("@subTaskId,@subUser,@subInfo,@examine)");
+			strSql.Append("@subTaskId,@subUser,@subInfo,@subTime,@subMoney,@examine)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@subTaskId", SqlDbType.Int,4),
 					new SqlParameter("@subUser", SqlDbType.VarChar,50),
-					new SqlParameter("@subInfo", SqlDbType.Image),
-					new SqlParameter("@examine", SqlDbType.VarChar,50)};
+					new SqlParameter("@subInfo", SqlDbType.VarChar,50),
+					new SqlParameter("@subTime", SqlDbType.VarChar,50),
+					new SqlParameter("@subMoney", SqlDbType.Decimal,9),
+					new SqlParameter("@examine", SqlDbType.Bit,1)};
 			parameters[0].Value = model.subTaskId;
 			parameters[1].Value = model.subUser;
 			parameters[2].Value = model.subInfo;
-			parameters[3].Value = model.examine;
+			parameters[3].Value = model.subTime;
+			parameters[4].Value = model.subMoney;
+			parameters[5].Value = model.examine;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -80,19 +84,25 @@ namespace Maticsoft.DAL
 			strSql.Append("subTaskId=@subTaskId,");
 			strSql.Append("subUser=@subUser,");
 			strSql.Append("subInfo=@subInfo,");
+			strSql.Append("subTime=@subTime,");
+			strSql.Append("subMoney=@subMoney,");
 			strSql.Append("examine=@examine");
 			strSql.Append(" where subId=@subId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@subTaskId", SqlDbType.Int,4),
 					new SqlParameter("@subUser", SqlDbType.VarChar,50),
-					new SqlParameter("@subInfo", SqlDbType.Image),
-					new SqlParameter("@examine", SqlDbType.VarChar,50),
+					new SqlParameter("@subInfo", SqlDbType.VarChar,50),
+					new SqlParameter("@subTime", SqlDbType.VarChar,50),
+					new SqlParameter("@subMoney", SqlDbType.Decimal,9),
+					new SqlParameter("@examine", SqlDbType.Bit,1),
 					new SqlParameter("@subId", SqlDbType.Int,4)};
 			parameters[0].Value = model.subTaskId;
 			parameters[1].Value = model.subUser;
 			parameters[2].Value = model.subInfo;
-			parameters[3].Value = model.examine;
-			parameters[4].Value = model.subId;
+			parameters[3].Value = model.subTime;
+			parameters[4].Value = model.subMoney;
+			parameters[5].Value = model.examine;
+			parameters[6].Value = model.subId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -156,7 +166,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 subId,subTaskId,subUser,subInfo,examine from PocketTaskSub ");
+			strSql.Append("select  top 1 subId,subTaskId,subUser,subInfo,subTime,subMoney,examine from PocketTaskSub ");
 			strSql.Append(" where subId=@subId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@subId", SqlDbType.Int,4)
@@ -196,13 +206,28 @@ namespace Maticsoft.DAL
 				{
 					model.subUser=row["subUser"].ToString();
 				}
-				if(row["subInfo"]!=null && row["subInfo"].ToString()!="")
+				if(row["subInfo"]!=null)
 				{
-					model.subInfo=(byte[])row["subInfo"];
+					model.subInfo=row["subInfo"].ToString();
 				}
-				if(row["examine"]!=null)
+				if(row["subTime"]!=null)
 				{
-					model.examine=row["examine"].ToString();
+					model.subTime=row["subTime"].ToString();
+				}
+				if(row["subMoney"]!=null && row["subMoney"].ToString()!="")
+				{
+					model.subMoney=decimal.Parse(row["subMoney"].ToString());
+				}
+				if(row["examine"]!=null && row["examine"].ToString()!="")
+				{
+					if((row["examine"].ToString()=="1")||(row["examine"].ToString().ToLower()=="true"))
+					{
+						model.examine=true;
+					}
+					else
+					{
+						model.examine=false;
+					}
 				}
 			}
 			return model;
@@ -214,7 +239,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select subId,subTaskId,subUser,subInfo,examine ");
+			strSql.Append("select subId,subTaskId,subUser,subInfo,subTime,subMoney,examine ");
 			strSql.Append(" FROM PocketTaskSub ");
 			if(strWhere.Trim()!="")
 			{
@@ -234,7 +259,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" subId,subTaskId,subUser,subInfo,examine ");
+			strSql.Append(" subId,subTaskId,subUser,subInfo,subTime,subMoney,examine ");
 			strSql.Append(" FROM PocketTaskSub ");
 			if(strWhere.Trim()!="")
 			{

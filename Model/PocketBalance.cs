@@ -12,7 +12,7 @@ namespace Maticsoft.Model
 		#region Model
 		private int _balanceid;
 		private string _balanceuser;
-		private string _balancemoney;
+		private decimal? _balancemoney;
 		private string _balancetime;
 		/// <summary>
 		/// 
@@ -33,7 +33,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string balanceMoney
+		public decimal? balanceMoney
 		{
 			set{ _balancemoney=value;}
 			get{return _balancemoney;}

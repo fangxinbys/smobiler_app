@@ -53,8 +53,8 @@ namespace Maticsoft.DAL
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketMaster", SqlDbType.VarChar,50),
 					new SqlParameter("@disciple", SqlDbType.VarChar,50),
-					new SqlParameter("@masterMoney", SqlDbType.VarChar,50),
-					new SqlParameter("@discipleMoney", SqlDbType.VarChar,50)};
+					new SqlParameter("@masterMoney", SqlDbType.Decimal,9),
+					new SqlParameter("@discipleMoney", SqlDbType.Decimal,9)};
 			parameters[0].Value = model.pocketMaster;
 			parameters[1].Value = model.disciple;
 			parameters[2].Value = model.masterMoney;
@@ -85,8 +85,8 @@ namespace Maticsoft.DAL
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketMaster", SqlDbType.VarChar,50),
 					new SqlParameter("@disciple", SqlDbType.VarChar,50),
-					new SqlParameter("@masterMoney", SqlDbType.VarChar,50),
-					new SqlParameter("@discipleMoney", SqlDbType.VarChar,50),
+					new SqlParameter("@masterMoney", SqlDbType.Decimal,9),
+					new SqlParameter("@discipleMoney", SqlDbType.Decimal,9),
 					new SqlParameter("@mentorId", SqlDbType.Int,4)};
 			parameters[0].Value = model.pocketMaster;
 			parameters[1].Value = model.disciple;
@@ -196,13 +196,13 @@ namespace Maticsoft.DAL
 				{
 					model.disciple=row["disciple"].ToString();
 				}
-				if(row["masterMoney"]!=null)
+				if(row["masterMoney"]!=null && row["masterMoney"].ToString()!="")
 				{
-					model.masterMoney=row["masterMoney"].ToString();
+					model.masterMoney=decimal.Parse(row["masterMoney"].ToString());
 				}
-				if(row["discipleMoney"]!=null)
+				if(row["discipleMoney"]!=null && row["discipleMoney"].ToString()!="")
 				{
-					model.discipleMoney=row["discipleMoney"].ToString();
+					model.discipleMoney=decimal.Parse(row["discipleMoney"].ToString());
 				}
 			}
 			return model;

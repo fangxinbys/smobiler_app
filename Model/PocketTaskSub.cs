@@ -13,8 +13,10 @@ namespace Maticsoft.Model
 		private int _subid;
 		private int? _subtaskid;
 		private string _subuser;
-		private byte[] _subinfo;
-		private string _examine;
+		private string _subinfo;
+		private string _subtime;
+		private decimal? _submoney;
+		private bool _examine;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -42,7 +44,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public byte[] subInfo
+		public string subInfo
 		{
 			set{ _subinfo=value;}
 			get{return _subinfo;}
@@ -50,7 +52,23 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string examine
+		public string subTime
+		{
+			set{ _subtime=value;}
+			get{return _subtime;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public decimal? subMoney
+		{
+			set{ _submoney=value;}
+			get{return _submoney;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public bool examine
 		{
 			set{ _examine=value;}
 			get{return _examine;}

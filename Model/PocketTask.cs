@@ -17,6 +17,7 @@ namespace Maticsoft.Model
 		private string _pockettaskrule;
 		private DateTime? _pockettime;
 		private string _pocketfengmian;
+		private string _pockettaskruleurl;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -72,6 +73,14 @@ namespace Maticsoft.Model
 		{
 			set{ _pocketfengmian=value;}
 			get{return _pocketfengmian;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string pocketTaskRuleUrl
+		{
+			set{ _pockettaskruleurl=value;}
+			get{return _pockettaskruleurl;}
 		}
 		#endregion Model
 

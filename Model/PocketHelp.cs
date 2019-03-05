@@ -24,7 +24,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string HelpTitle
+		public string helpTitle
 		{
 			set{ _helptitle=value;}
 			get{return _helptitle;}
@@ -32,7 +32,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string HelpInfo
+		public string helpInfo
 		{
 			set{ _helpinfo=value;}
 			get{return _helpinfo;}

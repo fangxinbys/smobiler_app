@@ -46,9 +46,9 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into PocketTask(");
-			strSql.Append("pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian)");
+			strSql.Append("pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian,pocketTaskRuleUrl)");
 			strSql.Append(" values (");
-			strSql.Append("@pocketTaskInfo,@pocketTaskNum,@pocketTaskMoney,@pocketTaskRule,@pocketTime,@pocketFengMian)");
+			strSql.Append("@pocketTaskInfo,@pocketTaskNum,@pocketTaskMoney,@pocketTaskRule,@pocketTime,@pocketFengMian,@pocketTaskRuleUrl)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketTaskInfo", SqlDbType.VarChar,500),
@@ -56,13 +56,15 @@ namespace Maticsoft.DAL
 					new SqlParameter("@pocketTaskMoney", SqlDbType.Decimal,9),
 					new SqlParameter("@pocketTaskRule", SqlDbType.VarChar,-1),
 					new SqlParameter("@pocketTime", SqlDbType.DateTime),
-					new SqlParameter("@pocketFengMian", SqlDbType.VarChar,500)};
+					new SqlParameter("@pocketFengMian", SqlDbType.VarChar,500),
+					new SqlParameter("@pocketTaskRuleUrl", SqlDbType.VarChar,100)};
 			parameters[0].Value = model.pocketTaskInfo;
 			parameters[1].Value = model.pocketTaskNum;
 			parameters[2].Value = model.pocketTaskMoney;
 			parameters[3].Value = model.pocketTaskRule;
 			parameters[4].Value = model.pocketTime;
 			parameters[5].Value = model.pocketFengMian;
+			parameters[6].Value = model.pocketTaskRuleUrl;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -86,7 +88,8 @@ namespace Maticsoft.DAL
 			strSql.Append("pocketTaskMoney=@pocketTaskMoney,");
 			strSql.Append("pocketTaskRule=@pocketTaskRule,");
 			strSql.Append("pocketTime=@pocketTime,");
-			strSql.Append("pocketFengMian=@pocketFengMian");
+			strSql.Append("pocketFengMian=@pocketFengMian,");
+			strSql.Append("pocketTaskRuleUrl=@pocketTaskRuleUrl");
 			strSql.Append(" where pocketTaskId=@pocketTaskId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketTaskInfo", SqlDbType.VarChar,500),
@@ -95,6 +98,7 @@ namespace Maticsoft.DAL
 					new SqlParameter("@pocketTaskRule", SqlDbType.VarChar,-1),
 					new SqlParameter("@pocketTime", SqlDbType.DateTime),
 					new SqlParameter("@pocketFengMian", SqlDbType.VarChar,500),
+					new SqlParameter("@pocketTaskRuleUrl", SqlDbType.VarChar,100),
 					new SqlParameter("@pocketTaskId", SqlDbType.Int,4)};
 			parameters[0].Value = model.pocketTaskInfo;
 			parameters[1].Value = model.pocketTaskNum;
@@ -102,7 +106,8 @@ namespace Maticsoft.DAL
 			parameters[3].Value = model.pocketTaskRule;
 			parameters[4].Value = model.pocketTime;
 			parameters[5].Value = model.pocketFengMian;
-			parameters[6].Value = model.pocketTaskId;
+			parameters[6].Value = model.pocketTaskRuleUrl;
+			parameters[7].Value = model.pocketTaskId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -166,7 +171,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 pocketTaskId,pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian from PocketTask ");
+			strSql.Append("select  top 1 pocketTaskId,pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian,pocketTaskRuleUrl from PocketTask ");
 			strSql.Append(" where pocketTaskId=@pocketTaskId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketTaskId", SqlDbType.Int,4)
@@ -222,6 +227,10 @@ namespace Maticsoft.DAL
 				{
 					model.pocketFengMian=row["pocketFengMian"].ToString();
 				}
+				if(row["pocketTaskRuleUrl"]!=null)
+				{
+					model.pocketTaskRuleUrl=row["pocketTaskRuleUrl"].ToString();
+				}
 			}
 			return model;
 		}
@@ -232,7 +241,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select pocketTaskId,pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian ");
+			strSql.Append("select pocketTaskId,pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian,pocketTaskRuleUrl ");
 			strSql.Append(" FROM PocketTask ");
 			if(strWhere.Trim()!="")
 			{
@@ -252,7 +261,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" pocketTaskId,pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian ");
+			strSql.Append(" pocketTaskId,pocketTaskInfo,pocketTaskNum,pocketTaskMoney,pocketTaskRule,pocketTime,pocketFengMian,pocketTaskRuleUrl ");
 			strSql.Append(" FROM PocketTask ");
 			if(strWhere.Trim()!="")
 			{

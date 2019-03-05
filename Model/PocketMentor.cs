@@ -13,8 +13,8 @@ namespace Maticsoft.Model
 		private int _mentorid;
 		private string _pocketmaster;
 		private string _disciple;
-		private string _mastermoney;
-		private string _disciplemoney;
+		private decimal? _mastermoney;
+		private decimal? _disciplemoney;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -42,7 +42,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string masterMoney
+		public decimal? masterMoney
 		{
 			set{ _mastermoney=value;}
 			get{return _mastermoney;}
@@ -50,7 +50,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string discipleMoney
+		public decimal? discipleMoney
 		{
 			set{ _disciplemoney=value;}
 			get{return _disciplemoney;}

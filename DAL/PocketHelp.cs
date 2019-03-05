@@ -46,15 +46,15 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into PocketHelp(");
-			strSql.Append("HelpTitle,HelpInfo)");
+			strSql.Append("helpTitle,helpInfo)");
 			strSql.Append(" values (");
-			strSql.Append("@HelpTitle,@HelpInfo)");
+			strSql.Append("@helpTitle,@helpInfo)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
-					new SqlParameter("@HelpTitle", SqlDbType.VarChar,50),
-					new SqlParameter("@HelpInfo", SqlDbType.VarChar,1000)};
-			parameters[0].Value = model.HelpTitle;
-			parameters[1].Value = model.HelpInfo;
+					new SqlParameter("@helpTitle", SqlDbType.VarChar,50),
+					new SqlParameter("@helpInfo", SqlDbType.VarChar,1000)};
+			parameters[0].Value = model.helpTitle;
+			parameters[1].Value = model.helpInfo;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -73,15 +73,15 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("update PocketHelp set ");
-			strSql.Append("HelpTitle=@HelpTitle,");
-			strSql.Append("HelpInfo=@HelpInfo");
+			strSql.Append("helpTitle=@helpTitle,");
+			strSql.Append("helpInfo=@helpInfo");
 			strSql.Append(" where helpId=@helpId");
 			SqlParameter[] parameters = {
-					new SqlParameter("@HelpTitle", SqlDbType.VarChar,50),
-					new SqlParameter("@HelpInfo", SqlDbType.VarChar,1000),
+					new SqlParameter("@helpTitle", SqlDbType.VarChar,50),
+					new SqlParameter("@helpInfo", SqlDbType.VarChar,1000),
 					new SqlParameter("@helpId", SqlDbType.Int,4)};
-			parameters[0].Value = model.HelpTitle;
-			parameters[1].Value = model.HelpInfo;
+			parameters[0].Value = model.helpTitle;
+			parameters[1].Value = model.helpInfo;
 			parameters[2].Value = model.helpId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
@@ -146,7 +146,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 helpId,HelpTitle,HelpInfo from PocketHelp ");
+			strSql.Append("select  top 1 helpId,helpTitle,helpInfo from PocketHelp ");
 			strSql.Append(" where helpId=@helpId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@helpId", SqlDbType.Int,4)
@@ -178,13 +178,13 @@ namespace Maticsoft.DAL
 				{
 					model.helpId=int.Parse(row["helpId"].ToString());
 				}
-				if(row["HelpTitle"]!=null)
+				if(row["helpTitle"]!=null)
 				{
-					model.HelpTitle=row["HelpTitle"].ToString();
+					model.helpTitle=row["helpTitle"].ToString();
 				}
-				if(row["HelpInfo"]!=null)
+				if(row["helpInfo"]!=null)
 				{
-					model.HelpInfo=row["HelpInfo"].ToString();
+					model.helpInfo=row["helpInfo"].ToString();
 				}
 			}
 			return model;
@@ -196,7 +196,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select helpId,HelpTitle,HelpInfo ");
+			strSql.Append("select helpId,helpTitle,helpInfo ");
 			strSql.Append(" FROM PocketHelp ");
 			if(strWhere.Trim()!="")
 			{
@@ -216,7 +216,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" helpId,HelpTitle,HelpInfo ");
+			strSql.Append(" helpId,helpTitle,helpInfo ");
 			strSql.Append(" FROM PocketHelp ");
 			if(strWhere.Trim()!="")
 			{

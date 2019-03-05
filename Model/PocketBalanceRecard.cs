@@ -14,6 +14,7 @@ namespace Maticsoft.Model
 		private string _recarduser;
 		private string _recardmoney;
 		private string _recardtime;
+		private string _recardstate;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -45,6 +46,14 @@ namespace Maticsoft.Model
 		{
 			set{ _recardtime=value;}
 			get{return _recardtime;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string recardState
+		{
+			set{ _recardstate=value;}
+			get{return _recardstate;}
 		}
 		#endregion Model
 
