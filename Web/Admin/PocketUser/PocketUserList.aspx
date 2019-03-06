@@ -49,8 +49,18 @@
                         <f:BoundField DataField="pocketUserInv" HeaderText="邀请码" ExpandUnusedSpace="true" />
                         <f:BoundField DataField="pocketUserAlipay" HeaderText="绑定支付宝" ExpandUnusedSpace="true" />
                         <f:BoundField DataField="pocketUserReName" HeaderText="真实姓名" ExpandUnusedSpace="true" />
+                        <f:TemplateField Width="100px" HeaderText="任务赏金">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="rtask" Text='<%# GetTask(Eval("pocketUserPhone").ToString()) %>'></asp:Label>
+                            </ItemTemplate>
+                        </f:TemplateField>
+                        <f:TemplateField Width="100px" HeaderText="收徒赏金">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="zt" Text='<%# GetTea(Eval("pocketUserPhone").ToString()) %>'></asp:Label>
+                            </ItemTemplate>
+                        </f:TemplateField>
                         <f:LinkButtonField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="用户修改" ConfirmTarget="Top" CommandName="Edit" Width="50px" />
-                        <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除"
+                        <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除" Enabled="false"
                             ConfirmText="确定删除该用户？" ConfirmTarget="Top" CommandName="Delete" Width="50px" />
                     </Columns>
                 </f:Grid>

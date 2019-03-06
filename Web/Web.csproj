@@ -107,6 +107,7 @@
     <Content Include="Admin\Bom\BomList.aspx" />
     <Content Include="Admin\PocketGg\PocketGgEdit.aspx" />
     <Content Include="Admin\PocketGg\PocketGgList.aspx" />
+    <Content Include="Admin\PocketMentor\PocketMentorList.aspx" />
     <Content Include="Admin\PocketUser\PocketUserEdit.aspx" />
     <Content Include="Admin\PocketUser\PocketUserList.aspx" />
     <Content Include="Admin\PocketNotice\PocketNoticeEdit.aspx" />
@@ -117,6 +118,8 @@
     <Content Include="Admin\Role\RoleEdit.aspx" />
     <Content Include="Admin\Role\RoleList.aspx" />
     <Content Include="Admin\Role\roleMenu.aspx" />
+    <Content Include="Admin\BalanceRecard\BalanceRecardEdit.aspx" />
+    <Content Include="Admin\BalanceRecard\BalanceRecardList.aspx" />
     <Content Include="Admin\TaskCheck\TaskCheckEdit.aspx" />
     <Content Include="Admin\TaskCheck\TaskCheckList.aspx" />
     <Content Include="Admin\UserInfo.aspx" />
@@ -2038,6 +2041,7 @@
     <Content Include="res\themes\pure_orange\theme.css" />
     <Content Include="res\themes\pure_purple\theme.css" />
     <Content Include="res\themes\pure_red\theme.css" />
+    <Content Include="showTask.aspx" />
     <Content Include="smobiler\Resources\Image\logon.png" />
     <Content Include="smobiler\Resources\Image\timg.jpg" />
     <Content Include="smobiler\Resources\Image\timg1.jpg" />
@@ -2439,6 +2443,13 @@
     <Compile Include="Admin\PocketGg\PocketGgList.aspx.designer.cs">
       <DependentUpon>PocketGgList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorList.aspx.cs">
+      <DependentUpon>PocketMentorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorList.aspx.designer.cs">
+      <DependentUpon>PocketMentorList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\PocketUser\PocketUserEdit.aspx.cs">
       <DependentUpon>PocketUserEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2508,6 +2519,20 @@
     </Compile>
     <Compile Include="Admin\Role\roleMenu.aspx.designer.cs">
       <DependentUpon>roleMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardEdit.aspx.cs">
+      <DependentUpon>BalanceRecardEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardEdit.aspx.designer.cs">
+      <DependentUpon>BalanceRecardEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardList.aspx.cs">
+      <DependentUpon>BalanceRecardList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardList.aspx.designer.cs">
+      <DependentUpon>BalanceRecardList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\TaskCheck\TaskCheckEdit.aspx.cs">
       <DependentUpon>TaskCheckEdit.aspx</DependentUpon>
@@ -2601,6 +2626,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="showTask.aspx.cs">
+      <DependentUpon>showTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showTask.aspx.designer.cs">
+      <DependentUpon>showTask.aspx</DependentUpon>
     </Compile>
     <Compile Include="ueditor\net\App_Code\Config.cs" />
     <Compile Include="ueditor\net\App_Code\ConfigHandler.cs" />

@@ -11,9 +11,9 @@ using System.IO;
 using System.Text;
 using Maticsoft.DBUtility;
 
-namespace Maticsoft.Web.Admin.PocketUser
+namespace Maticsoft.Web.Admin.PocketMentor
 {
-    public partial class PocketUserList : PageBase
+    public partial class PocketMentorList : PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -30,21 +30,11 @@ namespace Maticsoft.Web.Admin.PocketUser
             LoadData();
         }
 
-
-        protected string GetTask(string Rid)
-        {
-            string sql =string.Format(@"select SUM( money_t) from ( select isnull(SUM(masterMoney),0) as money_t from dbo.PocketMentor  
-                           where pocketMaster = '{0}' union select isnull(SUM(discipleMoney),0) as money_t from dbo.PocketMentor  where disciple = '{1}') a", Rid,Rid);
-            return decimal.Parse(DbHelperSQL.GetSingle(sql).ToString()).ToString();
-        }
-        protected string GetTea(string Rid)
-        {
-            string sql = string.Format(@"select isnull(SUM(pocketTaskMoney),0) from dbo.TaskCheckInfo where examine=1 and subUser='{0}'", Rid);
-            return decimal.Parse(DbHelperSQL.GetSingle(sql).ToString()).ToString();
-        }
+ 
         protected void LoadData()
         {
-            Maticsoft.BLL.PocketUser BLL = new Maticsoft.BLL.PocketUser();
+
+            Maticsoft.BLL.PocketMentor BLL = new Maticsoft.BLL.PocketMentor();
             string sortField = GridDpt.SortField;
             string sortDirection = GridDpt.SortDirection;
 
@@ -52,15 +42,15 @@ namespace Maticsoft.Web.Admin.PocketUser
             {
                 GridDpt.RecordCount = BLL.GetRecordCount(" ");
 
-                DataView view = BLL.GetListByPage("", " pocketUserId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                DataView view = BLL.GetListByPage("", " mentorId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
                 view.Sort = String.Format("{0} {1}", sortField, sortDirection);
                 GridDpt.DataSource = view.ToTable();
             }
             else
             {
-                GridDpt.RecordCount = BLL.GetRecordCount(" pocketUserName like '%" + txtValue.Text+ "%' ");
+                GridDpt.RecordCount = BLL.GetRecordCount(" pocketMaster like '%" + txtValue.Text + "%' or disciple  like '%" + txtValue.Text + "%' ");
 
-                DataView view = BLL.GetListByPage(" pocketUserName like '%" + txtValue.Text + "%' ", " pocketUserId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                DataView view = BLL.GetListByPage(" pocketMaster like '%" + txtValue.Text + "%' or disciple  like '%" + txtValue.Text + "%' ", " mentorId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
                 view.Sort = String.Format("{0} {1}", sortField, sortDirection);
                 GridDpt.DataSource = view.ToTable();
             }
@@ -68,65 +58,17 @@ namespace Maticsoft.Web.Admin.PocketUser
 
         }
 
-        protected void TreeDpt_NodeCommand(object sender, TreeCommandEventArgs e)
-        {
-            LoadData();
-        }
-
-        protected void GridDpt_RowCommand(object sender, GridCommandEventArgs e)
-        {
-           
-            int deptID  = GetSelectedDataKeyID(GridDpt);
-
         
-            if (e.CommandName == "Delete")
-            {
-
-
-              
-
-                BLL.PocketUser BLL = new Maticsoft.BLL.PocketUser();
-               
-                bool isTrue = BLL.Delete(deptID);
-
-
-                if (!isTrue)
-                {
-                    Alert.ShowInTop("删除失败！");
-                    return;
-                }
-                else
-                {
-                    insertLog("删除了用户：" + deptID);
-                    LoadData();
-                }
-            }
-            if (e.CommandName == "Edit")
-            {
-                this.Window1.Title = "用户管理";
-                string openUrl = String.Format("./PocketUserEdit.aspx?userId={0}", HttpUtility.UrlEncode(deptID.ToString()));
-                PageContext.RegisterStartupScript(Window1.GetSaveStateReference(deptID.ToString())+ Window1.GetShowReference(openUrl));
-            }
-           
-        }
+ 
 
         protected void GridDpt_Sort(object sender, GridSortEventArgs e)
         {
             LoadData();
         }
 
-        protected void btnNew_Click(object sender, EventArgs e)
-        {
-            Window1.Title = "用户管理";
-            PageContext.RegisterStartupScript(Window1.GetShowReference("./PocketUserEdit.aspx"));
-        }
+      
 
-        protected void Window1_Close(object sender, WindowCloseEventArgs e)
-        {
-            Alert.ShowInTop("保存成功");
-           
-            LoadData();
-        }
+      
         protected void btnExcel_Click(object sender, EventArgs e)
         {
             if (GridDpt.Rows.Count <= 0)

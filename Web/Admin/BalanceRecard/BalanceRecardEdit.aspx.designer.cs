@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Maticsoft.Web.Admin.PocketUser {
+namespace Maticsoft.Web.Admin.BalanceRecard {
     
     
-    public partial class PocketUserList {
+    public partial class BalanceRecardEdit {
         
         /// <summary>
         /// form1 控件。
@@ -31,111 +31,84 @@ namespace Maticsoft.Web.Admin.PocketUser {
         protected global::FineUIPro.PageManager PageManager1;
         
         /// <summary>
-        /// Panel1 控件。
+        /// SimpleForm1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Panel Panel1;
+        protected global::FineUIPro.Form SimpleForm1;
         
         /// <summary>
-        /// GridDpt 控件。
+        /// Toolbar2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Grid GridDpt;
+        protected global::FineUIPro.Toolbar Toolbar2;
         
         /// <summary>
-        /// Toolbar 控件。
+        /// btnClose 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Toolbar Toolbar;
+        protected global::FineUIPro.Button btnClose;
         
         /// <summary>
-        /// txtValue 控件。
+        /// btnSave 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.TextBox txtValue;
+        protected global::FineUIPro.Button btnSave;
         
         /// <summary>
-        /// btnSelect 控件。
+        /// txtUser 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Button btnSelect;
+        protected global::FineUIPro.TextBox txtUser;
         
         /// <summary>
-        /// btnExcel 控件。
+        /// txtZfb 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Button btnExcel;
+        protected global::FineUIPro.TextBox txtZfb;
         
         /// <summary>
-        /// ToolbarFill1 控件。
+        /// txtRname 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.ToolbarFill ToolbarFill1;
+        protected global::FineUIPro.TextBox txtRname;
         
         /// <summary>
-        /// btnRe 控件。
+        /// txtJe 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Button btnRe;
+        protected global::FineUIPro.TextBox txtJe;
         
         /// <summary>
-        /// btnNew 控件。
+        /// CheckTask 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::FineUIPro.Button btnNew;
-        
-        /// <summary>
-        /// rtask 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label rtask;
-        
-        /// <summary>
-        /// zt 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label zt;
-        
-        /// <summary>
-        /// Window1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::FineUIPro.Window Window1;
+        protected global::FineUIPro.CheckBox CheckTask;
     }
 }

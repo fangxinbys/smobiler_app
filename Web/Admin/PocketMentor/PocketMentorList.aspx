@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PocketTaskList.aspx.cs" Inherits="Maticsoft.Web.Admin.PocketTask.PocketTaskList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PocketMentorList.aspx.cs" Inherits="Maticsoft.Web.Admin.PocketMentor.PocketMentorList" %>
 
 <!DOCTYPE html>
 
@@ -14,8 +14,8 @@
         <f:Panel ID="Panel1" CssClass="blockpanel" Margin="10px" runat="server" ShowBorder="false" ShowHeader="false" Layout="Region">
             <Items>
                 <f:Grid ID="GridDpt" runat="server" ShowBorder="false" ShowHeader="false" OnPageIndexChange="GridDpt_PageIndexChange"
-                    DataKeyNames="pocketTaskId" EnableMultiSelect="false" ShowPagingMessage="true" AllowPaging="true" IsDatabasePaging="true"
-                    OnRowCommand="GridDpt_RowCommand" AllowSorting="true" SortField="pocketTaskId" SortDirection="asc" OnSort="GridDpt_Sort">
+                    DataKeyNames="mentorId" EnableMultiSelect="false" ShowPagingMessage="true" AllowPaging="true" IsDatabasePaging="true"
+                    AllowSorting="true" SortField="mentorId" SortDirection="asc" OnSort="GridDpt_Sort">
                     <Toolbars>
                         <f:Toolbar ID="Toolbar" runat="server">
 
@@ -34,8 +34,7 @@
                                 <f:ToolbarFill ID="ToolbarFill1" runat="server">
                                 </f:ToolbarFill>
                                 <f:Button ID="btnRe" runat="server" Icon="Reload" Text="刷新" OnClick="btnRe_Click"></f:Button>
-                                <f:Button ID="btnNew" runat="server" Icon="Add" Text="添加任务" OnClick="btnNew_Click">
-                                </f:Button>
+
                             </Items>
                         </f:Toolbar>
 
@@ -43,25 +42,16 @@
 
                     <Columns>
 
-                        <f:BoundField DataField="pocketTaskInfo" HeaderText="任务标题" SortField="noticeTitle" ExpandUnusedSpace="true" />
-
-                        <f:BoundField DataField="pocketTaskNum" HeaderText="任务数量" ExpandUnusedSpace="true" />
-                        <f:BoundField DataField="pocketTaskMoney" HeaderText="已领数量" ExpandUnusedSpace="true" />
-                        <f:BoundField DataField="pocketTaskMoney" HeaderText="任务单价" ExpandUnusedSpace="true" />
-                        <f:BoundField DataField="pocketTime" HeaderText="发布时间" ExpandUnusedSpace="true" />
-                        <f:LinkButtonField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="任务修改" ConfirmTarget="Top" CommandName="Edit" Width="50px" />
-                        <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除" Enabled="false"
-                            ConfirmText="确定删除该任务？" ConfirmTarget="Top" CommandName="Delete" Width="50px" />
+                        <f:BoundField DataField="pocketMaster" HeaderText="师傅" SortField="pocketMaster" ExpandUnusedSpace="true" />
+                        <f:BoundField DataField="disciple" HeaderText="徒弟" SortField="disciple" ExpandUnusedSpace="true" />
+                        <f:BoundField DataField="masterMoney" HeaderText="师傅赏金" SortField="disciple" ExpandUnusedSpace="true" />
+                        <f:BoundField DataField="discipleMoney" HeaderText="徒弟赏金" SortField="disciple" ExpandUnusedSpace="true" />
                     </Columns>
                 </f:Grid>
 
             </Items>
         </f:Panel>
-        <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"
-            EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="700px" Title="任务管理"
-            Height="600px">
-        </f:Window>
-
+       
 
     </form>
 </body>
