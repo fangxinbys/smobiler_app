@@ -52,8 +52,8 @@ namespace Maticsoft.DAL
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@recardUser", SqlDbType.VarChar,50),
-					new SqlParameter("@recardMoney", SqlDbType.VarChar,50),
-					new SqlParameter("@recardTime", SqlDbType.VarChar,50),
+					new SqlParameter("@recardMoney", SqlDbType.Decimal,9),
+					new SqlParameter("@recardTime", SqlDbType.DateTime),
 					new SqlParameter("@recardState", SqlDbType.VarChar,50)};
 			parameters[0].Value = model.recardUser;
 			parameters[1].Value = model.recardMoney;
@@ -84,8 +84,8 @@ namespace Maticsoft.DAL
 			strSql.Append(" where recardId=@recardId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@recardUser", SqlDbType.VarChar,50),
-					new SqlParameter("@recardMoney", SqlDbType.VarChar,50),
-					new SqlParameter("@recardTime", SqlDbType.VarChar,50),
+					new SqlParameter("@recardMoney", SqlDbType.Decimal,9),
+					new SqlParameter("@recardTime", SqlDbType.DateTime),
 					new SqlParameter("@recardState", SqlDbType.VarChar,50),
 					new SqlParameter("@recardId", SqlDbType.Int,4)};
 			parameters[0].Value = model.recardUser;
@@ -192,13 +192,13 @@ namespace Maticsoft.DAL
 				{
 					model.recardUser=row["recardUser"].ToString();
 				}
-				if(row["recardMoney"]!=null)
+				if(row["recardMoney"]!=null && row["recardMoney"].ToString()!="")
 				{
-					model.recardMoney=row["recardMoney"].ToString();
+					model.recardMoney=decimal.Parse(row["recardMoney"].ToString());
 				}
-				if(row["recardTime"]!=null)
+				if(row["recardTime"]!=null && row["recardTime"].ToString()!="")
 				{
-					model.recardTime=row["recardTime"].ToString();
+					model.recardTime=DateTime.Parse(row["recardTime"].ToString());
 				}
 				if(row["recardState"]!=null)
 				{

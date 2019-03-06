@@ -54,7 +54,7 @@ namespace Maticsoft.DAL
 					new SqlParameter("@subTaskId", SqlDbType.Int,4),
 					new SqlParameter("@subUser", SqlDbType.VarChar,50),
 					new SqlParameter("@subInfo", SqlDbType.VarChar,50),
-					new SqlParameter("@subTime", SqlDbType.VarChar,50),
+					new SqlParameter("@subTime", SqlDbType.DateTime),
 					new SqlParameter("@subMoney", SqlDbType.Decimal,9),
 					new SqlParameter("@examine", SqlDbType.Bit,1)};
 			parameters[0].Value = model.subTaskId;
@@ -92,7 +92,7 @@ namespace Maticsoft.DAL
 					new SqlParameter("@subTaskId", SqlDbType.Int,4),
 					new SqlParameter("@subUser", SqlDbType.VarChar,50),
 					new SqlParameter("@subInfo", SqlDbType.VarChar,50),
-					new SqlParameter("@subTime", SqlDbType.VarChar,50),
+					new SqlParameter("@subTime", SqlDbType.DateTime),
 					new SqlParameter("@subMoney", SqlDbType.Decimal,9),
 					new SqlParameter("@examine", SqlDbType.Bit,1),
 					new SqlParameter("@subId", SqlDbType.Int,4)};
@@ -210,9 +210,9 @@ namespace Maticsoft.DAL
 				{
 					model.subInfo=row["subInfo"].ToString();
 				}
-				if(row["subTime"]!=null)
+				if(row["subTime"]!=null && row["subTime"].ToString()!="")
 				{
-					model.subTime=row["subTime"].ToString();
+					model.subTime=DateTime.Parse(row["subTime"].ToString());
 				}
 				if(row["subMoney"]!=null && row["subMoney"].ToString()!="")
 				{

@@ -12,8 +12,8 @@ namespace Maticsoft.Model
 		#region Model
 		private int _recardid;
 		private string _recarduser;
-		private string _recardmoney;
-		private string _recardtime;
+		private decimal? _recardmoney;
+		private DateTime? _recardtime;
 		private string _recardstate;
 		/// <summary>
 		/// 
@@ -34,7 +34,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string recardMoney
+		public decimal? recardMoney
 		{
 			set{ _recardmoney=value;}
 			get{return _recardmoney;}
@@ -42,7 +42,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string recardTime
+		public DateTime? recardTime
 		{
 			set{ _recardtime=value;}
 			get{return _recardtime;}

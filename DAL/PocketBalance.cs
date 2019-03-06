@@ -53,7 +53,7 @@ namespace Maticsoft.DAL
 			SqlParameter[] parameters = {
 					new SqlParameter("@balanceUser", SqlDbType.VarChar,50),
 					new SqlParameter("@balanceMoney", SqlDbType.Decimal,9),
-					new SqlParameter("@balanceTime", SqlDbType.VarChar,50)};
+					new SqlParameter("@balanceTime", SqlDbType.DateTime)};
 			parameters[0].Value = model.balanceUser;
 			parameters[1].Value = model.balanceMoney;
 			parameters[2].Value = model.balanceTime;
@@ -82,7 +82,7 @@ namespace Maticsoft.DAL
 			SqlParameter[] parameters = {
 					new SqlParameter("@balanceUser", SqlDbType.VarChar,50),
 					new SqlParameter("@balanceMoney", SqlDbType.Decimal,9),
-					new SqlParameter("@balanceTime", SqlDbType.VarChar,50),
+					new SqlParameter("@balanceTime", SqlDbType.DateTime),
 					new SqlParameter("@balanceId", SqlDbType.Int,4)};
 			parameters[0].Value = model.balanceUser;
 			parameters[1].Value = model.balanceMoney;
@@ -191,9 +191,9 @@ namespace Maticsoft.DAL
 				{
 					model.balanceMoney=decimal.Parse(row["balanceMoney"].ToString());
 				}
-				if(row["balanceTime"]!=null)
+				if(row["balanceTime"]!=null && row["balanceTime"].ToString()!="")
 				{
-					model.balanceTime=row["balanceTime"].ToString();
+					model.balanceTime=DateTime.Parse(row["balanceTime"].ToString());
 				}
 			}
 			return model;

@@ -13,7 +13,7 @@ namespace Maticsoft.Model
 		private int _balanceid;
 		private string _balanceuser;
 		private decimal? _balancemoney;
-		private string _balancetime;
+		private DateTime? _balancetime;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -41,7 +41,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string balanceTime
+		public DateTime? balanceTime
 		{
 			set{ _balancetime=value;}
 			get{return _balancetime;}

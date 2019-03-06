@@ -14,7 +14,7 @@ namespace Maticsoft.Model
 		private int? _subtaskid;
 		private string _subuser;
 		private string _subinfo;
-		private string _subtime;
+		private DateTime? _subtime;
 		private decimal? _submoney;
 		private bool _examine;
 		/// <summary>
@@ -52,7 +52,7 @@ namespace Maticsoft.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string subTime
+		public DateTime? subTime
 		{
 			set{ _subtime=value;}
 			get{return _subtime;}

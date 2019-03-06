@@ -59,7 +59,7 @@
         </f:Panel>
         <f:Window ID="Window1" Hidden="true" EnableIFrame="true" runat="server" OnClose="Window1_Close"
             EnableMaximize="true" EnableResize="true" Target="Top" IsModal="True" Width="700px" Title="任务管理"
-            Height="400px">
+            Height="600px">
         </f:Window>
 
 
