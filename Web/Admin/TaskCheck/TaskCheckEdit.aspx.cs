@@ -29,15 +29,8 @@ namespace Maticsoft.Web.Admin.TaskCheck
 
                     Maticsoft.BLL.PocketTaskSub bll = new Maticsoft.BLL.PocketTaskSub();
                     Maticsoft.Model.PocketTaskSub model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
-                    if (File.Exists(@"~/smobiler/Resources/Upload/" + model.subInfo + ".jpg"))
-                    {
-                        imgPhoto.ImageUrl = "~/smobiler/Resources/Upload/" + model.subInfo + ".jpg";
-                    }
-                    if (File.Exists(@"~/smobiler/Resources/Upload/" + model.subInfo + ".png"))
-                    {
-                        imgPhoto.ImageUrl = "~/smobiler/Resources/Upload/" + model.subInfo + ".png";
-                    }
-                  
+                    imgPhoto.ImageUrl =  "../../smobiler/Resources/Upload/sub"  + model.subInfo + ".jpg";
+
                     txtUser.Text = model.subUser; 
                     CheckTask.Checked =  model.examine;
                     Maticsoft.BLL.PocketTask bllTask = new Maticsoft.BLL.PocketTask();

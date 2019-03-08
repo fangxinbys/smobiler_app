@@ -31,13 +31,13 @@ namespace Maticsoft.Web.Admin.PocketUser
         }
 
 
-        protected string GetTask(string Rid)
+        protected string GetTea(string Rid)
         {
             string sql =string.Format(@"select SUM( money_t) from ( select isnull(SUM(masterMoney),0) as money_t from dbo.PocketMentor  
                            where pocketMaster = '{0}' union select isnull(SUM(discipleMoney),0) as money_t from dbo.PocketMentor  where disciple = '{1}') a", Rid,Rid);
             return decimal.Parse(DbHelperSQL.GetSingle(sql).ToString()).ToString();
         }
-        protected string GetTea(string Rid)
+        protected string GetTask(string Rid)
         {
             string sql = string.Format(@"select isnull(SUM(pocketTaskMoney),0) from dbo.TaskCheckInfo where examine=1 and subUser='{0}'", Rid);
             return decimal.Parse(DbHelperSQL.GetSingle(sql).ToString()).ToString();

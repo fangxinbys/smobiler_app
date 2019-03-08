@@ -121,7 +121,7 @@ namespace Maticsoft.Web.Admin.PocketTask
                 model.pocketTime = DateTimeCh.SelectedDate;
                 model.pocketTaskRule = content;
                 int k = bll.Add(model);
-                model.pocketTaskRuleUrl = modelSet.Domain + "showTask.aspx?Id=" + bll.GetMaxId();
+                model.pocketTaskRuleUrl = modelSet.Domain + "showTask.aspx?Id=" +k;
               
                 if (k > 0)
                 {
