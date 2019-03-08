@@ -22,7 +22,11 @@
                 </f:Toolbar>
             </Toolbars>
             <Rows>
-
+                <f:FormRow>
+                    <Items>
+                        <f:TextBox ID="txtYm" Label="网站域名" runat="server" />
+                    </Items>
+                </f:FormRow>
                 <f:FormRow>
                     <Items>
                         <f:TextBox ID="WebName" Label="站点名称" runat="server" />

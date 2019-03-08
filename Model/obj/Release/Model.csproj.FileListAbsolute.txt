@@ -5,3 +5,7 @@ C:\Users\Administrator\source\repos\dev\Model\bin\Release\Maticsoft.Model.dll
 C:\Users\Administrator\source\repos\dev\Model\obj\Release\Maticsoft.Model.dll
 C:\Users\Administrator\source\repos\dev\Model\obj\Release\Model.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\dev\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\bin\Release\Maticsoft.Model.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Release\Model.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\Model\obj\Release\Maticsoft.Model.dll

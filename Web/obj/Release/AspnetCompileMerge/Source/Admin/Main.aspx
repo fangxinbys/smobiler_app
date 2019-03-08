@@ -18,9 +18,12 @@
                         <table>
                             <tr>
                                 <td>
-                                    <f:Button runat="server" CssClass="icononlyaction" ID="btnHomePage" IconAlign="Top" IconFont="_Home"
-                                        EnablePostBack="false" EnableDefaultState="false" EnableDefaultCorner="false">
-                                    </f:Button>
+                                    
+                                         <f:Button runat="server" CssClass="icononlyaction" ID="btnHomePage" IconAlign="Top" IconFont="_Home"
+                                          EnablePostBack="false" EnableDefaultState="false" EnableDefaultCorner="false">
+                                         </f:Button>
+                                    
+                                    
                                     <a class="logo" href="./Main.aspx"><%=(model==null?"":model.WebName) %>
                                     </a>
                                 </td>
@@ -61,7 +64,6 @@
                             <Tabs>
                                 <f:Tab ID="Tab1" Title="首页" BodyPadding="10px" AutoScroll="true" Icon="House" runat="server">
                                     <Content>
-
                                     </Content>
                                 </f:Tab>
                             </Tabs>
@@ -98,7 +100,7 @@
 
         // 页面控件初始化完毕后执行
         F.ready(function () {
-           
+
 
             var treeMenu = F(treeMenuClientID);
             var mainTabStrip = F(mainTabStripClientID);
@@ -137,7 +139,7 @@
     <script>
 
         function time() {
-          
+
             $.ajax({
                 type: "post",
                 async: "false",

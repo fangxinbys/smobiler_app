@@ -30,6 +30,7 @@ namespace Maticsoft.Web.Admin.Web
                     KeyWords.Text = model.KeyWords;
                     Tel.Text = model.Tel;
                     WebName.Text = model.WebName;
+                    txtYm.Text = model.Domain;
                 }
             }
 
@@ -49,6 +50,7 @@ namespace Maticsoft.Web.Admin.Web
                 newm.KeyWords = KeyWords.Text;
                 newm.Tel = Tel.Text;
                 newm.WebName = WebName.Text;
+                newm.Domain = txtYm.Text;
                 if (bll.Add(newm) > 0)
                 {
                     Alert.ShowInTop("保存成功！");
@@ -69,6 +71,7 @@ namespace Maticsoft.Web.Admin.Web
                 model.KeyWords = KeyWords.Text;
                 model.Tel = Tel.Text;
                 model.WebName = WebName.Text;
+                model.Domain = txtYm.Text;
                 if (bll.Update(model))
                 {
                     Alert.ShowInTop("保存成功！");

@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 
@@ -31,36 +32,24 @@ namespace Web
             if (pm != null)
             {
                 HttpCookie themeCookie = Request.Cookies["Theme_Pro"];
+                string themeValue = string.Empty;
                 if (themeCookie != null)
                 {
-                    string themeValue = themeCookie.Value;
-
-                    // 是否为内置主题
-                    if (IsSystemTheme(themeValue))
-                    {
-                        pm.CustomTheme = String.Empty;
-                        pm.Theme = (Theme)Enum.Parse(typeof(Theme), themeValue, true);
-                    }
-                    else
-                    {
-                        pm.CustomTheme = themeValue;
-                    }
+                    themeValue = themeCookie.Value; 
                 }
                 else
                 {
-                    string themeValue = "Blitzer";
-
-                    // 是否为内置主题
-                    if (IsSystemTheme(themeValue))
-                    {
-                        pm.CustomTheme = String.Empty;
-                        pm.Theme = (Theme)Enum.Parse(typeof(Theme), themeValue, true);
-                    }
-                    else
-                    {
-                        pm.CustomTheme = themeValue;
-                    }
-                 
+                   themeValue = "Blitzer"; //设置默认主题，这里可以写在配置文件里面
+                }
+                // 是否为内置主题
+                if (IsSystemTheme(themeValue))
+                {
+                    pm.CustomTheme = String.Empty;
+                    pm.Theme = (Theme)Enum.Parse(typeof(Theme), themeValue, true);
+                }
+                else
+                {
+                    pm.CustomTheme = themeValue;
                 }
 
                 if (Constants.IS_BASE)
@@ -212,6 +201,12 @@ namespace Web
             m.UserName = user.usersName;
 
             bll.Add(m);
+        }
+        protected static bool ValidateMobile(string mobile)
+        {
+            if (string.IsNullOrEmpty(mobile))
+                return false;
+            return Regex.IsMatch(mobile, @"^(13|14|15|16|18|19|17)\d{9}$");
         }
         #endregion
     }

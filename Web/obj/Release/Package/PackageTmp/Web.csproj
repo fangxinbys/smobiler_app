@@ -18,7 +18,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>2.0</OldToolsVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -59,14 +59,25 @@
       <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="qcloudsms_csharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\qcloudsms_csharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
@@ -94,10 +105,24 @@
     <Content Include="Admin\Menu\MenuList.aspx" />
     <Content Include="Admin\Menu\selectMenu.aspx" />
     <Content Include="Admin\Bom\BomList.aspx" />
+    <Content Include="Admin\PocketGg\PocketGgEdit.aspx" />
+    <Content Include="Admin\PocketGg\PocketGgList.aspx" />
+    <Content Include="Admin\PocketMentor\PocketMentorList.aspx" />
+    <Content Include="Admin\PocketMentor\PocketMentorScale.aspx" />
+    <Content Include="Admin\PocketUser\PocketUserEdit.aspx" />
+    <Content Include="Admin\PocketUser\PocketUserList.aspx" />
+    <Content Include="Admin\PocketNotice\PocketNoticeEdit.aspx" />
+    <Content Include="Admin\PocketNotice\PocketNoticeList.aspx" />
+    <Content Include="Admin\PocketTask\PocketTaskList.aspx" />
+    <Content Include="Admin\PocketTask\PocketTaskEdit.aspx" />
     <Content Include="Admin\Powers\PowersList.aspx" />
     <Content Include="Admin\Role\RoleEdit.aspx" />
     <Content Include="Admin\Role\RoleList.aspx" />
     <Content Include="Admin\Role\roleMenu.aspx" />
+    <Content Include="Admin\BalanceRecard\BalanceRecardEdit.aspx" />
+    <Content Include="Admin\BalanceRecard\BalanceRecardList.aspx" />
+    <Content Include="Admin\TaskCheck\TaskCheckEdit.aspx" />
+    <Content Include="Admin\TaskCheck\TaskCheckList.aspx" />
     <Content Include="Admin\UserInfo.aspx" />
     <Content Include="Admin\Users\userDpt.aspx" />
     <Content Include="Admin\Users\UserEdit.aspx" />
@@ -1849,6 +1874,7 @@
     <Content Include="res\images\logo\logo_old.gif" />
     <Content Include="res\images\logo\logo_small.png" />
     <Content Include="res\images\my_face_80.jpg" />
+    <Content Include="res\images\my_logo.png" />
     <Content Include="res\images\themes\black_tie.png" />
     <Content Include="res\images\themes\blitzer.png" />
     <Content Include="res\images\themes\bootstrap_pure.png" />
@@ -2016,6 +2042,22 @@
     <Content Include="res\themes\pure_orange\theme.css" />
     <Content Include="res\themes\pure_purple\theme.css" />
     <Content Include="res\themes\pure_red\theme.css" />
+    <Content Include="showTask.aspx" />
+    <Content Include="smobiler\Resources\Image\logon.png" />
+    <Content Include="smobiler\Resources\Image\timg.jpg" />
+    <Content Include="smobiler\Resources\Image\timg1.jpg" />
+    <Content Include="smobiler\Resources\Image\timg2.jpg" />
+    <Content Include="smobiler\Resources\Image\timg3.jpg" />
+    <Content Include="smobiler\Resources\Image\timg4.jpg" />
+    <Content Include="smobiler\Resources\Image\timg5.jpg" />
+    <Content Include="smobiler\Resources\Image\timg6.jpg" />
+    <Content Include="smobiler\Resources\Image\timg7.jpg" />
+    <Content Include="smobiler\Resources\Upload\sub1525452545.jpg" />
+    <Content Include="smobiler\Resources\Upload\sub1531403140.jpg" />
+    <Content Include="smobiler\Resources\Upload\sub170310310.jpg" />
+    <Content Include="smobiler\Resources\Upload\sub170339339.jpg" />
+    <Content Include="smobiler\Resources\Upload\sub170531531.jpg" />
+    <Content Include="smobiler\Resources\Upload\sub170721721.jpg" />
     <Content Include="ueditor\dialogs\anchor\anchor.html" />
     <Content Include="ueditor\dialogs\attachment\attachment.css" />
     <Content Include="ueditor\dialogs\attachment\attachment.html" />
@@ -2388,6 +2430,76 @@
     <Compile Include="Admin\Bom\BomList.aspx.designer.cs">
       <DependentUpon>BomList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\PocketGg\PocketGgEdit.aspx.cs">
+      <DependentUpon>PocketGgEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketGg\PocketGgEdit.aspx.designer.cs">
+      <DependentUpon>PocketGgEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketGg\PocketGgList.aspx.cs">
+      <DependentUpon>PocketGgList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketGg\PocketGgList.aspx.designer.cs">
+      <DependentUpon>PocketGgList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorList.aspx.cs">
+      <DependentUpon>PocketMentorList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorList.aspx.designer.cs">
+      <DependentUpon>PocketMentorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorScale.aspx.cs">
+      <DependentUpon>PocketMentorScale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorScale.aspx.designer.cs">
+      <DependentUpon>PocketMentorScale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserEdit.aspx.cs">
+      <DependentUpon>PocketUserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserEdit.aspx.designer.cs">
+      <DependentUpon>PocketUserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserList.aspx.cs">
+      <DependentUpon>PocketUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketUser\PocketUserList.aspx.designer.cs">
+      <DependentUpon>PocketUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeEdit.aspx.cs">
+      <DependentUpon>PocketNoticeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeEdit.aspx.designer.cs">
+      <DependentUpon>PocketNoticeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeList.aspx.cs">
+      <DependentUpon>PocketNoticeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketNotice\PocketNoticeList.aspx.designer.cs">
+      <DependentUpon>PocketNoticeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskList.aspx.cs">
+      <DependentUpon>PocketTaskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskList.aspx.designer.cs">
+      <DependentUpon>PocketTaskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskEdit.aspx.cs">
+      <DependentUpon>PocketTaskEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketTask\PocketTaskEdit.aspx.designer.cs">
+      <DependentUpon>PocketTaskEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Powers\PowersList.aspx.cs">
       <DependentUpon>PowersList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2415,6 +2527,34 @@
     </Compile>
     <Compile Include="Admin\Role\roleMenu.aspx.designer.cs">
       <DependentUpon>roleMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardEdit.aspx.cs">
+      <DependentUpon>BalanceRecardEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardEdit.aspx.designer.cs">
+      <DependentUpon>BalanceRecardEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardList.aspx.cs">
+      <DependentUpon>BalanceRecardList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\BalanceRecard\BalanceRecardList.aspx.designer.cs">
+      <DependentUpon>BalanceRecardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaskCheck\TaskCheckEdit.aspx.cs">
+      <DependentUpon>TaskCheckEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TaskCheck\TaskCheckEdit.aspx.designer.cs">
+      <DependentUpon>TaskCheckEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaskCheck\TaskCheckList.aspx.cs">
+      <DependentUpon>TaskCheckList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TaskCheck\TaskCheckList.aspx.designer.cs">
+      <DependentUpon>TaskCheckList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\UserInfo.aspx.cs">
       <DependentUpon>UserInfo.aspx</DependentUpon>
@@ -2495,6 +2635,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="showTask.aspx.cs">
+      <DependentUpon>showTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="showTask.aspx.designer.cs">
+      <DependentUpon>showTask.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ueditor\net\App_Code\Config.cs" />
     <Compile Include="ueditor\net\App_Code\ConfigHandler.cs" />
     <Compile Include="ueditor\net\App_Code\CrawlerHandler.cs" />
@@ -2549,6 +2696,7 @@
     <Content Include="data\test.xss">
       <DependentUpon>test.xsd</DependentUpon>
     </Content>
+    <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\matic.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -2563,6 +2711,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="report\" />
+    <Folder Include="smobiler\Resources\Audio\" />
+    <Folder Include="smobiler\Resources\Document\" />
+    <Folder Include="smobiler\Resources\Media\" />
+    <Folder Include="smobiler\Resources\Web\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -2582,12 +2734,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3448</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:3448/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

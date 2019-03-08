@@ -43,8 +43,9 @@
 
                                 <f:BoundField DataField="mCode" HeaderText="编码" Width="150px" SortField="mCode" />
                                 <f:BoundField DataField="mName" HeaderText="菜单名称" Width="150px" />
-                                <f:BoundField DataField="mUrl" HeaderText="菜单地址" ExpandUnusedSpace="true"/>
+                                <f:BoundField DataField="mUrl" HeaderText="菜单地址" ExpandUnusedSpace="true" />
                                 <f:BoundField DataField="mIcon" HeaderText="图标" Width="150px" />
+                                <f:BoundField DataField="mAppIcon" HeaderText="App图标" Width="150px" />
                                 <f:BoundField DataField="mSort" HeaderText="排序" Width="150px" />
                                 <f:BoundField DataField="mRemark" HeaderText="备注" ExpandUnusedSpace="true" />
                                 <f:LinkButtonField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="编辑" ConfirmTarget="Top" CommandName="Edit" Width="50px" />

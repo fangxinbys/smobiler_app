@@ -20,6 +20,7 @@ namespace Maticsoft.Model
 		private string _address;
 		private string _beian;
 		private string _remark;
+		private string _domain;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -99,6 +100,14 @@ namespace Maticsoft.Model
 		{
 			set{ _remark=value;}
 			get{return _remark;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string Domain
+		{
+			set{ _domain=value;}
+			get{return _domain;}
 		}
 		#endregion Model
 

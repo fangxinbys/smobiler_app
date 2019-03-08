@@ -53,6 +53,7 @@ namespace Maticsoft.Web.Admin.Menu
             txtSort.Text = m.mSort.ToString();
             txtUrl.Text = m.mUrl; 
             drp_tb.SelectedValue = m.mIcon;
+            txtAppIcon.Text = m.mAppIcon;
            
         }
         protected void bindtb()
@@ -110,7 +111,7 @@ namespace Maticsoft.Web.Admin.Menu
                 m.mIcon = drp_tb.SelectedValue;
                 m.mSort =Convert.ToInt32(txtSort.Text);
                 m.mUrl = txtUrl.Text;
-
+                m.mAppIcon = txtAppIcon.Text.Trim();
 
                 if (BLL.Update(m) == true)
                 {
@@ -141,6 +142,7 @@ namespace Maticsoft.Web.Admin.Menu
                 m.mIcon = drp_tb.SelectedValue;
                 m.mSort = Convert.ToInt32(txtSort.Text);
                 m.mUrl = txtUrl.Text;
+                m.mAppIcon = txtAppIcon.Text.Trim();
                 if (BLL.Add(m) >= 1)
                 {
                     PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());

@@ -108,6 +108,7 @@
     <Content Include="Admin\PocketGg\PocketGgEdit.aspx" />
     <Content Include="Admin\PocketGg\PocketGgList.aspx" />
     <Content Include="Admin\PocketMentor\PocketMentorList.aspx" />
+    <Content Include="Admin\PocketMentor\PocketMentorScale.aspx" />
     <Content Include="Admin\PocketUser\PocketUserEdit.aspx" />
     <Content Include="Admin\PocketUser\PocketUserList.aspx" />
     <Content Include="Admin\PocketNotice\PocketNoticeEdit.aspx" />
@@ -2449,6 +2450,13 @@
     </Compile>
     <Compile Include="Admin\PocketMentor\PocketMentorList.aspx.designer.cs">
       <DependentUpon>PocketMentorList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorScale.aspx.cs">
+      <DependentUpon>PocketMentorScale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PocketMentor\PocketMentorScale.aspx.designer.cs">
+      <DependentUpon>PocketMentorScale.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\PocketUser\PocketUserEdit.aspx.cs">
       <DependentUpon>PocketUserEdit.aspx</DependentUpon>

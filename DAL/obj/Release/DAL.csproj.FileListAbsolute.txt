@@ -16,3 +16,13 @@ C:\Users\Administrator\source\repos\dev\DAL\obj\Release\Maticsoft.DAL.dll
 C:\Users\Administrator\source\repos\dev\DAL\obj\Release\DAL.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\dev\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\dev\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\bin\Release\Maticsoft.DAL.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\bin\Release\Maticsoft.Common.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\bin\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\bin\Release\Maticsoft.Model.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\bin\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\bin\Release\System.Data.SQLite.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\obj\Release\DAL.csproj.CopyComplete
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DAL\obj\Release\Maticsoft.DAL.dll

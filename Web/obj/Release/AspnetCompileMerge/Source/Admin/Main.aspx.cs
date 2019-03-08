@@ -22,9 +22,10 @@ namespace Maticsoft.Web.Admin
             if (!IsPostBack)
             {
                 LoadData();
+              
                 Maticsoft.Model.tUsers user= GetIdentityUser();
                 btnUserName.Text = user.usersName;
-                btnUserName.ToolTip = dptbll.GetModel(user.dptId).dptName;
+                btnUserName.ToolTip = dptbll.GetModel(user.dptId == null ?(int) 0 : (int)user.dptId).dptName;
                 Maticsoft.BLL.tSet bll = new Maticsoft.BLL.tSet();
                 model = bll.GetModel(1);
                 Maticsoft.BLL.S_Onlines bllOn = new Maticsoft.BLL.S_Onlines();

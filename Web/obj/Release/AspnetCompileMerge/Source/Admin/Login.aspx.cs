@@ -64,21 +64,22 @@ namespace Maticsoft.Web.Admin
                     BLL.tUsers bll = new BLL.tUsers();
                     List<Model.tUsers> userList = bll.GetModelList("usersName='" + userName + "'");
 
-                    Model.tUsers user = userList.Count == 0 ? null : userList[0];
+                    Model.tUsers user = userList.Count == 1 ? userList[0] : null ;
 
                     if (user != null)
                     {
-           
-                        if (user.usersPwd ==  DESEncrypt.Encrypt(password))
+                        string strPwd = DESEncrypt.Encrypt(password);
+                        if (user.usersPwd == strPwd)
                         {
-                            if (user.Flag==0)
+                            
+                            if (user.Flag == 0)
                             {
                                 Alert.ShowInTop("用户未启用，请联系管理员！", String.Empty, "top.window.location.reload(false);");
                                 return;
                             }
                             else
                             {
-                               
+
                                 LoginSuccess(user);
 
                                 return;
@@ -86,13 +87,13 @@ namespace Maticsoft.Web.Admin
                         }
                         else
                         {
-                          
+
                             Alert.ShowInTop("用户名或密码错误！", String.Empty, "top.window.location.reload(false);");
                             return;
                         }
                     }
                     else
-                    { 
+                    {
                         Alert.ShowInTop("用户名或密码错误！", String.Empty, "top.window.location.reload(false);");
                         return;
                     }

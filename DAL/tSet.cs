@@ -46,9 +46,9 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into tSet(");
-			strSql.Append("WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark)");
+			strSql.Append("WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,Domain)");
 			strSql.Append(" values (");
-			strSql.Append("@WebName,@Copyright,@KeyWords,@Description,@Tel,@Email,@Address,@BeiAn,@Remark)");
+			strSql.Append("@WebName,@Copyright,@KeyWords,@Description,@Tel,@Email,@Address,@BeiAn,@Remark,@Domain)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@WebName", SqlDbType.NVarChar,150),
@@ -59,7 +59,8 @@ namespace Maticsoft.DAL
 					new SqlParameter("@Email", SqlDbType.NVarChar,350),
 					new SqlParameter("@Address", SqlDbType.NVarChar,350),
 					new SqlParameter("@BeiAn", SqlDbType.NVarChar,350),
-					new SqlParameter("@Remark", SqlDbType.NVarChar,350)};
+					new SqlParameter("@Remark", SqlDbType.NVarChar,350),
+					new SqlParameter("@Domain", SqlDbType.NVarChar,350)};
 			parameters[0].Value = model.WebName;
 			parameters[1].Value = model.Copyright;
 			parameters[2].Value = model.KeyWords;
@@ -69,6 +70,7 @@ namespace Maticsoft.DAL
 			parameters[6].Value = model.Address;
 			parameters[7].Value = model.BeiAn;
 			parameters[8].Value = model.Remark;
+			parameters[9].Value = model.Domain;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -95,7 +97,8 @@ namespace Maticsoft.DAL
 			strSql.Append("Email=@Email,");
 			strSql.Append("Address=@Address,");
 			strSql.Append("BeiAn=@BeiAn,");
-			strSql.Append("Remark=@Remark");
+			strSql.Append("Remark=@Remark,");
+			strSql.Append("Domain=@Domain");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@WebName", SqlDbType.NVarChar,150),
@@ -107,6 +110,7 @@ namespace Maticsoft.DAL
 					new SqlParameter("@Address", SqlDbType.NVarChar,350),
 					new SqlParameter("@BeiAn", SqlDbType.NVarChar,350),
 					new SqlParameter("@Remark", SqlDbType.NVarChar,350),
+					new SqlParameter("@Domain", SqlDbType.NVarChar,350),
 					new SqlParameter("@Id", SqlDbType.Int,4)};
 			parameters[0].Value = model.WebName;
 			parameters[1].Value = model.Copyright;
@@ -117,7 +121,8 @@ namespace Maticsoft.DAL
 			parameters[6].Value = model.Address;
 			parameters[7].Value = model.BeiAn;
 			parameters[8].Value = model.Remark;
-			parameters[9].Value = model.Id;
+			parameters[9].Value = model.Domain;
+			parameters[10].Value = model.Id;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -181,7 +186,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark from tSet ");
+			strSql.Append("select  top 1 Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,Domain from tSet ");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Id", SqlDbType.Int,4)
@@ -249,6 +254,10 @@ namespace Maticsoft.DAL
 				{
 					model.Remark=row["Remark"].ToString();
 				}
+				if(row["Domain"]!=null)
+				{
+					model.Domain=row["Domain"].ToString();
+				}
 			}
 			return model;
 		}
@@ -259,7 +268,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark ");
+			strSql.Append("select Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,Domain ");
 			strSql.Append(" FROM tSet ");
 			if(strWhere.Trim()!="")
 			{
@@ -279,7 +288,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark ");
+			strSql.Append(" Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,Domain ");
 			strSql.Append(" FROM tSet ");
 			if(strWhere.Trim()!="")
 			{

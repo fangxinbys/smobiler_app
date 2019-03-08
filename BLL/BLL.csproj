@@ -108,6 +108,7 @@
     <Compile Include="PocketHelp.cs" />
     <Compile Include="PocketMentor.cs" />
     <Compile Include="PocketNotice.cs" />
+    <Compile Include="pocketSet.cs" />
     <Compile Include="PocketTask.cs" />
     <Compile Include="PocketTaskRec.cs" />
     <Compile Include="PocketTaskSub.cs" />

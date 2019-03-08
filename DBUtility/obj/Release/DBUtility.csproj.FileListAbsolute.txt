@@ -10,3 +10,10 @@ C:\Users\Administrator\source\repos\dev\DBUtility\obj\Release\Maticsoft.DBUtilit
 C:\Users\Administrator\source\repos\dev\DBUtility\obj\Release\DBUtility.csprojAssemblyReference.cache
 C:\Users\Administrator\source\repos\dev\DBUtility\obj\Release\DBUtility.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\dev\DBUtility\obj\Release\DBUtility.csproj.CopyComplete
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\bin\Release\Maticsoft.DBUtility.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\bin\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\bin\Release\System.Data.SQLite.DLL
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Release\DBUtility.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Release\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Release\DBUtility.csproj.CopyComplete
+C:\Users\Administrator\Desktop\DevNew\proFineUI\DBUtility\obj\Release\Maticsoft.DBUtility.dll
