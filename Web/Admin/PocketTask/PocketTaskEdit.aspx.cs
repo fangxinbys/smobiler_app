@@ -121,8 +121,9 @@ namespace Maticsoft.Web.Admin.PocketTask
                 model.pocketTime = DateTimeCh.SelectedDate;
                 model.pocketTaskRule = content;
                 int k = bll.Add(model);
+                Maticsoft.Model.PocketTask modelUp = bll.GetModel(k);
                 model.pocketTaskRuleUrl = modelSet.Domain + "showTask.aspx?Id=" +k;
-              
+                bll.Update(model);
                 if (k > 0)
                 {
                     PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());
