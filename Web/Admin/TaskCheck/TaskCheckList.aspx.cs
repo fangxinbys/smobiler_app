@@ -75,22 +75,44 @@ namespace Maticsoft.Web.Admin.TaskCheck
            
             string sortField = GridDpt.SortField;
             string sortDirection = GridDpt.SortDirection;
-
-            if (txtValue.Text.Trim() == "")
+            if (drpSearch.SelectedValue == "")
             {
-                GridDpt.RecordCount =  GetRecordCount(" ");
+                if (txtValue.Text.Trim() == "")
+                {
+                    GridDpt.RecordCount = GetRecordCount(" ");
 
-                DataView view =  GetListByPage("", " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
-                view.Sort = String.Format("{0} {1}", sortField, sortDirection);
-                GridDpt.DataSource = view.ToTable();
+                    DataView view = GetListByPage("", " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
+                else
+                {
+                    GridDpt.RecordCount = GetRecordCount(" subUser like '%" + txtValue.Text + "%' ");
+
+                    DataView view = GetListByPage(" subUser like '%" + txtValue.Text + "%' ", " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
             }
             else
             {
-                GridDpt.RecordCount =  GetRecordCount(" subUser like '%" + txtValue.Text+ "%' ");
+                if (txtValue.Text.Trim() == "")
+                {
+                    GridDpt.RecordCount = GetRecordCount(string.Format(" isnull(examine,0)={0} ", drpSearch.SelectedValue));
 
-                DataView view =  GetListByPage(" subUser like '%" + txtValue.Text + "%' ", " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
-                view.Sort = String.Format("{0} {1}", sortField, sortDirection);
-                GridDpt.DataSource = view.ToTable();
+                    DataView view = GetListByPage(string.Format(" isnull(examine,0)={0} ", drpSearch.SelectedValue), " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
+                else
+                {
+                    GridDpt.RecordCount = GetRecordCount(string.Format(" subUser like '%" + txtValue.Text + "%' and isnull(examine,0)={0} ", drpSearch.SelectedValue));
+
+                    DataView view = GetListByPage(string.Format(" subUser like '%" + txtValue.Text + "%' and isnull(examine,0)={0} ", drpSearch.SelectedValue), " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
+
             }
             GridDpt.DataBind();
 
@@ -264,6 +286,11 @@ namespace Maticsoft.Web.Admin.TaskCheck
         }
 
         protected void btnRe_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        protected void drpSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadData();
         }
