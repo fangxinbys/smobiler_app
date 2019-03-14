@@ -37,25 +37,51 @@ namespace Maticsoft.Web.Admin.BalanceRecard
             Maticsoft.BLL.PocketBalanceRecard BLL = new Maticsoft.BLL.PocketBalanceRecard();
             string sortField = GridDpt.SortField;
             string sortDirection = GridDpt.SortDirection;
-
-            if (txtValue.Text.Trim() == "")
+            if (drpSearch.SelectedValue == "")
             {
-                GridDpt.RecordCount = BLL.GetRecordCount(" ");
+                if (txtValue.Text.Trim() == "")
+                {
+                    GridDpt.RecordCount = BLL.GetRecordCount(" ");
 
-                DataView view = BLL.GetListByPage("", " recardId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
-                view.Sort = String.Format("{0} {1}", sortField, sortDirection);
-                GridDpt.DataSource = view.ToTable();
+                    DataView view = BLL.GetListByPage("", " recardId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
+                else
+                {
+                    GridDpt.RecordCount = BLL.GetRecordCount(" recardUser like '%" + txtValue.Text + "%' ");
+
+                    DataView view = BLL.GetListByPage(" recardUser like '%" + txtValue.Text + "%' ", " recardId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
             }
             else
             {
-                GridDpt.RecordCount = BLL.GetRecordCount(" recardUser like '%" + txtValue.Text + "%' ");
+                if (txtValue.Text.Trim() == "")
+                {
+                    GridDpt.RecordCount = BLL.GetRecordCount(string.Format(" recardState='{0}' ",drpSearch.SelectedValue));
 
-                DataView view = BLL.GetListByPage(" recardUser like '%" + txtValue.Text + "%' ", " recardId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
-                view.Sort = String.Format("{0} {1}", sortField, sortDirection);
-                GridDpt.DataSource = view.ToTable();
+                    DataView view = BLL.GetListByPage(string.Format(" recardState='{0}' ", drpSearch.SelectedValue), " recardId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
+                else
+                {
+                    GridDpt.RecordCount = BLL.GetRecordCount(string.Format(" recardUser like '%" + txtValue.Text + "%' and   recardState='{0}' ",drpSearch.SelectedValue));
+
+                    DataView view = BLL.GetListByPage(string.Format(" recardUser like '%" + txtValue.Text + "%' and   recardState='{0}' ", drpSearch.SelectedValue), " recardId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    view.Sort = String.Format("{0} {1}", sortField, sortDirection);
+                    GridDpt.DataSource = view.ToTable();
+                }
+
             }
             GridDpt.DataBind();
 
+        }
+        protected void drpSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         protected void TreeDpt_NodeCommand(object sender, TreeCommandEventArgs e)

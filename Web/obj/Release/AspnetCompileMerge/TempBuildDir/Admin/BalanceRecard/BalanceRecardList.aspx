@@ -18,7 +18,15 @@
                     OnRowCommand="GridDpt_RowCommand" AllowSorting="true" SortField="recardId" SortDirection="asc" OnSort="GridDpt_Sort">
                     <Toolbars>
                         <f:Toolbar ID="Toolbar" runat="server">
+                            <Items>
+                                <f:DropDownList runat="server" ID="drpSearch" AutoPostBack="true" OnSelectedIndexChanged="drpSearch_SelectedIndexChanged">
 
+                                    <f:ListItem Text="全部" Value="" />
+                                    <f:ListItem Text="通过" Value="通过" />
+                                    <f:ListItem Text="驳回" Value="驳回" />
+                                    <f:ListItem Text="待审核" Value="待审核" />
+                                </f:DropDownList>
+                            </Items>
                             <Items>
 
 

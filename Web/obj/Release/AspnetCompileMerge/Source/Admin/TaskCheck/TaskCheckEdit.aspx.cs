@@ -29,15 +29,17 @@ namespace Maticsoft.Web.Admin.TaskCheck
 
                     Maticsoft.BLL.PocketTaskSub bll = new Maticsoft.BLL.PocketTaskSub();
                     Maticsoft.Model.PocketTaskSub model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
-                    imgPhoto.ImageUrl =  "../../smobiler/Resources/Upload/sub"  + model.subInfo + ".jpg";
+                    imgPhoto.ImageUrl = "../../smobiler/Resources/Upload/sub" + model.subInfo + ".jpg";
 
-                    txtUser.Text = model.subUser; 
-                    CheckTask.Checked =  model.examine;
+                    txtUser.Text = model.subUser;
+                    if (model.examine)
+                    {
+                        CheckTask.SelectedValue = model.examine == true ? "1" : "0";
+                    }
                     Maticsoft.BLL.PocketTask bllTask = new Maticsoft.BLL.PocketTask();
                     Maticsoft.Model.PocketTask modelTask = bllTask.GetModel((int)model.subTaskId);
                     txtMoney.Text = modelTask.pocketTaskMoney.ToString();
                     DateTimeCh.SelectedDate = model.subTime;
-                   
                 }
             }
         }
@@ -56,7 +58,7 @@ namespace Maticsoft.Web.Admin.TaskCheck
                 Maticsoft.BLL.PocketTaskSub bll = new Maticsoft.BLL.PocketTaskSub();
                 Maticsoft.Model.PocketTaskSub model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
 
-                model.examine = CheckTask.Checked ? true : false;
+                model.examine = CheckTask.SelectedValue=="1" ? true : false;
 
 
                 bll.Update(model);

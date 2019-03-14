@@ -65,9 +65,11 @@
                 <f:FormRow>
 
                     <Items>
-                       
-                        <f:CheckBox ID="CheckTask"   runat="server" Text="审核通过" Checked="true" Label="任务操作" ShowRedStar="true">
-                        </f:CheckBox>
+                        <f:RadioButtonList ID="CheckTask" Label="审核操作" runat="server" Required="true" ShowRedStar="true">
+                            <f:RadioItem Text="通过" Value="1" />
+                            <f:RadioItem Text="驳回" Value="0" />
+                        </f:RadioButtonList>
+
                     </Items>
                 </f:FormRow>
 

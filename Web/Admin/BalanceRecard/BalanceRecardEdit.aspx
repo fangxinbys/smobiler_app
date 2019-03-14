@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
-    
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -56,9 +56,11 @@
                 <f:FormRow>
 
                     <Items>
+                        <f:RadioButtonList ID="CheckTask" Label="审核操作" runat="server" Required="true" ShowRedStar="true">
+                            <f:RadioItem Text="通过" Value="通过" />
+                            <f:RadioItem Text="驳回" Value="驳回" />
+                        </f:RadioButtonList>
 
-                        <f:CheckBox ID="CheckTask" runat="server" Text="审核通过" Checked="true" Label="任务操作" ShowRedStar="true">
-                        </f:CheckBox>
                     </Items>
                 </f:FormRow>
 

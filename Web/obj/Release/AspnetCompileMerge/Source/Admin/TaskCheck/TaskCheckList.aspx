@@ -22,9 +22,9 @@
                                 <f:DropDownList runat="server" ID="drpSearch" AutoPostBack="true" OnSelectedIndexChanged="drpSearch_SelectedIndexChanged">
 
                                     <f:ListItem Text="全部" Value="" />
-                                    <f:ListItem Text="已审核" Value="1" />
-                                    <f:ListItem Text="未审核" Value="0" />
-
+                                    <f:ListItem Text="已审核" Value="已审核" />
+                                    <f:ListItem Text="已驳回" Value="已驳回" />
+                                    <f:ListItem Text="待审核" Value="待审核" />
                                 </f:DropDownList>
                             </Items>
                             <Items>

@@ -22,25 +22,27 @@ namespace Maticsoft.Web.Admin.BalanceRecard
             {
                 btnClose.OnClientClick = ActiveWindow.GetHideReference();
 
-               
+
 
                 if (!string.IsNullOrEmpty(Request.QueryString["Id"]))
                 {
 
                     Maticsoft.BLL.PocketBalanceRecard bll = new Maticsoft.BLL.PocketBalanceRecard();
                     Maticsoft.Model.PocketBalanceRecard model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
-                    
+
                     txtUser.Text = model.recardUser;
                     txtJe.Text = model.recardMoney.ToString();
 
-                 
+
                     Maticsoft.BLL.PocketUser bllTask = new Maticsoft.BLL.PocketUser();
                     Maticsoft.Model.PocketUser modelTask = bllTask.GetModelList(string.Format(" pocketUserPhone ='{0}' ", model.recardUser))[0];
                     if (modelTask == null) return;
                     txtZfb.Text = modelTask.pocketUserAlipay;
                     txtRname.Text = modelTask.pocketUserReName;
-                    CheckTask.Checked = model.recardState == "待审核" ? false:true ;
-
+                    if (model.recardState != "待审核")
+                    {
+                        CheckTask.SelectedValue = model.recardState;
+                    }
                 }
             }
         }
@@ -59,7 +61,7 @@ namespace Maticsoft.Web.Admin.BalanceRecard
                 Maticsoft.BLL.PocketBalanceRecard bll = new Maticsoft.BLL.PocketBalanceRecard();
                 Maticsoft.Model.PocketBalanceRecard model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
 
-                model.recardState = CheckTask.Checked ? "通过" : "待审核";
+                model.recardState = CheckTask.SelectedValue;
 
 
                 bll.Update(model);
