@@ -46,21 +46,23 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into PocketUser(");
-			strSql.Append("pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName)");
+			strSql.Append("pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName,wximg)");
 			strSql.Append(" values (");
-			strSql.Append("@pocketUserName,@pocketUserPhone,@pocketUserInv,@pocketUserAlipay,@pocketUserReName)");
+			strSql.Append("@pocketUserName,@pocketUserPhone,@pocketUserInv,@pocketUserAlipay,@pocketUserReName,@wximg)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketUserName", SqlDbType.VarChar,50),
 					new SqlParameter("@pocketUserPhone", SqlDbType.VarChar,50),
 					new SqlParameter("@pocketUserInv", SqlDbType.VarChar,50),
 					new SqlParameter("@pocketUserAlipay", SqlDbType.VarChar,50),
-					new SqlParameter("@pocketUserReName", SqlDbType.VarChar,50)};
+					new SqlParameter("@pocketUserReName", SqlDbType.VarChar,50),
+					new SqlParameter("@wximg", SqlDbType.VarChar,100)};
 			parameters[0].Value = model.pocketUserName;
 			parameters[1].Value = model.pocketUserPhone;
 			parameters[2].Value = model.pocketUserInv;
 			parameters[3].Value = model.pocketUserAlipay;
 			parameters[4].Value = model.pocketUserReName;
+			parameters[5].Value = model.wximg;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -83,7 +85,8 @@ namespace Maticsoft.DAL
 			strSql.Append("pocketUserPhone=@pocketUserPhone,");
 			strSql.Append("pocketUserInv=@pocketUserInv,");
 			strSql.Append("pocketUserAlipay=@pocketUserAlipay,");
-			strSql.Append("pocketUserReName=@pocketUserReName");
+			strSql.Append("pocketUserReName=@pocketUserReName,");
+			strSql.Append("wximg=@wximg");
 			strSql.Append(" where pocketUserId=@pocketUserId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketUserName", SqlDbType.VarChar,50),
@@ -91,13 +94,15 @@ namespace Maticsoft.DAL
 					new SqlParameter("@pocketUserInv", SqlDbType.VarChar,50),
 					new SqlParameter("@pocketUserAlipay", SqlDbType.VarChar,50),
 					new SqlParameter("@pocketUserReName", SqlDbType.VarChar,50),
+					new SqlParameter("@wximg", SqlDbType.VarChar,100),
 					new SqlParameter("@pocketUserId", SqlDbType.Int,4)};
 			parameters[0].Value = model.pocketUserName;
 			parameters[1].Value = model.pocketUserPhone;
 			parameters[2].Value = model.pocketUserInv;
 			parameters[3].Value = model.pocketUserAlipay;
 			parameters[4].Value = model.pocketUserReName;
-			parameters[5].Value = model.pocketUserId;
+			parameters[5].Value = model.wximg;
+			parameters[6].Value = model.pocketUserId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -161,7 +166,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 pocketUserId,pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName from PocketUser ");
+			strSql.Append("select  top 1 pocketUserId,pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName,wximg from PocketUser ");
 			strSql.Append(" where pocketUserId=@pocketUserId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@pocketUserId", SqlDbType.Int,4)
@@ -213,6 +218,10 @@ namespace Maticsoft.DAL
 				{
 					model.pocketUserReName=row["pocketUserReName"].ToString();
 				}
+				if(row["wximg"]!=null)
+				{
+					model.wximg=row["wximg"].ToString();
+				}
 			}
 			return model;
 		}
@@ -223,7 +232,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select pocketUserId,pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName ");
+			strSql.Append("select pocketUserId,pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName,wximg ");
 			strSql.Append(" FROM PocketUser ");
 			if(strWhere.Trim()!="")
 			{
@@ -243,7 +252,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" pocketUserId,pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName ");
+			strSql.Append(" pocketUserId,pocketUserName,pocketUserPhone,pocketUserInv,pocketUserAlipay,pocketUserReName,wximg ");
 			strSql.Append(" FROM PocketUser ");
 			if(strWhere.Trim()!="")
 			{

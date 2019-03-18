@@ -16,6 +16,7 @@ namespace Maticsoft.Model
 		private string _pocketuserinv;
 		private string _pocketuseralipay;
 		private string _pocketuserrename;
+		private string _wximg;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -63,6 +64,14 @@ namespace Maticsoft.Model
 		{
 			set{ _pocketuserrename=value;}
 			get{return _pocketuserrename;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string wximg
+		{
+			set{ _wximg=value;}
+			get{return _wximg;}
 		}
 		#endregion Model
 

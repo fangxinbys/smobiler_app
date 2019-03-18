@@ -40,6 +40,7 @@ namespace Maticsoft.Web.Admin.TaskCheck
                     Maticsoft.Model.PocketTask modelTask = bllTask.GetModel((int)model.subTaskId);
                     txtMoney.Text = modelTask.pocketTaskMoney.ToString();
                     DateTimeCh.SelectedDate = model.subTime;
+                    txtRemark.Text = model.subRemake;
                 }
             }
         }
@@ -59,7 +60,7 @@ namespace Maticsoft.Web.Admin.TaskCheck
                 Maticsoft.Model.PocketTaskSub model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
 
                 model.examine = CheckTask.SelectedValue=="1" ? true : false;
-
+                model.subRemake = txtRemark.Text;
 
                 bll.Update(model);
                 PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());

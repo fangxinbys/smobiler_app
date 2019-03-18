@@ -46,9 +46,9 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into PocketTaskSub(");
-			strSql.Append("subTaskId,subUser,subInfo,subTime,subMoney,examine)");
+			strSql.Append("subTaskId,subUser,subInfo,subTime,subMoney,examine,subRemake)");
 			strSql.Append(" values (");
-			strSql.Append("@subTaskId,@subUser,@subInfo,@subTime,@subMoney,@examine)");
+			strSql.Append("@subTaskId,@subUser,@subInfo,@subTime,@subMoney,@examine,@subRemake)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@subTaskId", SqlDbType.Int,4),
@@ -56,13 +56,15 @@ namespace Maticsoft.DAL
 					new SqlParameter("@subInfo", SqlDbType.VarChar,50),
 					new SqlParameter("@subTime", SqlDbType.DateTime),
 					new SqlParameter("@subMoney", SqlDbType.Decimal,9),
-					new SqlParameter("@examine", SqlDbType.Bit,1)};
+					new SqlParameter("@examine", SqlDbType.Bit,1),
+					new SqlParameter("@subRemake", SqlDbType.VarChar,500)};
 			parameters[0].Value = model.subTaskId;
 			parameters[1].Value = model.subUser;
 			parameters[2].Value = model.subInfo;
 			parameters[3].Value = model.subTime;
 			parameters[4].Value = model.subMoney;
 			parameters[5].Value = model.examine;
+			parameters[6].Value = model.subRemake;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -86,7 +88,8 @@ namespace Maticsoft.DAL
 			strSql.Append("subInfo=@subInfo,");
 			strSql.Append("subTime=@subTime,");
 			strSql.Append("subMoney=@subMoney,");
-			strSql.Append("examine=@examine");
+			strSql.Append("examine=@examine,");
+			strSql.Append("subRemake=@subRemake");
 			strSql.Append(" where subId=@subId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@subTaskId", SqlDbType.Int,4),
@@ -95,6 +98,7 @@ namespace Maticsoft.DAL
 					new SqlParameter("@subTime", SqlDbType.DateTime),
 					new SqlParameter("@subMoney", SqlDbType.Decimal,9),
 					new SqlParameter("@examine", SqlDbType.Bit,1),
+					new SqlParameter("@subRemake", SqlDbType.VarChar,500),
 					new SqlParameter("@subId", SqlDbType.Int,4)};
 			parameters[0].Value = model.subTaskId;
 			parameters[1].Value = model.subUser;
@@ -102,7 +106,8 @@ namespace Maticsoft.DAL
 			parameters[3].Value = model.subTime;
 			parameters[4].Value = model.subMoney;
 			parameters[5].Value = model.examine;
-			parameters[6].Value = model.subId;
+			parameters[6].Value = model.subRemake;
+			parameters[7].Value = model.subId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -166,7 +171,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 subId,subTaskId,subUser,subInfo,subTime,subMoney,examine from PocketTaskSub ");
+			strSql.Append("select  top 1 subId,subTaskId,subUser,subInfo,subTime,subMoney,examine,subRemake from PocketTaskSub ");
 			strSql.Append(" where subId=@subId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@subId", SqlDbType.Int,4)
@@ -229,6 +234,10 @@ namespace Maticsoft.DAL
 						model.examine=false;
 					}
 				}
+				if(row["subRemake"]!=null)
+				{
+					model.subRemake=row["subRemake"].ToString();
+				}
 			}
 			return model;
 		}
@@ -239,7 +248,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select subId,subTaskId,subUser,subInfo,subTime,subMoney,examine ");
+			strSql.Append("select subId,subTaskId,subUser,subInfo,subTime,subMoney,examine,subRemake ");
 			strSql.Append(" FROM PocketTaskSub ");
 			if(strWhere.Trim()!="")
 			{
@@ -259,7 +268,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" subId,subTaskId,subUser,subInfo,subTime,subMoney,examine ");
+			strSql.Append(" subId,subTaskId,subUser,subInfo,subTime,subMoney,examine,subRemake ");
 			strSql.Append(" FROM PocketTaskSub ");
 			if(strWhere.Trim()!="")
 			{

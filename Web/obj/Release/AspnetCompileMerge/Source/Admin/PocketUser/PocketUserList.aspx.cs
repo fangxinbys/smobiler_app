@@ -39,7 +39,7 @@ namespace Maticsoft.Web.Admin.PocketUser
         }
         protected string GetTask(string Rid)
         {
-            string sql = string.Format(@"select isnull(SUM(pocketTaskMoney),0) from dbo.TaskCheckInfo where examine=1 and subUser='{0}'", Rid);
+            string sql = string.Format(@"select isnull(SUM(pocketTaskMoney),0) from dbo.TaskCheckInfo where examine='已审核' and subUser='{0}'", Rid);
             return decimal.Parse(DbHelperSQL.GetSingle(sql).ToString()).ToString();
         }
         protected void LoadData()

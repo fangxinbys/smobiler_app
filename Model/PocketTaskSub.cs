@@ -17,6 +17,7 @@ namespace Maticsoft.Model
 		private DateTime? _subtime;
 		private decimal? _submoney;
 		private bool _examine;
+		private string _subremake;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -72,6 +73,14 @@ namespace Maticsoft.Model
 		{
 			set{ _examine=value;}
 			get{return _examine;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string subRemake
+		{
+			set{ _subremake=value;}
+			get{return _subremake;}
 		}
 		#endregion Model
 

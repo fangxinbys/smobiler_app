@@ -36,7 +36,7 @@
                 </f:FormRow>
                 <f:FormRow>
                     <Items>
-                        <f:NumberBox ID="txtTx" Label="徒弟赏金" Required="true" ShowRedStar="true" runat="server" EmptyText="请输入数字" Text="10" />
+                        <f:NumberBox ID="txtTx" Label="提现限额" Required="true" ShowRedStar="true" runat="server" EmptyText="请输入数字" Text="10" />
 
                     </Items>
                 </f:FormRow>

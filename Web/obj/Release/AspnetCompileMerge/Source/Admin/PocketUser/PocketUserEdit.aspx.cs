@@ -52,8 +52,8 @@ namespace Maticsoft.Web.Admin.PocketUser
             txtpocketUserInv.Text = tUsers.pocketUserInv;
             txtpocketUserAlipay.Text = tUsers.pocketUserAlipay;
             txtpocketUserReName.Text = tUsers.pocketUserReName;
-
-
+            txtImg.ImageUrl =   "../../smobiler/Resources/Upload/"+ tUsers.wximg + ".jpg";
+        
         }
 
 

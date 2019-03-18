@@ -63,7 +63,12 @@
 
                     </Items>
                 </f:FormRow>
-
+                <f:FormRow runat="server">
+                    <Items>
+                        <f:TextArea ID="txtRemark" runat="server" Label="审核说明" Required="true" ShowRedStar="true">
+                        </f:TextArea>
+                    </Items>
+                </f:FormRow>
 
 
             </Rows>

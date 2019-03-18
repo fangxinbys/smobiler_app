@@ -46,19 +46,23 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into PocketBalanceRecard(");
-			strSql.Append("recardUser,recardMoney,recardTime,recardState)");
+			strSql.Append("recardUser,recardMoney,recardTime,recardState,recardStateTime,recardRemake)");
 			strSql.Append(" values (");
-			strSql.Append("@recardUser,@recardMoney,@recardTime,@recardState)");
+			strSql.Append("@recardUser,@recardMoney,@recardTime,@recardState,@recardStateTime,@recardRemake)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@recardUser", SqlDbType.VarChar,50),
 					new SqlParameter("@recardMoney", SqlDbType.Decimal,9),
 					new SqlParameter("@recardTime", SqlDbType.DateTime),
-					new SqlParameter("@recardState", SqlDbType.VarChar,50)};
+					new SqlParameter("@recardState", SqlDbType.VarChar,50),
+					new SqlParameter("@recardStateTime", SqlDbType.DateTime),
+					new SqlParameter("@recardRemake", SqlDbType.VarChar,500)};
 			parameters[0].Value = model.recardUser;
 			parameters[1].Value = model.recardMoney;
 			parameters[2].Value = model.recardTime;
 			parameters[3].Value = model.recardState;
+			parameters[4].Value = model.recardStateTime;
+			parameters[5].Value = model.recardRemake;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -80,19 +84,25 @@ namespace Maticsoft.DAL
 			strSql.Append("recardUser=@recardUser,");
 			strSql.Append("recardMoney=@recardMoney,");
 			strSql.Append("recardTime=@recardTime,");
-			strSql.Append("recardState=@recardState");
+			strSql.Append("recardState=@recardState,");
+			strSql.Append("recardStateTime=@recardStateTime,");
+			strSql.Append("recardRemake=@recardRemake");
 			strSql.Append(" where recardId=@recardId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@recardUser", SqlDbType.VarChar,50),
 					new SqlParameter("@recardMoney", SqlDbType.Decimal,9),
 					new SqlParameter("@recardTime", SqlDbType.DateTime),
 					new SqlParameter("@recardState", SqlDbType.VarChar,50),
+					new SqlParameter("@recardStateTime", SqlDbType.DateTime),
+					new SqlParameter("@recardRemake", SqlDbType.VarChar,500),
 					new SqlParameter("@recardId", SqlDbType.Int,4)};
 			parameters[0].Value = model.recardUser;
 			parameters[1].Value = model.recardMoney;
 			parameters[2].Value = model.recardTime;
 			parameters[3].Value = model.recardState;
-			parameters[4].Value = model.recardId;
+			parameters[4].Value = model.recardStateTime;
+			parameters[5].Value = model.recardRemake;
+			parameters[6].Value = model.recardId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -156,7 +166,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 recardId,recardUser,recardMoney,recardTime,recardState from PocketBalanceRecard ");
+			strSql.Append("select  top 1 recardId,recardUser,recardMoney,recardTime,recardState,recardStateTime,recardRemake from PocketBalanceRecard ");
 			strSql.Append(" where recardId=@recardId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@recardId", SqlDbType.Int,4)
@@ -204,6 +214,14 @@ namespace Maticsoft.DAL
 				{
 					model.recardState=row["recardState"].ToString();
 				}
+				if(row["recardStateTime"]!=null && row["recardStateTime"].ToString()!="")
+				{
+					model.recardStateTime=DateTime.Parse(row["recardStateTime"].ToString());
+				}
+				if(row["recardRemake"]!=null)
+				{
+					model.recardRemake=row["recardRemake"].ToString();
+				}
 			}
 			return model;
 		}
@@ -214,7 +232,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select recardId,recardUser,recardMoney,recardTime,recardState ");
+			strSql.Append("select recardId,recardUser,recardMoney,recardTime,recardState,recardStateTime,recardRemake ");
 			strSql.Append(" FROM PocketBalanceRecard ");
 			if(strWhere.Trim()!="")
 			{
@@ -234,7 +252,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" recardId,recardUser,recardMoney,recardTime,recardState ");
+			strSql.Append(" recardId,recardUser,recardMoney,recardTime,recardState,recardStateTime,recardRemake ");
 			strSql.Append(" FROM PocketBalanceRecard ");
 			if(strWhere.Trim()!="")
 			{

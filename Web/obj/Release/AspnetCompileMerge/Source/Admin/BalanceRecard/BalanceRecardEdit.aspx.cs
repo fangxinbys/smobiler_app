@@ -43,6 +43,7 @@ namespace Maticsoft.Web.Admin.BalanceRecard
                     {
                         CheckTask.SelectedValue = model.recardState;
                     }
+                    txtRemark.Text = model.recardRemake;
                 }
             }
         }
@@ -62,7 +63,7 @@ namespace Maticsoft.Web.Admin.BalanceRecard
                 Maticsoft.Model.PocketBalanceRecard model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
 
                 model.recardState = CheckTask.SelectedValue;
-
+                model.recardRemake = txtRemark.Text;
 
                 bll.Update(model);
                 PageContext.RegisterStartupScript(ActiveWindow.GetHidePostBackReference());

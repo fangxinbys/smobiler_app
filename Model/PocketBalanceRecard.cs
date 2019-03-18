@@ -15,6 +15,8 @@ namespace Maticsoft.Model
 		private decimal? _recardmoney;
 		private DateTime? _recardtime;
 		private string _recardstate;
+		private DateTime? _recardstatetime= DateTime.Now;
+		private string _recardremake;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -54,6 +56,22 @@ namespace Maticsoft.Model
 		{
 			set{ _recardstate=value;}
 			get{return _recardstate;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public DateTime? recardStateTime
+		{
+			set{ _recardstatetime=value;}
+			get{return _recardstatetime;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string recardRemake
+		{
+			set{ _recardremake=value;}
+			get{return _recardremake;}
 		}
 		#endregion Model
 
