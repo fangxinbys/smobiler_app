@@ -39,6 +39,7 @@ namespace Maticsoft.Web.Admin.BalanceRecard
                     if (modelTask == null) return;
                     txtZfb.Text = modelTask.pocketUserAlipay;
                     txtRname.Text = modelTask.pocketUserReName;
+                    txtImg.ImageUrl = "../../smobiler/Resources/Upload/" + modelTask.wximg + ".jpg";
                     if (model.recardState != "待审核")
                     {
                         CheckTask.SelectedValue = model.recardState;

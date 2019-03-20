@@ -7,7 +7,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
 
-
+    <style>
+        .photo img {
+            height: 200px;
+            width: 200px;
+            border: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -69,7 +75,12 @@
                         </f:TextArea>
                     </Items>
                 </f:FormRow>
+                <f:FormRow>
+                    <Items>
+                        <f:Image runat="server" ID="txtImg" Label="微信收款码" CssClass="photo"></f:Image>
+                    </Items>
 
+                </f:FormRow>
 
             </Rows>
 
