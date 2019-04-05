@@ -81,7 +81,7 @@ namespace Maticsoft.Web.Admin.TaskCheck
                 {
                     GridDpt.RecordCount = GetRecordCount(" ");
 
-                    DataView view = GetListByPage("", " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    DataView view = GetListByPage("", " subId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
                     view.Sort = String.Format("{0} {1}", sortField, sortDirection);
                     GridDpt.DataSource = view.ToTable();
                 }
@@ -89,7 +89,7 @@ namespace Maticsoft.Web.Admin.TaskCheck
                 {
                     GridDpt.RecordCount = GetRecordCount(" subUser like '%" + txtValue.Text + "%' ");
 
-                    DataView view = GetListByPage(" subUser like '%" + txtValue.Text + "%' ", " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    DataView view = GetListByPage(" subUser like '%" + txtValue.Text + "%' ", " subId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
                     view.Sort = String.Format("{0} {1}", sortField, sortDirection);
                     GridDpt.DataSource = view.ToTable();
                 }
@@ -100,7 +100,7 @@ namespace Maticsoft.Web.Admin.TaskCheck
                 {
                     GridDpt.RecordCount = GetRecordCount(string.Format(" examine='{0}' ", drpSearch.SelectedValue));
 
-                    DataView view = GetListByPage(string.Format(" examine='{0}' ", drpSearch.SelectedValue), " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    DataView view = GetListByPage(string.Format(" examine='{0}' ", drpSearch.SelectedValue), " subId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
                     view.Sort = String.Format("{0} {1}", sortField, sortDirection);
                     GridDpt.DataSource = view.ToTable();
                 }
@@ -108,7 +108,7 @@ namespace Maticsoft.Web.Admin.TaskCheck
                 {
                     GridDpt.RecordCount = GetRecordCount(string.Format(" subUser like '%" + txtValue.Text + "%' and examine='{0}' ", drpSearch.SelectedValue));
 
-                    DataView view = GetListByPage(string.Format(" subUser like '%" + txtValue.Text + "%' and  examine='{0}' ", drpSearch.SelectedValue), " subId asc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
+                    DataView view = GetListByPage(string.Format(" subUser like '%" + txtValue.Text + "%' and  examine='{0}' ", drpSearch.SelectedValue), " subId desc ", GridDpt.PageIndex * GridDpt.PageSize, (GridDpt.PageIndex + 1) * GridDpt.PageSize).Tables[0].DefaultView;
                     view.Sort = String.Format("{0} {1}", sortField, sortDirection);
                     GridDpt.DataSource = view.ToTable();
                 }

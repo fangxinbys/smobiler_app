@@ -18,6 +18,10 @@ namespace Maticsoft.Model
 		private decimal? _submoney;
 		private bool _examine;
 		private string _subremake;
+		private string _subinfo2;
+		private string _subinfo3;
+		private string _subinfo4;
+		private string _subinfo5;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -81,6 +85,38 @@ namespace Maticsoft.Model
 		{
 			set{ _subremake=value;}
 			get{return _subremake;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string subInfo2
+		{
+			set{ _subinfo2=value;}
+			get{return _subinfo2;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string subInfo3
+		{
+			set{ _subinfo3=value;}
+			get{return _subinfo3;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string subInfo4
+		{
+			set{ _subinfo4=value;}
+			get{return _subinfo4;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string subInfo5
+		{
+			set{ _subinfo5=value;}
+			get{return _subinfo5;}
 		}
 		#endregion Model
 

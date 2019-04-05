@@ -30,11 +30,34 @@ namespace Maticsoft.Web.Admin.TaskCheck
                     Maticsoft.BLL.PocketTaskSub bll = new Maticsoft.BLL.PocketTaskSub();
                     Maticsoft.Model.PocketTaskSub model = bll.GetModel(int.Parse(Request.QueryString["Id"]));
                     imgPhoto.ImageUrl = "../../smobiler/Resources/Upload/sub" + model.subInfo + ".jpg";
-
-                    txtUser.Text = model.subUser;
-                    if (model.examine)
+                    if (File.Exists(Server.MapPath("../../smobiler/Resources/Upload/sub" + model.subInfo2 + ".jpg")))
                     {
-                        CheckTask.SelectedValue = model.examine == true ? "1" : "0";
+
+                        Image2.ImageUrl = "../../smobiler/Resources/Upload/sub" + model.subInfo2 + ".jpg";
+                    }
+                    if (File.Exists(Server.MapPath("../../smobiler/Resources/Upload/sub" + model.subInfo3 + ".jpg")))
+                    {
+
+                        Image3.ImageUrl = "../../smobiler/Resources/Upload/sub" + model.subInfo3 + ".jpg";
+                    }
+                    if (File.Exists(Server.MapPath("../../smobiler/Resources/Upload/sub" + model.subInfo4 + ".jpg")))
+                    {
+
+                        Image4.ImageUrl = "../../smobiler/Resources/Upload/sub" + model.subInfo4 + ".jpg";
+                    }
+                    if (File.Exists(Server.MapPath("../../smobiler/Resources/Upload/sub" + model.subInfo5 + ".jpg")))
+                    {
+
+                        Image5.ImageUrl = "../../smobiler/Resources/Upload/sub" + model.subInfo5 + ".jpg";
+                    }
+                    txtUser.Text = model.subUser;
+                    if (model.examine==false)
+                    {
+                        CheckTask.SelectedValue = "0";
+                    }
+                    if (model.examine == true)
+                    {
+                        CheckTask.SelectedValue = "1";
                     }
                     Maticsoft.BLL.PocketTask bllTask = new Maticsoft.BLL.PocketTask();
                     Maticsoft.Model.PocketTask modelTask = bllTask.GetModel((int)model.subTaskId);

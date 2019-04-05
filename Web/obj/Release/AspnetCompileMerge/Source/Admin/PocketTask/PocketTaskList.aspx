@@ -50,7 +50,7 @@
                         <f:BoundField DataField="pocketTaskMoney" HeaderText="任务单价" ExpandUnusedSpace="true" />
                         <f:BoundField DataField="pocketTime" HeaderText="发布时间" ExpandUnusedSpace="true" />
                         <f:LinkButtonField ColumnID="editField" TextAlign="Center" Icon="Pencil" ToolTip="任务修改" ConfirmTarget="Top" CommandName="Edit" Width="50px" />
-                        <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除" Enabled="false"
+                        <f:LinkButtonField ColumnID="deleteField" TextAlign="Center" Icon="Delete" ToolTip="删除"  
                             ConfirmText="确定删除该任务？" ConfirmTarget="Top" CommandName="Delete" Width="50px" />
                     </Columns>
                 </f:Grid>

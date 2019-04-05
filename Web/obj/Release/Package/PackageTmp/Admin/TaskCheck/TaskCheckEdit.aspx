@@ -79,7 +79,42 @@
                         </f:TextArea>
                     </Items>
                 </f:FormRow>
+                <f:FormRow>
+                    <Items>
 
+                        <f:Image ID="Image2" CssClass="photo" ImageUrl="../../upload/blank.png" ShowEmptyLabel="true" runat="server" Label="提交图片_2">
+                        </f:Image>
+
+                    </Items>
+
+                </f:FormRow>
+                <f:FormRow>
+                    <Items>
+
+                        <f:Image ID="Image3" CssClass="photo" ImageUrl="../../upload/blank.png" ShowEmptyLabel="true" runat="server" Label="提交图片_3">
+                        </f:Image>
+
+                    </Items>
+
+                </f:FormRow>
+                <f:FormRow>
+                    <Items>
+
+                        <f:Image ID="Image4" CssClass="photo" ImageUrl="../../upload/blank.png" ShowEmptyLabel="true" runat="server" Label="提交图片_4">
+                        </f:Image>
+
+                    </Items>
+
+                </f:FormRow>
+                <f:FormRow>
+                    <Items>
+
+                        <f:Image ID="Image5" CssClass="photo" ImageUrl="../../upload/blank.png" ShowEmptyLabel="true" runat="server" Label="提交图片_5">
+                        </f:Image>
+
+                    </Items>
+
+                </f:FormRow>
             </Rows>
 
         </f:Form>
