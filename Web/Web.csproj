@@ -137,6 +137,7 @@
     <Content Include="common\themes.aspx" />
     <Content Include="Admin\Login.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="QQ.html" />
     <Content Include="res\css\common.css" />
     <Content Include="res\css\index.css" />
     <Content Include="res\icon\accept.png" />
