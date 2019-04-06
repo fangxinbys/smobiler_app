@@ -42,13 +42,13 @@
 
                 <f:FormRow>
                     <Items>
-                        <f:TextBox ID="txtZfb" Label="支付宝号" Required="true" ShowRedStar="true" runat="server" Readonly="true" />
+                        <f:TextBox ID="txtZfb" Label="支付宝号" ShowRedStar="true" runat="server" Readonly="true" />
                     </Items>
                 </f:FormRow>
 
                 <f:FormRow>
                     <Items>
-                        <f:TextBox ID="txtRname" Label="提现姓名" Required="true" ShowRedStar="true" runat="server" Readonly="true" />
+                        <f:TextBox ID="txtRname" Label="提现姓名" ShowRedStar="true" runat="server" Readonly="true" />
                     </Items>
                 </f:FormRow>
                 <f:FormRow>
